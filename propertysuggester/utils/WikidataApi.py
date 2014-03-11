@@ -29,3 +29,12 @@ class WikidataApi:
 
         result = requests.get(self.url + "/api.php", params=params)
         return result.json()
+
+    def wb_getentities(self, entityid="",language = "en"):
+        # action=wbgetentities&format=json&ids=P35
+
+        params = {'action': 'wbgetentities', 'format': 'json',
+                  'language': language, 'ids': entityid}
+
+        result = requests.get(self.url + "/api.php", params=params)
+        return result.json()
