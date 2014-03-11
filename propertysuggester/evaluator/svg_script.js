@@ -1,6 +1,8 @@
 
+function execute_it(inputfilename){
+var svg1 = d3.select("svg") .remove();
 var margin = {top: 40, right: 20, bottom: 30, left: 40},
-    width = 960 - margin.left - margin.right,
+    width = 1300 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
 var formatPercent = d3.format(".0%");
@@ -34,11 +36,13 @@ var svg = d3.select("body").append("svg")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 svg.call(tip);
-
-d3.tsv("1000_output.tsv", type, function(error, data) {
+if (inputfilename==""){
+  inputfilename = "1000_output.csv";
+}
+d3.csv(inputfilename, type, function(error, data) {
   x.domain(data.map(function(d) { return d.rank; }));
-  y.domain([0, d3.max(data, function(d) { return d.amount; })]);
-
+  y.domain([0, 600]);
+//d3.max(data, function(d) { return d.amount; })])
   svg.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
@@ -65,9 +69,11 @@ d3.tsv("1000_output.tsv", type, function(error, data) {
       .on('mouseover', tip.show)
       .on('mouseout', tip.hide)
 
-});
+});}
 
 function type(d) {
   d.amount = +d.amount;
   return d;
 }
+
+execute_it("");
