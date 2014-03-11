@@ -14,17 +14,15 @@ with open("file.csv", "r") as f:
 from collections import defaultdict
 
 import random
-import json
-import urllib2
 import csv
 from propertysuggester.parser import CsvReader
 from propertysuggester.utils.WikidataApi import WikidataApi
 
-class Evaluator():
+class SearchResultEvaluation():
     def __init__(self):
-        self.inputfile = ""
+        self.inputfile = "Wikidata-20131129161111.csv"
         self.outputfile = "_output.csv"
-        self.samplesize = 10
+        self.samplesize = 100
         self.itemsBeyond50Count = 0
         self.itemsOnFirst50PositionSum = 0
         self.itemsOnFirst50Count = 0
@@ -52,7 +50,7 @@ class Evaluator():
 
 
     def write_output_file(self, ranking_amounts):
-        with open("_output.tsv", 'wb') as csvfile:
+        with open(self.output_file, 'wb') as csvfile:
             rankingwriter = csv.writer(csvfile, delimiter='\t', quotechar='|', quoting=csv.QUOTE_MINIMAL)
             rankingwriter.writerow(["rank", "amount"])
             for key, value in self.ranking_amounts.iteritems():
@@ -61,8 +59,7 @@ class Evaluator():
 
 
     def determine_ranks(self, current_item_number, foundEntities):
-        with open("Wikidata-20131129161111.csv", "r") as f:
-        #with open("Wikidata-20131129161111.xml.gz.csv", "r") as f:
+        with open(self.inputfile, "r") as f:
             for entity in CsvReader.read_csv(f):
                 if not foundEntities >= self.samplesize:
                     if current_item_number in self.ids and len(entity.claims) > 1:
@@ -74,7 +71,6 @@ class Evaluator():
                         suggestions = api.wbs_getsuggestions(properties=removed_list, limit=50, cont=0)
                         rank = 0
                         self.appearsWithinFirst50 = False
-
                         for suggestion in suggestions["search"]:
                             rank += 1
                             if int(propertyIds[-1]) == int(suggestion["id"][1:]):
@@ -114,5 +110,7 @@ class Evaluator():
 
 
 
-x = Evaluator()
+x = SearchResultEvaluation()
 x.evaluate()
+
+#importfile = "Wikidata-20131129161111.xml.gz.csv"
