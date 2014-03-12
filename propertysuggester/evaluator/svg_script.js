@@ -39,9 +39,26 @@ svg.call(tip);
 if (inputfilename==""){
   inputfilename = "1000_output.csv";
 }
+
+//maximum
+
+var maxi = 0;
+d3.csv("1000_output.csv", type, function(error, data) {
+  maxi = d3.max(data, function(d) { return d.amount; });
+  
+
+});
+d3.csv("1000_output_letter.csv", type, function(error, data) {
+  maxi = Math.max(d3.max(data, function(d) { return d.amount; }),maxi);
+  maxi = Math.ceil(maxi/100) * 100
+});
+
+
+
 d3.csv(inputfilename, type, function(error, data) {
+
   x.domain(data.map(function(d) { return d.rank; }));
-  y.domain([0, 600]);
+  y.domain([0, maxi]);
 //d3.max(data, function(d) { return d.amount; })])
   svg.append("g")
       .attr("class", "x axis")
