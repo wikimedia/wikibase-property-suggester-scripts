@@ -1,11 +1,8 @@
-import CsvReader
-import random
 import argparse
-from WikidataApi import WikidataApi
-from CompressedFileType import CompressedFileType
-
-import json
-import urllib2
+from propertysuggester.parser import CsvReader
+from propertysuggester.utils.datatypes import Entity, Claim
+from propertysuggester.utils.CompressedFileType import CompressedFileType
+from propertysuggester.utils.WikidataApi import WikidataApi
 
 pathToWiki = 'http://suggester.wmflabs.org/wiki'
 threshold = 0.3 # threshold that suggestions in the results have to pass
