@@ -13,7 +13,6 @@ from propertysuggester.utils.CompressedFileType import CompressedFileType
 minNumberEntities = 50
 MaxNumberValues = 30
 
-
 def computeTable(generator):
 	i = 0
 	table = {}
@@ -24,14 +23,14 @@ def computeTable(generator):
 		if i%750000 == 0:
 			print str(i/75000.0)+"%"
 		for claim in entity.claims:
-			if claim.datatype == "wikibase-entityid":       #classes are represented by wikibase-entities
+			if claim.datatype == "wikibase-entityid":   #classes are represented by wikibase-entities
 				pid = claim.property_id
 				if not pid in table:
 					table[pid] = defaultdict(int)
-				if not pid in entities[entity.title]:                                              
-					table[pid]["appearances"] += 1          #count occurences for each property
+				if not pid in entities[entity.title]:  
+					table[pid]["appearances"] += 1   #count occurences for each property
 					entities[entity.title].append(pid)
-				if not claim.value in table[pid]:           #for each property keep track of occuring values and entities described by specific property,value combinations
+				if not claim.value in table[pid]:  #for each property keep track of occuring values and entities described by specific property,value combinations
 					table[pid][claim.value] = []
 				table[pid][claim.value].append(entity.title) #specific (entity, property, value) - triple can only occur once - so no need to check for existance here
 	return table, entities
@@ -51,11 +50,11 @@ def findClassifyingProperties(table, entities, numberProperties, numberValues):
 			if len(items)>100:
 				classDict[pid][value] = defaultdict(float)
 				for item in items:
-					for prop in entities[item]:                      
+					for prop in entities[item]: 
 						if not prop in classDict[pid][value]:
 							countAllPropEntries += 1
 						classDict[pid][value][prop] += 1/float(len(items)) #compute normalized frequency for each property in each class
-	print countAllPropEntries                  
+	print "Number of Property Entries:" countAllPropEntries  
 
 	print "compute inverse class-frequency"
 
@@ -65,7 +64,7 @@ def findClassifyingProperties(table, entities, numberProperties, numberValues):
 		countProps = 0
 		classifierRating = 0
 		for value, propertyDict in valueDict.iteritems():
-			for prop, tf in propertyDict.iteritems():                                         #compute tfid for each property in each class
+			for prop, tf in propertyDict.iteritems(): #compute tfid for each property in each class
 				countProps += 1
 				progress += 1
 				if countProps%500 == 0:
@@ -75,26 +74,10 @@ def findClassifyingProperties(table, entities, numberProperties, numberValues):
 					if prop in propertyDict:
 						classesWithProp +=1
 				classifierRating += tf * math.log(len(valueDict)/classesWithProp)  
-		classifierRating = classifierRating/float(countProps)                              #average tfidf
+		classifierRating = classifierRating/float(countProps) #average tfidf
 		overallRanking.append((pid, classifierRating))
 	overallRanking = sorted(overallRanking, key = lambda (pid, averageTfIdf): averageTfIdf, reverse = True)
-	return overallRanking      
-
-def computeCommonProperties(table, ItemList, minFrequency): #creates List of properties that occur with more than minFrequency in ItemList
-	itemCount = len(ItemList)
-	propertyDic = {}
-	for item in ItemList:
-		for prop in table[item]:
-			if not prop[0] in propertyDic:
-				propertyDic[prop[0]] = defaultdict(int)
-			propertyDic[prop[0]]["appearances"] += 1
-	commonProperties = []
-	for prop in propertyDic:
-		if((propertyDic[prop]["appearances"]/float(itemCount))>minFrequency):
-			commonProperties.append(prop)
-	return commonProperties
-
-#problem: certain items just have more attributes or much less! (Commons Category) when a certain property value combination occurs - therefore lower confidence level for finding general common properties
+	return overallRanking   
 
 def findPropertiesWithLimitedValueSet(table, maxNumberValues, minNumberEntities):
 	propertyDict = {}
