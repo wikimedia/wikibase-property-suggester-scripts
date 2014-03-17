@@ -13,6 +13,8 @@ from propertysuggester.utils.CompressedFileType import CompressedFileType
 minNumberEntities = 50
 MaxNumberValues = 30
 
+deprecatedProperties = [107, 76, 71, 77, 70, 57, 74, 168]
+
 def computeTable(generator):
 	i = 0
 	table = {}
@@ -23,8 +25,8 @@ def computeTable(generator):
 		if i%750000 == 0:
 			print str(i/75000.0)+"%"
 		for claim in entity.claims:
-			if claim.datatype == "wikibase-entityid":   #classes are represented by wikibase-entities
-				pid = claim.property_id
+			pid = claim.property_id
+			if claim.datatype == "wikibase-entityid" and pid not in deprecatedProperties:   #classes are represented by wikibase-entities
 				if not pid in table:
 					table[pid] = defaultdict(int)
 				if not pid in entities[entity.title]:  
@@ -47,14 +49,14 @@ def findClassifyingProperties(table, entities, numberProperties, numberValues):
 	for pid, valueDict in mostFrequentlyUsed.iteritems():
 		classDict[pid] = {}
 		for value, items in valueDict.iteritems():
-			if len(items)>100:
+			if len(items)>250:
 				classDict[pid][value] = defaultdict(float)
 				for item in items:
 					for prop in entities[item]: 
 						if not prop in classDict[pid][value]:
 							countAllPropEntries += 1
 						classDict[pid][value][prop] += 1/float(len(items)) #compute normalized frequency for each property in each class
-	print "Number of Property Entries:" countAllPropEntries  
+	print "Number of Property Entries:" + str(countAllPropEntries)  
 
 	print "compute inverse class-frequency"
 
@@ -73,9 +75,10 @@ def findClassifyingProperties(table, entities, numberProperties, numberValues):
 				for value, propertyDict in valueDict.iteritems(): 
 					if prop in propertyDict:
 						classesWithProp +=1
-				classifierRating += tf * math.log(len(valueDict)/classesWithProp)  
-		classifierRating = classifierRating/float(countProps) #average tfidf
-		overallRanking.append((pid, classifierRating))
+				classifierRating += tf * math.log(len(valueDict)/classesWithProp) 
+		if countProps > 50:                                      # and pid not in deprecatedProperties: 
+			classifierRating = classifierRating/float(countProps) #average tfidf
+			overallRanking.append((pid, classifierRating))
 	overallRanking = sorted(overallRanking, key = lambda (pid, averageTfIdf): averageTfIdf, reverse = True)
 	return overallRanking   
 
@@ -100,6 +103,6 @@ if __name__ == "__main__":
 	print "finding properties with limited ValueSets"
 	findPropertiesWithLimitedValueSet(table, MaxNumberValues, minNumberEntities)
 	print "finding classifying properties"
-	result = findClassifyingProperties(table, entities, 10, 20)
+	result = findClassifyingProperties(table, entities, 40, 20)
 	print result
 	print "success"
