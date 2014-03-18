@@ -8,7 +8,7 @@ pathToWiki = 'http://suggester.wmflabs.org/wiki'
 threshold = 0.3 # threshold that suggestions in the results have to pass
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="this program generates a Edit-Item-Suggestions")
+    parser = argparse.ArgumentParser(description="this program generates a Edit-Item-Suggestions-List")
     parser.add_argument("input", help="The CSV input file (wikidata triple)", type=CompressedFileType('r'))
     parser.add_argument("offset", nargs='?', default="0", help="offset", type=int)
     parser.add_argument("limit", nargs='?', default="1000", help="limit", type=int)
