@@ -9,7 +9,7 @@ from propertysuggester.utils.CompressedFileType import CompressedFileType
 
 numberProperties = 40 # Number of properties analyzed to find classifiers (e.g if this value is set to 40, the 40 most frequently used properties are analyzed)
 numberValues = 20 # Number of analyzid values per property
-minClassSize = 250 # Only classes above this size are considered relevant in analysis
+minClassSize = 400 # Only classes above this size are considered relevant in analysis
 minProperties = 50 # Only Properties that are used in connection with at least 50 other properties are considered in analysis
 
 deprecatedProperties = [107, 76, 71, 77, 70, 57, 74, 168] # List of deprecated Properties that are ignored in analysis
