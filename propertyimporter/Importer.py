@@ -11,7 +11,7 @@ class Importer:
 
         inApi = WikidataApi(inApiUrl)
         outApi = WikidataApi(outApiUrl)
-        skippedProps = [23,42]
+        skippedProps = [23, 42, 1337, 9001, 31337, 720101010]
 
         for propertyId in xrange(2, 2000):
             propertyJson = inApi.getEntityById(propertyId)
