@@ -6,16 +6,19 @@ import time
 from propertysuggester.utils.WikidataApi import WikidataApi
 
 class Importer:
+
     def importProperties(self, inApiUrl, outApiUrl):
+
         inApi = WikidataApi(inApiUrl)
         outApi = WikidataApi(outApiUrl)
+        skippedProps = [23,42]
 
         for propertyId in xrange(2, 2000):
             propertyJson = inApi.getEntityById(propertyId)
             print propertyJson
-            if propertyJson != None and False :
+            if propertyJson != None:
                 outApi.newPropertyByData(self.buildData(propertyJson))
-            else :
+            elif propertyId not in skippedProps:
                 dummy = '{"labels":{"en-gb":{"language":"en-gb","value":"dummyProperty'+str(propertyId)+'"}},"descriptions":{"en-gb":{"language":"en-gb","value":"Propertydescription"}},"datatype":"string"}'
                 outApi.newPropertyByData(json.loads(dummy))
                 #outApi.deleteById(propertyId)
