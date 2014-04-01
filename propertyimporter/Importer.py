@@ -7,20 +7,22 @@ from propertysuggester.utils.WikidataApi import WikidataApi
 
 class Importer:
 
-    def importProperties(self, inApiUrl, outApiUrl):
+    def importProperties(self, sourceApiUrl, destinationApiUrl):
 
-        inApi = WikidataApi(inApiUrl)
-        outApi = WikidataApi(outApiUrl)
-        skippedProps = [23, 42, 1337, 9001, 31337, 720101010]
+        sourceApi = WikidataApi(sourceApiUrl)
+        destinationApi = WikidataApi(destinationApiUrl)
 
         for propertyId in xrange(2, 2000):
-            propertyJson = inApi.getEntityById(propertyId)
-            print propertyJson
-            if propertyJson != None:
-                outApi.newPropertyByData(self.buildData(propertyJson))
-            elif propertyId not in skippedProps:
+            propertyJsonSource = sourceApi.getEntityById(propertyId)
+            propertyJsonDestination = destinationApi.getEntityById(propertyId)
+            if propertyJsonSource != None:
+                if propertyJsonDestination == None:
+                    destinationApi.createEnity(self.buildData(propertyJsonSource), "property")
+                else:
+                    destinationApi.overiteEntity(self.buildData(propertyJsonSource), "P"+str(propertyId))
+            elif propertyId:
                 dummy = '{"labels":{"en-gb":{"language":"en-gb","value":"dummyProperty'+str(propertyId)+'"}},"descriptions":{"en-gb":{"language":"en-gb","value":"Propertydescription"}},"datatype":"string"}'
-                outApi.newPropertyByData(json.loads(dummy))
+                destinationApi.createEntity(json.loads(dummy), "property")
                 #outApi.deleteById(propertyId)
         
     

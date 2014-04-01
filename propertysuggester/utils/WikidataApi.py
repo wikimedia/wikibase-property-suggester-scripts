@@ -45,29 +45,38 @@ class WikidataApi:
     def obtainEditToken(self):
         self.editToken = "+\\"
 
-    def _wbeditentity(self="", eid="", site="", title="", baserevid="", summary="", bot="", data="", clear="", new=""):
+    def createEntity(self, data="", new=""):
+
         if self.editToken == "":
             self.obtainEditToken()
 
         params = {
             'action' : 'wbeditentity',
-#            "id" : eid,
- #           "site" : site,
-  #          "title" : title,
-   #         "baserevid" : baserevid,
-    #        "summary" : summary,
-     #       "bot" : bot,
             "data" : json.dumps(data),
-     #       "clear" : clear,
             "new" : new,
             "token" : self.editToken,
             "format" : "json" }
+
         result = requests.post(self.url, data=params)
         self._checkResponseStatus(result)
         return result.json()
 
-    def newPropertyByData(self, data):
-        return self._wbeditentity(data=data, new="property")
+    def overiteEntity(self, data, eid):
+
+        if self.editToken == "":
+            self.obtainEditToken()
+
+        params = {
+            'action' : 'wbeditentity',
+            'id' : eid,
+            "data" : json.dumps(data),
+            "clear" : True,
+            "token" : self.editToken,
+            "format" : "json" }
+
+        result = requests.post(self.url, data=params)
+        self._checkResponseStatus(result)
+        return result.json()
 
     def _wbgetentities(self, ids="", sites="", titles="", props="", sort="", order="", languages="", languagefallback="", normalize="", ungroupedlist=""):
 
