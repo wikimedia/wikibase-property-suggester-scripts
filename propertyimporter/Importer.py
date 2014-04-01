@@ -13,13 +13,15 @@ class Importer:
         destinationApi = WikidataApi(destinationApiUrl)
 
         for propertyId in xrange(2, 2000):
+            if propertyId % 10 == 0:
+                print str(propertyId) + "/2000"
             propertyJsonSource = sourceApi.getEntityById(propertyId)
             propertyJsonDestination = destinationApi.getEntityById(propertyId)
             if propertyJsonSource != None:
                 if propertyJsonDestination == None:
                     destinationApi.createEnity(self.buildData(propertyJsonSource), "property")
                 else:
-                    destinationApi.overiteEntity(self.buildData(propertyJsonSource), "P"+str(propertyId))
+                    destinationApi.overwriteEntity(self.buildData(propertyJsonSource), "P{0}".format(propertyId))
             else:
                 dummy = '{"labels":{"en-gb":{"language":"en-gb","value":"dummyProperty'+str(propertyId)+'"}},"descriptions":{"en-gb":{"language":"en-gb","value":"Propertydescription"}},"datatype":"string"}'
                 destinationApi.createEntity(json.loads(dummy), "property")

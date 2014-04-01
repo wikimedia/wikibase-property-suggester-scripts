@@ -61,7 +61,7 @@ class WikidataApi:
         self._checkResponseStatus(result)
         return result.json()
 
-    def overiteEntity(self, data, eid):
+    def overwriteEntity(self, data, eid):
 
         if self.editToken == "":
             self.obtainEditToken()
@@ -78,33 +78,15 @@ class WikidataApi:
         self._checkResponseStatus(result)
         return result.json()
 
-    def _wbgetentities(self, ids="", sites="", titles="", props="", sort="", order="", languages="", languagefallback="", normalize="", ungroupedlist=""):
+    def getEntityById(self, pid):
 
         params = {
             "action" : "wbgetentities",
-            "ids" : ids, 
- #           "sites" : sites, 
-  #          "titles" : titles, 
-   #         "props" : props, 
-   #         "sort" : sort, 
-    #        "order" : order, 
-    #        "languages" : languages, 
-    #        "languagefallback" : languagefallback, 
-     #      "normalize" : normalize, 
-    #        "ungroupedlist" : ungroupedlist,
+            "ids" : "P{0}".format(pid),
             "format" : "json"}
-
-        print params
 
         result = requests.post(self.url, data=params)
         self._checkResponseStatus(result)
-        
+
         return result.json()
 
-    def getEntityById(self, pid):
-        memwaste = "P{0}".format(pid)
-        result = self._wbgetentities(ids=memwaste)
-        if "-1" in result["entities"]:
-            return None
-        else:
-            return result["entities"].values()[0]
