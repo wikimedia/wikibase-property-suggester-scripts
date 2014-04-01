@@ -1,8 +1,8 @@
 import requests
 import json
 
-class WikidataApi:
 
+class WikidataApi:
     # token is here http://localhost/devrepo/core/api.php?action=query&prop=info&intoken=edit&generator=allpages&format=json
 
     def __init__(self, url):
@@ -38,12 +38,21 @@ class WikidataApi:
         self._checkResponseStatus(result)
         return result.json()
 
+
     def _checkResponseStatus(self, response):
         if response.status_code != 200:
             raise Exception("invalid response", response)
+        jsonResponse = response.json()
+        if not "success" in jsonResponse:
+            errormsg = ""
+            if "error" in jsonResponse:
+                errormsg += str(jsonResponse["error"])
+            raise Exception("api call failed", response, errormsg)
+
 
     def obtainEditToken(self):
         self.editToken = "+\\"
+
 
     def createEntity(self, data="", new=""):
 
@@ -51,16 +60,16 @@ class WikidataApi:
             self.obtainEditToken()
 
         params = {
-            'action' : 'wbeditentity',
-            "data" : json.dumps(data),
-            "new" : new,
-            "token" : self.editToken,
-            "format" : "json" }
+            'action': 'wbeditentity',
+            "data": json.dumps(data),
+            "new": new,
+            "token": self.editToken,
+            "format": "json"}
 
         result = requests.post(self.url, data=params)
         self._checkResponseStatus(result)
-        print result.json()
         return result.json()
+
 
     def overwriteEntity(self, data, eid):
 
@@ -68,23 +77,24 @@ class WikidataApi:
             self.obtainEditToken()
 
         params = {
-            'action' : 'wbeditentity',
-            'id' : eid,
-            "data" : json.dumps(data),
-            "clear" : True,
-            "token" : self.editToken,
-            "format" : "json" }
+            'action': 'wbeditentity',
+            'id': "P{0}".format(eid),
+            "data": json.dumps(data),
+            "clear": True,
+            "token": self.editToken,
+            "format": "json"}
 
         result = requests.post(self.url, data=params)
         self._checkResponseStatus(result)
         return result.json()
 
+
     def getEntityById(self, pid):
 
         params = {
-            "action" : "wbgetentities",
-            "ids" : "P{0}".format(pid),
-            "format" : "json"}
+            "action": "wbgetentities",
+            "ids": "P{0}".format(pid),
+            "format": "json"}
 
         result = requests.post(self.url, data=params)
         self._checkResponseStatus(result)
