@@ -17,8 +17,8 @@ class Importer:
                 print str(propertyId) + "/2000"
             propertyJsonSource = sourceApi.getEntityById(propertyId)
             propertyJsonDestination = destinationApi.getEntityById(propertyId)
-            if propertyJsonSource != None:
-                if propertyJsonDestination == None:
+            if propertyJsonSource is not None:
+                if propertyJsonDestination is None:
                     destinationApi.createEnity(self.buildData(propertyJsonSource), "property")
                 else:
                     destinationApi.overwriteEntity(self.buildData(propertyJsonSource), "P{0}".format(propertyId))

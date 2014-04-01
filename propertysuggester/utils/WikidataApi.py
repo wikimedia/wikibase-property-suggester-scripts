@@ -59,6 +59,7 @@ class WikidataApi:
 
         result = requests.post(self.url, data=params)
         self._checkResponseStatus(result)
+        print result.json()
         return result.json()
 
     def overwriteEntity(self, data, eid):
@@ -88,5 +89,11 @@ class WikidataApi:
         result = requests.post(self.url, data=params)
         self._checkResponseStatus(result)
 
-        return result.json()
+        resultJson = result.json()
+
+        if "-1" in resultJson["entities"]:
+            return None
+        else:
+            return resultJson["entities"].values()[0]
+
 
