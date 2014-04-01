@@ -20,7 +20,7 @@ class Importer:
                     destinationApi.createEnity(self.buildData(propertyJsonSource), "property")
                 else:
                     destinationApi.overiteEntity(self.buildData(propertyJsonSource), "P"+str(propertyId))
-            elif propertyId:
+            else:
                 dummy = '{"labels":{"en-gb":{"language":"en-gb","value":"dummyProperty'+str(propertyId)+'"}},"descriptions":{"en-gb":{"language":"en-gb","value":"Propertydescription"}},"datatype":"string"}'
                 destinationApi.createEntity(json.loads(dummy), "property")
                 #outApi.deleteById(propertyId)
