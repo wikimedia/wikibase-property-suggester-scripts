@@ -4,7 +4,7 @@ from testtools.matchers import *
 from propertysuggester.utils.WikidataApi import WikidataApi
 
 
-@skip("the test instance is currently not working")
+#@skip("the test instance is currently not working")
 class WikiDataApiTest(TestCase):
     def setUp(self):
         TestCase.setUp(self)
@@ -24,3 +24,4 @@ class WikiDataApiTest(TestCase):
         self.assertThat(result["success"], Equals(1))
         self.assertThat(result["search-continue"], Equals(7))
         self.assertThat(result["search"], HasLength(2))
+
