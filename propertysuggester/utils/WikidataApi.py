@@ -35,18 +35,18 @@ class WikidataApi:
             params['properties'] = ','.join(map(str, properties))
 
         result = requests.get(self.url, params=params)
-        self._checkResponseStatus(result)
+        self._check_response_status(result)
         return result.json()
 
 
-    def _checkResponseStatus(self, response):
+    def _check_response_status(self, response):
         if response.status_code != 200:
-            raise Exception("invalid response", response)
-        jsonResponse = response.json()
-        if not "success" in jsonResponse:
+            raise Exception("invalid response", response, response.text)
+        json_response = response.json()
+        if not "success" in json_response:
             errormsg = ""
-            if "error" in jsonResponse:
-                errormsg += str(jsonResponse["error"])
+            if "error" in json_response:
+                errormsg += str(json_response["error"])
             raise Exception("api call failed", response, errormsg)
 
 
@@ -54,7 +54,7 @@ class WikidataApi:
         self.editToken = "+\\"
 
 
-    def createEntity(self, data="", new=""):
+    def create_entity(self, data="", new=""):
 
         if self.editToken == "":
             self.obtainEditToken()
@@ -67,11 +67,11 @@ class WikidataApi:
             "format": "json"}
 
         result = requests.post(self.url, data=params)
-        self._checkResponseStatus(result)
+        self._check_response_status(result)
         return result.json()
 
 
-    def overwriteEntity(self, data, eid):
+    def overwrite_entity(self, data, eid):
 
         if self.editToken == "":
             self.obtainEditToken()
@@ -85,11 +85,11 @@ class WikidataApi:
             "format": "json"}
 
         result = requests.post(self.url, data=params)
-        self._checkResponseStatus(result)
+        self._check_response_status(result)
         return result.json()
 
 
-    def getEntityById(self, pid):
+    def get_entity_by_id(self, pid):
 
         params = {
             "action": "wbgetentities",
@@ -97,7 +97,7 @@ class WikidataApi:
             "format": "json"}
 
         result = requests.post(self.url, data=params)
-        self._checkResponseStatus(result)
+        self._check_response_status(result)
 
         resultJson = result.json()
 
