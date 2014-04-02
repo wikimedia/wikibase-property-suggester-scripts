@@ -7,10 +7,10 @@ class WikidataApi:
 
     def __init__(self, url):
         self.url = url + "/api.php"
-        self.editToken = ""
+        self._editToken = None
 
-    def getEditToken():
-        pass
+    def _get_edit_token(self):
+        return "+\\"  # dummy implementation!
 
     def wbs_getsuggestions(self, entity="", properties=(), limit=10, cont=0, language='en', search=''):
         """
@@ -51,19 +51,17 @@ class WikidataApi:
 
 
     def obtainEditToken(self):
-        self.editToken = "+\\"
+        if not self._editToken:
+            self._editToken = self._get_edit_token()
+        return self._editToken
 
 
     def create_entity(self, data="", new=""):
-
-        if self.editToken == "":
-            self.obtainEditToken()
-
         params = {
             'action': 'wbeditentity',
             "data": json.dumps(data),
             "new": new,
-            "token": self.editToken,
+            "token": self.obtainEditToken(),
             "format": "json"}
 
         result = requests.post(self.url, data=params)
@@ -73,15 +71,12 @@ class WikidataApi:
 
     def overwrite_entity(self, data, eid):
 
-        if self.editToken == "":
-            self.obtainEditToken()
-
         params = {
             'action': 'wbeditentity',
             'id': "P{0}".format(eid),
             "data": json.dumps(data),
             "clear": True,
-            "token": self.editToken,
+            "token": self.obtainEditToken(),
             "format": "json"}
 
         result = requests.post(self.url, data=params)
@@ -96,7 +91,7 @@ class WikidataApi:
             "ids": "P{0}".format(pid),
             "format": "json"}
 
-        result = requests.post(self.url, data=params)
+        result = requests.get(self.url, params=params)
         self._check_response_status(result)
 
         resultJson = result.json()

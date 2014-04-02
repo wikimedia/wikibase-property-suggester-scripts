@@ -10,7 +10,7 @@ if __name__ == "__main__":
                         default="http://www.wikidata.org/w/", nargs="?", type=str)
     parser.add_argument("destinationUrl", help="The url of the mediawiki to paste to", type=str)
     parser.add_argument("--start", help="At which id to start (default=1)", nargs="?", type=int, default=1)
-    parser.add_argument("--end", help="At which id to end (default=1200)", nargs="?", type=int, default=1200)
+    parser.add_argument("--end", help="At which id to end (default=1200)", nargs="?", type=int, default=1400)
     args = parser.parse_args()
 
 
