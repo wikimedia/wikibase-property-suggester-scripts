@@ -84,11 +84,11 @@ class WikidataApi:
         return result.json()
 
 
-    def get_entity_by_id(self, pid):
+    def get_entity_by_id(self, eid):
 
         params = {
             "action": "wbgetentities",
-            "ids": "P{0}".format(pid),
+            "ids": eid,
             "format": "json"}
 
         result = requests.get(self.url, params=params)

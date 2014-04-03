@@ -21,8 +21,8 @@ class Importer:
             else:
                 print ".",
 
-            source_json = self.source_api.get_entity_by_id(propertyId)
-            destination_json = self.destination_api.get_entity_by_id(propertyId)
+            source_json = self.source_api.get_entity_by_id("P{0}".format(propertyId))
+            destination_json = self.destination_api.get_entity_by_id("P{0}".format(propertyId))
             if source_json:
                 if not destination_json:
                     self.destination_api.create_entity(self.build_data(source_json), "property")
