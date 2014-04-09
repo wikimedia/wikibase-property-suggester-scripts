@@ -13,7 +13,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     start = time.time()
-    print "extractnig statements"
+    print "extracting statements"
 
     analyzer = StatementWithItemValueAnalyzer()
     analyzer.analyze(args.input, args.prefix)

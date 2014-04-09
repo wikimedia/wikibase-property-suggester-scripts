@@ -1,19 +1,20 @@
 
 class StatementWithItemValueFile:
     def __init__(self, fileName, mode):
-        self.mode = mode 
+    	self.mode = mode
+    	self.fileName = fileName
         if mode == "write":
-            m = "w"
+            self.stream = open(fileName, "w")
         elif mode == "read":
-            m = "r"
+            self.stream = None
         else:
             raise Exception("use 'write' or 'read'")
-        
-        self.stream = open(fileName, m)
         
     def statements(self):
         if self.mode != "read":
             raise Exception("use 'read' if you want to read")
+
+        self.stream = open(self.fileName, "r")
         for line in self.stream:
             yield line.strip().split(",")
 
@@ -21,14 +22,14 @@ class StatementWithItemValueFile:
         statements = self.statements()
 
         currentItemId = None
-        statementsOfCurrentItem = ()
+        statementsOfCurrentItem = []
 
         for statement in statements:
             if currentItemId != statement[0]:
                 if currentItemId != None:
                     yield statementsOfCurrentItem
                 currentItemId = statement[0]
-                statementsOfCurrentItem = ()
+                statementsOfCurrentItem = []
             statementsOfCurrentItem.append((statement[1],statement[2]))
 
     def writeStatement(self, itemId, propertyId, itemValueId):
