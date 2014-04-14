@@ -6,7 +6,7 @@ from propertysuggester.utils.datatypes import Entity, Claim
 from propertysuggester.utils.CompressedFileType import CompressedFileType
 from propertysuggester.utils.WikidataApi import WikidataApi
 
-wikiApi = WikidataApi("http://www.wikidata.org/w/")
+wikiApi = WikidataApi("https://www.wikidata.org/w/api.php")
 
 
 minNumberEntities = 10 #Only Property Value Combinations that occur in over (for example) 50 items are being considered

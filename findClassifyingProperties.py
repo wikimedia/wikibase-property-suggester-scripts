@@ -1,21 +1,19 @@
 import argparse
-import operator
 import math
 from collections import defaultdict
 import AnalysisDataGenerator
 from propertysuggester.parser import CsvReader
-from propertysuggester.utils.datatypes import Entity, Claim
 from propertysuggester.utils.CompressedFileType import CompressedFileType
 from propertysuggester.utils.WikidataApi import WikidataApi
 
 numberProperties = 40 # Number of properties analyzed to find classifiers (e.g if this value is set to 40, the 40 most frequently used properties are analyzed)
-numberValues = 20 # Number of analyzid values per property
+numberValues = 20 # Number of analyzed values per property
 minClassSize = 400 # Only classes above this size are considered relevant in analysis
 minProperties = 50 # Only Properties that are used in connection with at least 50 other properties are considered in analysis
 
 deprecatedProperties = [107, 76, 71, 77, 70, 57, 74, 168] # List of deprecated Properties that are ignored in analysis
 
-wikiApi = WikidataApi("http://www.wikidata.org/w/")
+wikiApi = WikidataApi("https://www.wikidata.org/w/api.php")
 
 def findClassifyingProperties(table, entities, numberProps = numberProperties, numberVals = numberValues, minClassMembers = minClassSize, minProps = minProperties):
 	"""

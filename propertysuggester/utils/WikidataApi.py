@@ -49,7 +49,6 @@ class WikidataApi:
             "format": "json"}
 
         result = requests.get(self.url, params=params)
-        self._check_response_status(result)
 
         resultjson = self._check_response_status(result)
         if "-1" in resultjson["entities"]:
@@ -87,7 +86,6 @@ class WikidataApi:
         """
         if response.status_code != 200:
             raise Exception("invalid response", response, response.text)
-
         json_response = response.json()
         if "success" not in json_response or json_response["success"] != 1:
             errormsg = ""
