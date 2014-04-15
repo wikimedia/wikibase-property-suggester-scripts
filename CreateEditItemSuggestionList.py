@@ -6,11 +6,13 @@ from propertysuggester.analyzer import TableEntitiesGenerator
 from collections import defaultdict
 
 maxSuggestions = 100 # threshold that suggestions in the results have to pass
-threshold = 0.3
+ProbabilityThreshold = 0.2
+minNumberStatements = 4
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="this program generates a Edit-Item-Suggestions-Table")
     parser.add_argument("input", help="The CSV input file (wikidata triple)", type=CompressedFileType('r'))
+    parser.add_argument("output", help="The CSV output file (database triples: pid;qid;probablilit)")
     args = parser.parse_args()
 
     print "computing table..."
@@ -24,23 +26,26 @@ if __name__ == "__main__":
     itemCount=0
 
     for entity in entities:
-        itemCount +=1
-        if itemCount%100000 == 0:
-            print str(itemCount)
         propList = list(entities[entity])
-        for pid1 in table:
-            if pid1 not in propList:
-                probabilitySum = 0
-                for pid2 in propList:
-                    probabilitySum += table[pid2][pid1]/float(table[pid2]["appearances"])
-                averageProbability = probabilitySum/len(propList)
-                if averageProbability > threshold:
-                    suggestionList = editItemSuggestionsTable[pid1]
-                    if len(suggestionList) < maxSuggestions:
-                        suggestionList.append((averageProbability, entity))
-                    elif min(suggestionList)[0] < averageProbability:
-                            suggestionList[suggestionList.index(min(suggestionList))] = (averageProbability, entity)
+        if len(propList) > minNumberStatements:
+            itemCount +=1
+            if itemCount%1000 == 0:
+                print str(itemCount)
+            for pid1 in tabel:
+                if pid1 not in propList:
+                    probabilitySum = 0
+                    for pid2 in propList:
+                        probabilitySum += table[pid2][pid1]/float(table[pid2]["appearances"])
+                    averageProbability = probabilitySum/len(propList)
+                    if averageProbability > ProbabilityThreshold:
+                        suggestionList = editItemSuggestionsTable[pid1]
+                        if len(suggestionList) < maxSuggestions:
+                            suggestionList.append((averageProbability, entity))
+                        elif min(suggestionList)[0] < averageProbability:
+                                suggestionList[suggestionList.index(min(suggestionList))] = (averageProbability, entity)
     #print editItemSuggestionsTable
+    outputFile = open(args.output, "w")
     for prop, entityList in editItemSuggestionsTable.iteritems():
         for probability, entity in entityList:
-            print str(prop) + ";" + entity + ";" + probability
+            outputFile.write(str(prop) + ";" + entity + ";" + str(probability) + "\n")
+    outputFile.close()
