@@ -2,11 +2,10 @@ import argparse
 from propertysuggester.parser import CsvReader
 from propertysuggester.utils.datatypes import Entity, Claim
 from propertysuggester.utils.CompressedFileType import CompressedFileType
-from propertysuggester.utils.WikidataApi import WikidataApi
 from propertysuggester.analyzer import TableEntitiesGenerator
 from collections import defaultdict
 
-threshold = 0.3 # threshold that suggestions in the results have to pass
+maxSuggestions = 100 # threshold that suggestions in the results have to pass
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="this program generates a Edit-Item-Suggestions-Table")
@@ -27,16 +26,18 @@ if __name__ == "__main__":
         itemCount +=1
         if itemCount%100000 == 0:
             print str(itemCount)
-        propList = entities[entity]
-        for pid1 in table:
+        propList = list(entities[entity])
+        #for pid1 in table:
+        for pid1 in [569]:
             if pid1 not in propList:
                 probabilitySum = 0
                 for pid2 in propList:
-                    probabilitySum += table[pid2][pid1]/table[pid2]["appearances"]
+                    probabilitySum += table[pid2][pid1]/float(table[pid2]["appearances"])
                 averageProbability = probabilitySum/len(propList)
-                if (averageProbability >= threshold):
-                    editItemSuggestionsTable[pid1].append(entity.title)
+                if (len(editItemSuggestionsTable[pid1]) < ):
+                    editItemSuggestionsTable[pid1].append((entity.title, averageProbability))
+    #print editItemSuggestionsTable
     for prop, entityList in editItemSuggestionsTable.iteritems():
-        print "\n"+ str(p)
+        print "\n"+ str(prop)
         print entityList
 
