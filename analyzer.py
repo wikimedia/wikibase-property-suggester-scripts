@@ -17,5 +17,5 @@ if __name__ == "__main__":
     print "computing table"
     t = MatrixGenerator.compute_table(CsvReader.read_csv(args.input))
     print "done - {0:.2f}s".format(time.time()-start)
-    print "writing to database"
+    print "writing csv file"
     CsvGenerator.create_pair_csv(t, args.output)

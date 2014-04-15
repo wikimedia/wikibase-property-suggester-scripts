@@ -29,7 +29,7 @@ class StatementWithItemValueAnalyzer:
 
         print "\n\n#step5: apply selection of relevant statements\n"
         avgStatementsPerGroup = numOfStatementPairs/len(statementPairGroups)
-        coverage = 20*avgStatementsPerGroup
+        coverage = 4*avgStatementsPerGroup
         relevantStatementPairGroups = defaultdict()
         self.applyThreshold(statementPairGroups, relevantStatementPairGroups, coverage)
         print "{0} of {1} statement pairs do show a sufficient coverage\n".format(len(relevantStatementPairGroups),len(statementPairGroups))
@@ -55,7 +55,7 @@ class StatementWithItemValueAnalyzer:
         # todo find adequate distribution
         avg = numOfStatements*1.0/numOfGorups
         # proportion = numOfStatements**-0.5
-        return avg * 65
+        return avg * 20
 
     def applyThreshold(self, inList, outList, threshold):
         for k, v in inList.items():

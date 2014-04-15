@@ -1,23 +1,22 @@
-/*sample query for vs_statement_pair_occurences usage*/
-
 SELECT 
-	/* s1Id, s1ValueId, po1.occurences as po1, s2Id, s2ValueId, po2.occurences as po2, rule.occurences, rule.occurences/po1.occurences */
-	rule.s2Id as propertyId,
-	s2ValueId as value, 
-	rule.occurences as coverage, 
-	( 1 - EXP(SUM(LOG(1- ( (rule.occurences*1.0/po.occurences) / (pair_occurence.probability ) ))) ) ) as probability
+	
+	rules.s2Id as propertyId,
+	rules.s2ValueId as value, 
+	( 1 - EXP(SUM(LOG(1- ( (rules.occurrences*1.0/property_value_occurrences.occurrences) / (property_property_occurrences.probability ) ))) ) ) as pr
 FROM 
-	vs_statement_pair_occurences as rule, vs_statement_occurences as po, wbs_propertypairs as pair_occurence
+	vs_statement_pair_occurrences as rules, vs_statement_occurrences as property_value_occurrences, wbs_propertypairs as property_property_occurrences
 WHERE
-	(s1Id, s1ValueId) IN	((106, 186360), (31,5)) /* Staatsangehörigkeit:Österreich, Gender:male, profession:physiker */
+	(s1Id, s1ValueId) IN	((31,5))
 	
-	AND pair_occurence.pid1 = s1Id
-	AND pair_occurence.pid2 = s2Id
+	AND property_property_occurrences.pid1 = s1Id
+	AND property_property_occurrences.pid2 = s2Id
 	 
-	AND po.propertyId = s1Id 
-	AND po.valueEntityId = s1ValueId
+	AND property_value_occurrences.propertyId = s1Id 
+	AND property_value_occurrences.valueEntityId = s1ValueId
 	
+	AND rules.s2Id = 509
 	
-GROUP BY rule.s2Id, rule.s2ValueId
-	/*
-ORDER BY probability desc*/
+GROUP BY rules.s2Id, rules.s2ValueId
+HAVING 
+	pr > 0.01
+ORDER BY pr desc
