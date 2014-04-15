@@ -6,6 +6,7 @@ from propertysuggester.analyzer import TableEntitiesGenerator
 from collections import defaultdict
 
 maxSuggestions = 100 # threshold that suggestions in the results have to pass
+threshold = 0.3
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="this program generates a Edit-Item-Suggestions-Table")
@@ -27,20 +28,19 @@ if __name__ == "__main__":
         if itemCount%100000 == 0:
             print str(itemCount)
         propList = list(entities[entity])
-        #for pid1 in table:
-        for pid1 in [569]:
+        for pid1 in table:
             if pid1 not in propList:
                 probabilitySum = 0
                 for pid2 in propList:
                     probabilitySum += table[pid2][pid1]/float(table[pid2]["appearances"])
                 averageProbability = probabilitySum/len(propList)
-                if len(editItemSuggestionsTable[pid1]) < maxSuggestions:
-                    editItemSuggestionsTable[pid1].append((averageProbability, entity))
-                else:
-                    if min(editItemSuggestionsTable[pid1])[0] < averageProbability:
-                        editItemSuggestionsTable[pid1][editItemSuggestionsTable.index(min(editItemSuggestionsTable[pid1]))] = (entity, averageProbability)
+                if averageProbability > threshold:
+                    suggestionList = editItemSuggestionsTable[pid1]
+                    if len(suggestionList) < maxSuggestions:
+                        suggestionList.append((averageProbability, entity))
+                    elif min(suggestionList)[0] < averageProbability:
+                            suggestionList[suggestionList.index(min(suggestionList))] = (averageProbability, entity)
     #print editItemSuggestionsTable
     for prop, entityList in editItemSuggestionsTable.iteritems():
-        print "\n"+ str(prop)
-        print entityList
-
+        for probability, entity in entityList:
+            print str(prop) + ";" + entity + ";" + probability
