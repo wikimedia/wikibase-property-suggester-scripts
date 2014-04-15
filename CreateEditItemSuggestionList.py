@@ -34,8 +34,11 @@ if __name__ == "__main__":
                 for pid2 in propList:
                     probabilitySum += table[pid2][pid1]/float(table[pid2]["appearances"])
                 averageProbability = probabilitySum/len(propList)
-                if (len(editItemSuggestionsTable[pid1]) < ):
-                    editItemSuggestionsTable[pid1].append((entity.title, averageProbability))
+                if len(editItemSuggestionsTable[pid1]) < maxSuggestions:
+                    editItemSuggestionsTable[pid1].append((averageProbability, entity))
+                else:
+                    if min(editItemSuggestionsTable[pid1])[0] < averageProbability:
+                        editItemSuggestionsTable[pid1][editItemSuggestionsTable.index(min(editItemSuggestionsTable[pid1]))] = (entity, averageProbability)
     #print editItemSuggestionsTable
     for prop, entityList in editItemSuggestionsTable.iteritems():
         print "\n"+ str(prop)
