@@ -3,40 +3,40 @@ from propertysuggester.parser import CsvReader
 from propertysuggester.utils.datatypes import Entity, Claim
 from propertysuggester.utils.CompressedFileType import CompressedFileType
 from propertysuggester.utils.WikidataApi import WikidataApi
+from propertysuggester.analyzer import TableEntitiesGenerator
+from collections import defaultdict
 
-pathToWiki = 'http://suggester.wmflabs.org/wiki'
 threshold = 0.3 # threshold that suggestions in the results have to pass
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="this program generates a Edit-Item-Suggestions-List")
+    parser = argparse.ArgumentParser(description="this program generates a Edit-Item-Suggestions-Table")
     parser.add_argument("input", help="The CSV input file (wikidata triple)", type=CompressedFileType('r'))
-    parser.add_argument("offset", nargs='?', default="0", help="offset", type=int)
-    parser.add_argument("limit", nargs='?', default="1000", help="limit", type=int)
-    parser.add_argument("properties", nargs='?', default="", help="comma seperated list of properties to be considered")
     args = parser.parse_args()
 
+    print "computing table..."
+
+    generator = CsvReader.read_csv(args.input)
+
+    table, entities = TableEntitiesGenerator.compute_table(generator)
+
+    editItemSuggestionsTable = defaultdict(list)
+
     itemCount=0
-    pidList = args.properties.split(",")
-    
-    for entity in CsvReader.read_csv(args.input):
+
+    for entity in entities:
         itemCount +=1
-        if itemCount%100 == 0:
+        if itemCount%100000 == 0:
             print str(itemCount)
-        if itemCount < args.offset:
-            continue
-        if itemCount > args.limit:
-            break
-        if entity.claims:
-            propertyIds = [claim.property_id for claim in entity.claims] #get ids from claims
-            api = WikidataApi(pathToWiki)
-            result = api.wbs_getsuggestions(properties=propertyIds, limit=50, cont=0)
-            suggestions = result["search"]
-            suggestIds = ""
-            for suggestion in suggestions:
-                if float(suggestion["correlation"]) > threshold:
-                    if args.properties == "" or (str(suggestion["id"][1:]) in pidList):
-                        suggestIds = suggestIds + " " + str(suggestion["id"]) 
-                else:
-                    if suggestIds != "":
-                        print 'http://www.wikidata.org/wiki'+'/Item:' + entity.title + suggestIds
-                    break;
+        propList = entities[entity]
+        for pid1 in table:
+            if pid1 not in propList:
+                probabilitySum = 0
+                for pid2 in propList:
+                    probabilitySum += table[pid2][pid1]/table[pid2]["appearances"]
+                averageProbability = probabilitySum/len(propList)
+                if (averageProbability >= threshold):
+                    editItemSuggestionsTable[pid1].append(entity.title)
+    for prop, entityList in editItemSuggestionsTable.iteritems():
+        print "\n"+ str(p)
+        print entityList
+
