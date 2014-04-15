@@ -31,7 +31,7 @@ if __name__ == "__main__":
             itemCount +=1
             if itemCount%1000 == 0:
                 print str(itemCount)
-            for pid1 in tabel:
+            for pid1 in table:
                 if pid1 not in propList:
                     probabilitySum = 0
                     for pid2 in propList:
