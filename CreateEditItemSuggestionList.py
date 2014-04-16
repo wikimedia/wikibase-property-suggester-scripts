@@ -5,7 +5,7 @@ from propertysuggester.utils.CompressedFileType import CompressedFileType
 from propertysuggester.analyzer import TableEntitiesGenerator
 from collections import defaultdict
 
-maxSuggestions = 100 # threshold that suggestions in the results have to pass
+maxSuggestions = 1000 # threshold that suggestions in the results have to pass
 ProbabilityThreshold = 0.2
 minNumberStatements = 4
 
@@ -47,5 +47,5 @@ if __name__ == "__main__":
     outputFile = open(args.output, "w")
     for prop, entityList in editItemSuggestionsTable.iteritems():
         for probability, entity in entityList:
-            outputFile.write(str(prop) + ";" + entity + ";" + str(probability) + "\n")
+            outputFile.write(str(prop) + "," + entity + "," + str(probability) + "\n")
     outputFile.close()
