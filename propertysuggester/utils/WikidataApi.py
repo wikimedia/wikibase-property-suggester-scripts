@@ -58,15 +58,14 @@ class WikidataApi:
 
     def get_labels_by_ids(self, IdList):
         listString = "|".join(IdList)
-        print listString
         params = {
             "action": "wbgetentities",
             "format": "json",
             "ids": listString,
             "props": "labels",
             "languages": "en"}
-        result = requests.get(self.url, params=params)
 
+        result = requests.get(self.url, params=params)
         resultjson = self._check_response_status(result)
         return resultjson["entities"].values()
 
