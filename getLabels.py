@@ -35,29 +35,23 @@ if __name__ == "__main__":
 
     table, entities = TableEntitiesGenerator.compute_table(generator)
 
-    """
-    resultList = getLabelsForIdList(["P31", "P19", "Q2"])
-    print resultList
-    """
-    Idlist = []
+    outputFile = open(args.output, "w")
+
+    print "get Labels for properties..."
+    IdList = []
     for pid in table:
-        Idlist.append("P"+str(pid))
+        IdList.append("P"+str(pid))
     resultList = getLabelsForIdList(IdList)
-    print resultList
-    """
-    print "finding property Labels"
-    propertyCount = 0
-    for pid in table:
-        propertyCount+=1
-        if propertyCount%100 == 0:
-            print propertyCount + " Properties processed"
-        outputFile.write(str(prop) +  "," + wikiApi.get_entity_by_id("P{0}".format(pid))["labels"]["en"]["value"] + "\n")
-    outputFile.write("\n Item-Labels: \n")
-    itemCount = 0
-    for qid in entities:
-        itemCount+=1
-        if itemCount%100 == 0:
-            print itemCount + " Items processed"
-        outputFile.write(qid[1:] +  "," + wikiApi.get_entity_by_id(qid)["labels"]["en"]["value"] + "\n")
+    for entityId, label in resultList:
+        outputFile.write(entityId + "," + label +"\n")
+
+    print "get labels for items..."
+    IdList = []
+    for entityId in entities:
+        IdList.append(entityId)
+    resultList = getLabelsForIdList(IdList)
+    for entityId, label in resultList:
+        outputFile.write(entityId + "," + label + "\n")
+
     outputFile.close()
-"""
+    
