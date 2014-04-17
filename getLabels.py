@@ -18,6 +18,8 @@ def getLabelsForIdList(idList):
         idList = idList[100:]
         resultList = wikiApi.get_labels_by_ids(partList)
         for res in resultList:
+            if res == "-1":
+                continue
             result.append((res["id"], res["labels"]["en"]["value"]))
     return result
 
