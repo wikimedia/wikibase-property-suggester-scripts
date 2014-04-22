@@ -17,14 +17,12 @@ class Importer:
         for numericId in xrange(self.start, self.end):
             if numericId % 10 == 0:
                 print "{0}/{1}".format(numericId, self.end)
-            else:
-                print ".",
             entityid = self.idtemplate.format(numericId)
 
             try:
                 self.clone_entity(entityid)
             except Exception, e:
-                logging.error("failed while cloning {0}".format(entityid), str(e))
+                logging.error("failed while cloning {0} {1}".format(entityid, str(e)))
 
     def clone_entity(self, entityid):
         source_json = self.source_api.get_entity_by_id(entityid)
@@ -32,19 +30,19 @@ class Importer:
         if source_json:
             if not destination_json:
                 self.destination_api.create_entity(self.build_data(source_json), self.type)
+                print "+",
             else:
                 self.destination_api.overwrite_entity(self.build_data(source_json), entityid)
+                print "u",
         else:
             dummy = {"labels": {"en-gb": {"language": "en-gb", "value": "dummy" + entityid}},
                      "descriptions": {"en-gb": {"language": "en-gb", "value": "Propertydescription"}},
                      "datatype": "string"}
             if not destination_json:
-                try:
-                    self.destination_api.create_entity(dummy, self.type)
-                except Exception, e:
-                    logging.warning("fail to create dummy {0}".format(entityid))
+                self.destination_api.create_entity(dummy, self.type)
             else:
                 self.destination_api.overwrite_entity(dummy, entityid)
+            print "d",
 
     def check_lengthconstrains(self, prop, entity_json):
         lengthconstrained = ["descriptions", "labels"]

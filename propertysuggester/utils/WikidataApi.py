@@ -49,7 +49,6 @@ class WikidataApi:
             "format": "json"}
 
         result = requests.get(self.url, params=params)
-        self._check_response_status(result)
 
         resultjson = self._check_response_status(result)
         if "-1" in resultjson["entities"]:
