@@ -6,7 +6,7 @@ SELECT
 FROM 
 	vs_statement_pair_occurrences as rules, vs_statement_occurrences as property_value_occurrences, wbs_propertypairs as property_property_occurrences
 WHERE
-	(s1Id, s1ValueId) IN	((31,5))
+	(s1Id, s1ValueId) IN	((31,5),(106, 12204))
 	
 	AND property_property_occurrences.pid1 = s1Id
 	AND property_property_occurrences.pid2 = s2Id

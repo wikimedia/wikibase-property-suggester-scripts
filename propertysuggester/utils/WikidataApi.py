@@ -1,33 +1,30 @@
+import collections
 import requests
-import json
+
 
 class WikidataApi:
-
-    # token is here http://localhost/devrepo/core/api.php?action=query&prop=info&intoken=edit&generator=allpages&format=json
-
     def __init__(self, url):
-        self.url = url + "/api.php"
-        self.editToken = ""
+        self.url = url
 
-    def getEditToken():
-        pass
-
-    def wbs_getsuggestions(self, entity="", properties=(), limit=10, cont=0, language='en', search=''):
+    def wbs_getsuggestions(self, entity=None, properties=None, limit=10, cont=0, language='en', search=''):
         """
-        @rtype : dict
-        @type entity: str
-        @type properties: tuple[int] or list[int]
+        @type entity: str or None
+        @type properties: collections.Iterable[int] or None
         @type limit: int
         @type cont: int
         @type language: str
         @type search: str
+        @rtype : dict
         """
         if (entity and properties) or (not entity and not properties):
             raise AttributeError("provide either a entity or properties")
 
-        params = {'action': 'wbsgetsuggestions', 'format': 'json',
-                  'limit': limit, 'continue': cont,
-                  'language': language, 'search': search}
+        params = {'action': 'wbsgetsuggestions',
+                  'format': 'json',
+                  'limit': limit,
+                  'continue': cont,
+                  'language': language,
+                  'search': search}
 
         if entity:
             params['entity'] = entity
@@ -35,67 +32,21 @@ class WikidataApi:
             params['properties'] = ','.join(map(str, properties))
 
         result = requests.get(self.url, params=params)
-        self._checkResponseStatus(result)
-        return result.json()
+        return self._check_response_status(result)
 
-    def _checkResponseStatus(self, response):
+    def _check_response_status(self, response):
+        """
+        @type response: requests.Response
+        @rtype : dict the Json response
+        """
         if response.status_code != 200:
-            raise Exception("invalid response", response)
+            raise Exception("invalid response", response, response.text)
 
-    def obtainEditToken(self):
-        self.editToken = "+\\"
+        json_response = response.json()
+        if "success" not in json_response or json_response["success"] != 1:
+            errormsg = ""
+            if "error" in json_response:
+                errormsg += str(json_response["error"])
+            raise Exception("api call failed", response, errormsg)
 
-    def _wbeditentity(self="", eid="", site="", title="", baserevid="", summary="", bot="", data="", clear="", new=""):
-        if self.editToken == "":
-            self.obtainEditToken()
-
-        params = {
-            'action' : 'wbeditentity',
-#            "id" : eid,
- #           "site" : site,
-  #          "title" : title,
-   #         "baserevid" : baserevid,
-    #        "summary" : summary,
-     #       "bot" : bot,
-            "data" : json.dumps(data),
-     #       "clear" : clear,
-            "new" : new,
-            "token" : self.editToken,
-            "format" : "json" }
-        result = requests.post(self.url, data=params)
-        self._checkResponseStatus(result)
-        return result.json()
-
-    def newPropertyByData(self, data):
-        return self._wbeditentity(data=data, new="property")
-
-    def _wbgetentities(self, ids="", sites="", titles="", props="", sort="", order="", languages="", languagefallback="", normalize="", ungroupedlist=""):
-
-        params = {
-            "action" : "wbgetentities",
-            "ids" : ids, 
- #           "sites" : sites, 
-  #          "titles" : titles, 
-   #         "props" : props, 
-   #         "sort" : sort, 
-    #        "order" : order, 
-    #        "languages" : languages, 
-    #        "languagefallback" : languagefallback, 
-     #      "normalize" : normalize, 
-    #        "ungroupedlist" : ungroupedlist,
-            "format" : "json"}
-
-        print params
-
-        result = requests.post(self.url, data=params)
-        self._checkResponseStatus(result)
-        
-        return result.json()
-
-    def getEntityById(self, pid):
-        memwaste = "P{0}".format(pid)
-        result = self._wbgetentities(ids=memwaste)
-        if "-1" in result["entities"]:
-            return None
-        else:
-            return result["entities"].values()[0]
+        return json_response
