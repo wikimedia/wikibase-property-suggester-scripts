@@ -10,7 +10,6 @@ def create_pair_csv(table, out, delimiter=","):
     csv_writer = csv.writer(out, delimiter=delimiter, quoting=csv.QUOTE_MINIMAL)
     print "properties: {0}".format(len(table))
 
-    csv_writer.writerow(("pid1", "pid2", "count", "probability"))
     rowcount = 0
     for pid1, row in table.iteritems():
         for pid2, value in row.iteritems():
