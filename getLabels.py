@@ -12,13 +12,13 @@ def getLabelsForIdList(idList):
     count = 0
     while(idList):
         count += 100
-        if count%10000==0:
-            print count + "elements processed"
-        partList = idList[:100]
-        idList = idList[100:]
+        if count%1000==0:
+            print str(count) + "elements processed"
+        partList = idList[:500]
+        idList = idList[500:]
         resultList = wikiApi.get_labels_by_ids(partList)
         for res in resultList:
-            if res == "-1" or if "labels" not in res:
+            if res == "-1" or "labels" not in res:
                 continue
             result.append((res["id"], res["labels"]["en"]["value"]))
     return result
@@ -37,7 +37,7 @@ if __name__ == "__main__":
 
     table, entities = TableEntitiesGenerator.compute_table(generator)
 
-    outputFile = open(args.output, "w")
+    outputFile = open(args.output, "w+")
 
     print "get Labels for properties..."
     IdList = []
@@ -45,7 +45,7 @@ if __name__ == "__main__":
         IdList.append("P"+str(pid))
     resultList = getLabelsForIdList(IdList)
     for entityId, label in resultList:
-        outputFile.write(entityId + "," + label +"\n")
+        outputFile.write((entityId + "," + label + "\n").encode("utf-8"))
 
     print "get labels for items..."
     IdList = []
@@ -53,7 +53,7 @@ if __name__ == "__main__":
         IdList.append(entityId)
     resultList = getLabelsForIdList(IdList)
     for entityId, label in resultList:
-        outputFile.write(entityId + "," + label + "\n")
+        outputFile.write((entityId + "," + label + "\n").encode("utf-8"))
 
     outputFile.close()
     
