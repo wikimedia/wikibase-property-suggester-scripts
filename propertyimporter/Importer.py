@@ -4,6 +4,7 @@ import argparse
 import time
 
 from propertysuggester.utils.WikidataApi import WikidataApi
+from propertysuggester.utils.WikidataApi import ServiceUnavailableError
 
 class Importer:
     def importProperties(self, inApiUrl, outApiUrl):
@@ -11,7 +12,17 @@ class Importer:
         outApi = WikidataApi(outApiUrl)
 
         for propertyId in xrange(2, 2000):
-            propertyJson = inApi.getEntityById(propertyId)
+
+            retry = True;
+            while retry:
+                try:
+                    propertyJson = inApi.getEntityById(propertyId)
+                    retry = False
+                except ServiceUnavailableError as e:
+                    retry = True
+                    time.sleep(3)
+
+
             print propertyJson
             if propertyJson != None and False :
                 outApi.newPropertyByData(self.buildData(propertyJson))

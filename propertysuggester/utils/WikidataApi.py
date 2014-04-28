@@ -1,6 +1,10 @@
 import requests
 import json
 
+class ServiceUnavailableError(Exception):
+    def __init__(self, response):
+        self.response = response
+
 class WikidataApi:
 
     # token is here http://localhost/devrepo/core/api.php?action=query&prop=info&intoken=edit&generator=allpages&format=json
@@ -9,7 +13,7 @@ class WikidataApi:
         self.url = url + "/api.php"
         self.editToken = ""
 
-    def getEditToken():
+    def getEditToken(self):
         pass
 
     def wbs_getsuggestions(self, entity="", properties=(), limit=10, cont=0, language='en', search=''):
@@ -39,6 +43,8 @@ class WikidataApi:
         return result.json()
 
     def _checkResponseStatus(self, response):
+        if response.status_code == 503:
+            raise ServiceUnavailableError(response)
         if response.status_code != 200:
             raise Exception("invalid response", response)
 
