@@ -36,5 +36,5 @@ class StatementWithItemValueFile:
         if self.mode != "write":
             raise Exception("use 'read' if you want to read")
 
-        statement = ",".join([itemId, propertyId, itemValueId])
+        statement = ",".join([str(itemId), str(propertyId), str(itemValueId)])
         self.stream.write(statement+"\n")

@@ -86,11 +86,11 @@ class StatementWithItemValueAnalyzer:
         return i
 
     def writeInfo(self, relevantStatementGroups, outFilePrefix):
-        fs = open(outFilePrefix+"statement_occurences.data", "w")
+        fs = open(outFilePrefix+"statement_occurrences.data", "w")
         for key, value in relevantStatementGroups.items():
             fs.write( ",".join([key[0], key[1], str(value)]) + "\n" )
 
     def writeRules(self, relevantStatementPairGroups, outFilePrefix):
-        fs = open(outFilePrefix+"statement_pair_occurences.data", "w")
+        fs = open(outFilePrefix+"statement_pair_occurrences.data", "w")
         for key, value in relevantStatementPairGroups.items():
             fs.write( ",".join([key[0][0], key[0][1], key[1][0], key[1][1], str(value)]) + "\n" )
