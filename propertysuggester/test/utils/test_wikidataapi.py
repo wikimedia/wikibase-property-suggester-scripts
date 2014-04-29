@@ -1,14 +1,20 @@
-from testtools import TestCase
+import requests
+from testtools import TestCase, skipIf
 from testtools.matchers import *
 
 from propertysuggester.utils.WikidataApi import WikidataApi
 
 
+api_url = "http://suggester.wmflabs.org/w/api.php"
+
+
+@skipIf(requests.get(api_url).status_code != 200, "the test instance is currently not working")
 class WikiDataApiTest(TestCase):
+
     def setUp(self):
         TestCase.setUp(self)
 
-        self.api = WikidataApi("http://suggester.wmflabs.org/wiki/")
+        self.api = WikidataApi(api_url)
 
     def test_wbsgetsuggestions(self):
         result = self.api.wbs_getsuggestions(entity="Q4", limit=3, cont=2)
@@ -23,3 +29,4 @@ class WikiDataApiTest(TestCase):
         self.assertThat(result["success"], Equals(1))
         self.assertThat(result["search-continue"], Equals(7))
         self.assertThat(result["search"], HasLength(2))
+
