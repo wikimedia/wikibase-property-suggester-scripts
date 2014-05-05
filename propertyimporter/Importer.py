@@ -45,10 +45,10 @@ class Importer:
             print "d",
 
     def check_lengthconstrains(self, prop, entity_json):
-        lengthconstrained = ["descriptions", "labels"]
+        length_constrained = ["descriptions", "labels"]
         multilang_limits = 250  # from options.wiki
 
-        if prop in lengthconstrained:
+        if prop in length_constrained:
             for k, v in entity_json[prop].items():
                 if len(v['value'].encode("utf-8")) >= multilang_limits:
                     logging.debug(u'Warning "{entity} - {prop} - {lang}: {value}" violates length constrains'.format(
