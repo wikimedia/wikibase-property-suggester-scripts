@@ -10,32 +10,31 @@ class StatementWithItemValueAnalyzer:
         print "\n\n#step1: count statement occurences\n"
         statementGroups = defaultdict()
         numOfStatements = self.countStatementOccurences(statementsFile, statementGroups)
-    	
-        coverage = self.calculateMinCoverage(len(statementGroups), numOfStatements)
-        print "coverage = {0}\n".format(coverage)
+
 
         print "\n\n#step2: apply selection of relevant statements\n"
+        avg = numOfStatements*1.0/len(statementGroups)
+        coverage = avg * 2
+        print "min coverage = {0}\n".format(coverage)
         relevantStatementGroups = defaultdict()
         self.applyThreshold(statementGroups, relevantStatementGroups, coverage)
-        print "{0} of {1} statements do show a sufficient coverage\n".format(len(relevantStatementGroups),len(statementGroups))
+        print "{0} of {1} statement groups do show a sufficient coverage\n".format(len(relevantStatementGroups),len(statementGroups))
         statementGroups.clear() #free memory
 
-        print "\n\n#step3: build cross product\n"
+        print "\n\n#step3: count statement pair appearences\n"
         statementPairGroups = defaultdict()
-        self.initializeStatementPairGroups(relevantStatementGroups.keys(), statementPairGroups)
+        numOfStatementPairs = self.countStatementPairOccurences(statementsFile, relevantStatementGroups, statementPairGroups);
 
-        print "\n\n#step4: count statement pair appearences\n"
-        numOfStatementPairs = self.countStatementPairOccurences(statementsFile, statementPairGroups)
-
-        print "\n\n#step5: apply selection of relevant statements\n"
-        avgStatementsPerGroup = numOfStatementPairs/len(statementPairGroups)
-        coverage = 3*avgStatementsPerGroup
+        print "\n\n#step4: apply selection of relevant statements\n"
+        avg = numOfStatementPairs*1.0/len(statementPairGroups)
+        coverage = avg * 0.1
+        print "min coverage = {0}\n".format(coverage)
         relevantStatementPairGroups = defaultdict()
         self.applyThreshold(statementPairGroups, relevantStatementPairGroups, coverage)
-        print "{0} of {1} statement pairs do show a sufficient coverage\n".format(len(relevantStatementPairGroups),len(statementPairGroups))
+        print "{0} of {1} statement pair groups do show a sufficient coverage\n".format(len(relevantStatementPairGroups),len(statementPairGroups))
         statementPairGroups.clear()
 
-        print "\n\n#step6: write Things to disk\n"
+        print "\n\n#step5: write Things to disk\n"
         self.writeInfo(relevantStatementGroups, outFilePrefix)
         self.writeRules(relevantStatementPairGroups, outFilePrefix)
 
@@ -55,34 +54,28 @@ class StatementWithItemValueAnalyzer:
         # todo find adequate distribution
         avg = numOfStatements*1.0/numOfGorups
         # proportion = numOfStatements**-0.5
-        return avg * 19
+        return avg * 3
 
     def applyThreshold(self, inList, outList, threshold):
         for k, v in inList.items():
             if v >= threshold:
-                outList[k] = v 
+                outList[k] = v
 
-    def initializeStatementPairGroups(self, keyValuePairs, statementPairGroup):
-        for pair1 in keyValuePairs:
-            for pair2 in keyValuePairs:
-                if pair1 != pair2:
-                    keyPair = (pair1, pair2)
-                    statementPairGroup[keyPair] = 0 
-
-    def countStatementPairOccurences(self, statementsFile, statementPairGroups):
+    def countStatementPairOccurences(self, statementsFile, relevantStatementPairs, statementPairGroups):
         groups = statementsFile.groupsOfStatementsOfAnItem()
 
-        currentItemId = None
-        statementsOfCurrentItem = ()
         i = 0
         for group in groups:
             for pair1 in group:
-                for pair2 in group:
-                    keyPair = (pair1, pair2)
-                    if keyPair in statementPairGroups:
-                        statementPairGroups[keyPair] += 1
-                        i += 1
-                        if 0 == (i % 1000000): print "processed {0} relevant property pair occurences\n".format(i)
+                if pair1 in relevantStatementPairs:
+                    for pair2 in group:
+                        if pair2 in relevantStatementPairs:
+                            keyPair = (pair1, pair2)
+                            if not keyPair in statementPairGroups:
+                                statementPairGroups[keyPair] = 0
+                            statementPairGroups[keyPair] += 1
+                            i += 1
+                            if 0 == (i % 1000000): print "processed {0} relevant property pair occurences\n".format(i)
         return i
 
     def writeInfo(self, relevantStatementGroups, outFilePrefix):
