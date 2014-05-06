@@ -5,18 +5,16 @@ from propertysuggester.utils.WikidataApi import WikidataApi
 logging.basicConfig(format='%(levelname)s:%(message)s')
 
 class Importer:
-    def __init__(self, source_url, destination_url, start, end, loaditems):
+    def __init__(self, source_url, destination_url, loaditems):
         self.source_api = WikidataApi(source_url)
         self.destination_api = WikidataApi(destination_url)
-        self.start = start
-        self.end = end
         self.type = "item" if loaditems else "property"
         self.idtemplate = "Q{0}" if loaditems else "P{0}"
 
-    def import_entities(self):
-        for numericId in xrange(self.start, self.end):
+    def import_entities(self, start, end):
+        for numericId in xrange(start, end):
             if numericId % 10 == 0:
-                print "{0}/{1}".format(numericId, self.end)
+                print "{0}/{1}".format(numericId, end)
             entityid = self.idtemplate.format(numericId)
 
             try:
