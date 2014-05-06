@@ -29,7 +29,7 @@ class StatementWithItemValueAnalyzer:
 
         print "\n\n#step5: apply selection of relevant statements\n"
         avgStatementsPerGroup = numOfStatementPairs/len(statementPairGroups)
-        coverage = 4*avgStatementsPerGroup
+        coverage = 3*avgStatementsPerGroup
         relevantStatementPairGroups = defaultdict()
         self.applyThreshold(statementPairGroups, relevantStatementPairGroups, coverage)
         print "{0} of {1} statement pairs do show a sufficient coverage\n".format(len(relevantStatementPairGroups),len(statementPairGroups))
@@ -55,7 +55,7 @@ class StatementWithItemValueAnalyzer:
         # todo find adequate distribution
         avg = numOfStatements*1.0/numOfGorups
         # proportion = numOfStatements**-0.5
-        return avg * 20
+        return avg * 19
 
     def applyThreshold(self, inList, outList, threshold):
         for k, v in inList.items():
@@ -88,9 +88,9 @@ class StatementWithItemValueAnalyzer:
     def writeInfo(self, relevantStatementGroups, outFilePrefix):
         fs = open(outFilePrefix+"statement_occurrences.data", "w")
         for key, value in relevantStatementGroups.items():
-            fs.write( ",".join([key[0], key[1], str(value)]) + "\n" )
+            fs.write( ",".join(map(str, [key[0], key[1], value])) + "\n" )
 
     def writeRules(self, relevantStatementPairGroups, outFilePrefix):
         fs = open(outFilePrefix+"statement_pair_occurrences.data", "w")
         for key, value in relevantStatementPairGroups.items():
-            fs.write( ",".join([key[0][0], key[0][1], key[1][0], key[1][1], str(value)]) + "\n" )
+            fs.write( ",".join(map(str, [key[0][0], key[0][1], key[1][0], key[1][1], value])) + "\n" )

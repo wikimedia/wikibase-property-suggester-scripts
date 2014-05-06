@@ -16,7 +16,7 @@ class StatementWithItemValueFile:
 
         self.stream = open(self.fileName, "r")
         for line in self.stream:
-            yield line.strip().split(",")
+            yield list(map(int,line.strip().split(",")))
 
     def groupsOfStatementsOfAnItem(self):
         statements = self.statements()
