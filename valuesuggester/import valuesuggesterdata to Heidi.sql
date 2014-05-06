@@ -7,7 +7,7 @@ occurrences int
 )
 ;
 
-LOAD DATA INFILE "C:/Bachelorprojekt/Repositories/PropertySuggester-PythonValues/dumps/item_suggester_statement_occurrences.data"
+LOAD DATA INFILE "C:/Bachelorprojekt/Repositories/PropertySuggester-PythonValues/dumps/processed/vs_statement_occurrences.data"
 INTO TABLE vs_statement_occurrences
 FIELDS
 	TERMINATED BY ','
@@ -27,7 +27,7 @@ occurrences int
 )
 ;
 
-LOAD DATA INFILE "C:/Bachelorprojekt/Repositories/PropertySuggester-PythonValues/dumps/item_suggester_statement_pair_occurrences.data"
+LOAD DATA INFILE "C:/Bachelorprojekt/Repositories/PropertySuggester-PythonValues/dumps/processed/vs_statement_pair_occurrences.data"
 INTO TABLE vs_statement_pair_occurrences
 FIELDS
 	TERMINATED BY ','
