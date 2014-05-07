@@ -9,6 +9,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     for line in args.input:
-        for text in re.findall(r"\(([^,']*,[^,']*,'[^,']*',(?:'en'|'de'|'fr'),'[^,']*','[^,']*','[^,']*',[^,']*)\)", line):
+    	#(?:'en'|'de'|'fr')
+        for text in re.findall(r"\(([^,']*,[^,']*,'[^,']*','en','[^,']*','[^,']*','[^,']*',[^,']*)\)", line):
             print text
             
