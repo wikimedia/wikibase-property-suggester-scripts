@@ -5,7 +5,7 @@ from propertysuggester.utils.CompressedFileType import CompressedFileType
 from propertysuggester.analyzer import TableEntitiesGenerator
 from collections import defaultdict
 
-maxSuggestions = 1000 # threshold that suggestions in the results have to pass
+maxSuggestions = 500 # threshold that suggestions in the results have to pass
 ProbabilityThreshold = 0.2
 minNumberStatements = 4
 
