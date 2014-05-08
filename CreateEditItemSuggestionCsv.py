@@ -47,5 +47,5 @@ if __name__ == "__main__":
     outputFile = open(args.output, "w")
     for prop, entityList in editItemSuggestionsTable.iteritems():
         for probability, entity in entityList:
-            outputFile.write(str(prop) + "," + entity + "," + str(probability) + "\n")
+            outputFile.write(str(prop) + "," + entity[1:] + "," + str(probability) + "\n")
     outputFile.close()
