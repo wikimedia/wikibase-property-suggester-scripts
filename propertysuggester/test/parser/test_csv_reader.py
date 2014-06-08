@@ -1,8 +1,10 @@
 from StringIO import StringIO
+
 from testtools import TestCase
 
 from propertysuggester.parser import CsvReader
-from propertysuggester.test.test_abstract_reader import AbstractUniverseTest
+from propertysuggester.test.parser.test_abstract_reader import AbstractUniverseTest
+
 
 class CsvReaderTest(AbstractUniverseTest):
     def setUp(self):
@@ -14,3 +16,11 @@ class CsvReaderTest(AbstractUniverseTest):
         out.seek(0)
         self.result = list(CsvReader.read_csv(out))
 
+
+class CsvReaderTest2(AbstractUniverseTest):
+    def testInvalidRowThrowsException(self):
+        f = StringIO()
+        f.writelines(["a,b"])
+        f.seek(0)
+
+        self.assertRaises(ValueError, lambda: list(CsvReader.read_csv(f)))

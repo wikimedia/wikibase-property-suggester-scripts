@@ -7,21 +7,27 @@ with open("file.csv", "r") as f:
         do_things()
 
 """
+import csv
 
-from propertysuggester.utils.datatypes import Claim, Entity
+from propertysuggester.utils.datamodel import Claim, Entity
 
-def read_csv(input_file, separator=","):
+
+def read_csv(input_file, delimiter=","):
     """
     @rtype : collections.Iterable[Entity]
     @type input_file: file or StringIO.StringIO
-    @type separator: str
+    @type delimiter: str
     """
     current_title = None
     claims = []
-    for line in input_file:
-        title, prop, datatype, value = line.strip().split(separator, 3)
+    csv_reader = csv.reader(input_file, delimiter=delimiter, quoting=csv.QUOTE_MINIMAL)
+
+    for row_count, row in enumerate(csv_reader):
+        if len(row) != 4:
+            raise ValueError("Error in line {0}: {1}".format(row_count, row))
+        title, prop, datatype, value = row
         if current_title != title:
-            if not current_title is None:
+            if current_title is not None:
                 yield Entity(current_title, claims)
             current_title = title
             claims = []
@@ -30,3 +36,4 @@ def read_csv(input_file, separator=","):
     if not current_title is None:
         yield Entity(current_title, claims)
 
+    return

@@ -8,8 +8,9 @@ with open("file.csv", "r") as f:
 
 """
 import multiprocessing
-import traceback, signal
-from propertysuggester.utils.datatypes import Claim, Entity
+import traceback
+import signal
+from propertysuggester.utils.datamodel import Claim, Entity
 
 try:
     import ujson as json
@@ -36,7 +37,7 @@ def init_worker():
     signal.signal(signal.SIGINT, signal.SIG_IGN)
 
 
-def read_xml(input_file, thread_count=4):
+def read_xml(input_file, thread_count=1):
     """
     @rtype : collections.Iterable[Entity]
     @type input_file:  file or GzipFile or StringIO.StringIO
@@ -90,7 +91,7 @@ def _process_json((title, json_string)):
     claims = []
     for claim in data["claims"]:
         claim = claim["m"]
-        prop = claim[1]
+        property_id = claim[1]
         if claim[0] == "value":
             datatype = claim[2]
             if datatype == "string":
@@ -99,18 +100,20 @@ def _process_json((title, json_string)):
                 value = "Q" + str(claim[3]["numeric-id"])
             elif datatype == "time":
                 value = claim[3]["time"]
+            elif datatype == "quantity":
+                value = claim[3]["amount"]
             elif datatype == "globecoordinate":
-                value = "N%f, E%f" % (claim[3]["latitude"], claim[3]["longitude"])
+                value = "N{0}, E{1}".format(claim[3]["latitude"], claim[3]["longitude"])
             elif datatype == "bad":
                 # for example in Q2241
                 continue
             else:
                 print "WARNING unknown wikidata datatype: %s" % datatype
                 continue
-        else: # novalue, somevalue, ...
+        else:  # novalue, somevalue, ...
             datatype = "unknown"
             value = claim[0]
 
-        claims.append(Claim(prop, datatype, value))
+        claims.append(Claim(property_id, datatype, value))
     return Entity(title, claims)
 
