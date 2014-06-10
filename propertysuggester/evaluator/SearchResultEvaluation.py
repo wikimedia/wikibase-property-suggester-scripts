@@ -17,7 +17,7 @@ from propertysuggester.evaluator.ResultEvaluation import ResultEvaluation
 
 class SearchResultEvaluation(ResultEvaluation):
     def __init__(self):
-        ResultEvaluation.__init__(self, "C:\Users\Virginia\Documents\GitHub\wikidatawiki-20131021-pages-articles.csv", 10 ,"Resultoutput.csv")
+        ResultEvaluation.__init__(self, "Y:\Documents\GitHub\PropertySuggester-Python\wikidatawiki-20140526-pages-articles.csv", 1000 ,"20130526_dump_1000.csv")
 
     def process_entities(self, entity):
         propertyIds = [claim.property_id for claim in entity.claims]  # get ids from claims
