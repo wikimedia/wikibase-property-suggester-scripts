@@ -3,14 +3,14 @@ function execute_it(inputfilename){
   var loaded = 0
   //maximum
   var maxi = 0;
-  d3.csv("1000_output.csv", type, function(error, data) {
+  d3.csv("20130526_dump_1000_random.csv", type, function(error, data) {
     maxi = d3.max(data, function(d) { return d.amount; });
     if (++loaded == 2) {
       draw(inputfilename, maxi)
     }
 
   });
-  d3.csv("1000_output_letter.csv", type, function(error, data) {
+  d3.csv('20130526_dump_new_algorithm_1000.csv', type, function(error, data) {
     maxi = Math.max(d3.max(data, function(d) { return d.amount; }),maxi);
     maxi = Math.ceil(maxi/100) * 100
     if (++loaded == 2) {
@@ -68,7 +68,12 @@ function draw(inputfilename, maxi) {
     svg.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")
-        .call(xAxis);
+        .call(xAxis)
+        .append("text")
+        .attr("x", 600)
+        .attr("y", 30)
+        .style("text-anchor-", "middle")
+        .text("rank");
 
     svg.append("g")
         .attr("class", "y axis")

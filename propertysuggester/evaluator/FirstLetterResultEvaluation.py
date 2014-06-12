@@ -18,7 +18,7 @@ from propertysuggester.parser import CsvReader
 class FirstLetterResultEvaluation(ResultEvaluation):
 
     def __init__(self):
-        ResultEvaluation.__init__(self, "C:\Users\Virginia\Documents\GitHub\wikidatawiki-20131021-pages-articles.csv", 10, "Resultoutput_letter.csv")
+        ResultEvaluation.__init__(self, "Y:\Documents\GitHub\PropertySuggester-Python\wikidatawiki-20140526-pages-articles.csv", 1000, "20130526_dump_1000_first_letter.csv")
         self.property_dic = {}
 
 
