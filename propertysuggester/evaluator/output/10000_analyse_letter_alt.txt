@@ -1,0 +1,4009 @@
+C:\Users\virginia.weidhaas\venv\Scripts\python.exe Y:/Documents/GitHub/PropertySuggester-Python/propertysuggester/evaluator/FirstLetterResultEvaluation.py
+Processed Items: 0
+
+Item Q9692:
+Found suggestion at rank 1
+Processed Items: 1
+
+Item Q16622:
+Found suggestion at rank 1
+Processed Items: 2
+
+Item Q24029:
+Found suggestion at rank 1
+Processed Items: 3
+
+Item Q37428:
+Rank could not be determined within first 50
+Processed Items: 4
+
+Item Q40293:
+Found suggestion at rank 15
+Processed Items: 5
+
+Item Q41689:
+Found suggestion at rank 1
+Processed Items: 6
+
+Item Q42990:
+Found suggestion at rank 5
+Processed Items: 7
+
+Item Q45912:
+Found suggestion at rank 7
+Processed Items: 8
+
+Item Q47523:
+Found suggestion at rank 1
+Processed Items: 9
+
+Item Q50570:
+Found suggestion at rank 1
+Processed Items: 10
+
+Item Q63321:
+Found suggestion at rank 1
+Processed Items: 11
+
+Item Q65401:
+Found suggestion at rank 1
+Processed Items: 12
+
+Item Q67635:
+Found suggestion at rank 1
+Processed Items: 13
+
+Item Q75916:
+Found suggestion at rank 1
+Processed Items: 14
+
+Item Q80405:
+Found suggestion at rank 2
+Processed Items: 15
+
+Item Q88063:
+Found suggestion at rank 1
+Processed Items: 16
+
+Item Q96057:
+Found suggestion at rank 1
+Processed Items: 17
+
+Item Q96120:
+Found suggestion at rank 2
+Processed Items: 18
+
+Item Q98173:
+Found suggestion at rank 2
+Processed Items: 19
+
+Item Q99323:
+Found suggestion at rank 1
+Processed Items: 20
+
+Item Q100251:
+Found suggestion at rank 1
+Processed Items: 21
+
+Item Q102879:
+Found suggestion at rank 1
+Processed Items: 22
+
+Item Q104677:
+Found suggestion at rank 1
+Processed Items: 23
+
+Item Q107074:
+Found suggestion at rank 1
+Processed Items: 24
+
+Item Q109032:
+Found suggestion at rank 1
+Processed Items: 25
+
+Item Q122721:
+Found suggestion at rank 3
+Processed Items: 26
+
+Item Q132239:
+Found suggestion at rank 3
+Processed Items: 27
+
+Item Q142632:
+Found suggestion at rank 1
+Processed Items: 28
+
+Item Q145263:
+Found suggestion at rank 2
+Processed Items: 29
+
+Item Q155706:
+Found suggestion at rank 1
+Processed Items: 30
+
+Item Q170068:
+Found suggestion at rank 1
+Processed Items: 31
+
+Item Q172363:
+Found suggestion at rank 1
+Processed Items: 32
+
+Item Q191290:
+Found suggestion at rank 2
+Processed Items: 33
+
+Item Q201209:
+Found suggestion at rank 3
+Processed Items: 34
+
+Item Q206641:
+Found suggestion at rank 3
+Processed Items: 35
+
+Item Q216460:
+Found suggestion at rank 1
+Processed Items: 36
+
+Item Q217527:
+Found suggestion at rank 14
+Processed Items: 37
+
+Item Q219444:
+Found suggestion at rank 15
+Processed Items: 38
+
+Item Q232514:
+Found suggestion at rank 4
+Processed Items: 39
+
+Item Q240903:
+Found suggestion at rank 1
+Processed Items: 40
+
+Item Q252561:
+Found suggestion at rank 4
+Processed Items: 41
+
+Item Q254607:
+Found suggestion at rank 2
+Processed Items: 42
+
+Item Q257386:
+Found suggestion at rank 18
+Processed Items: 43
+
+Item Q263203:
+Found suggestion at rank 1
+Processed Items: 44
+
+Item Q265466:
+Found suggestion at rank 1
+Processed Items: 45
+
+Item Q283941:
+Found suggestion at rank 1
+Processed Items: 46
+
+Item Q284480:
+Found suggestion at rank 15
+Processed Items: 47
+
+Item Q301403:
+Found suggestion at rank 2
+Processed Items: 48
+
+Item Q304139:
+Found suggestion at rank 1
+Processed Items: 49
+
+Item Q314870:
+Found suggestion at rank 1
+Processed Items: 50
+
+Item Q323694:
+Found suggestion at rank 2
+Processed Items: 51
+
+Item Q348039:
+Found suggestion at rank 2
+Processed Items: 52
+
+Item Q379647:
+Found suggestion at rank 1
+Processed Items: 53
+
+Item Q381251:
+Found suggestion at rank 1
+Processed Items: 54
+
+Item Q389592:
+Found suggestion at rank 2
+Processed Items: 55
+
+Item Q404337:
+Found suggestion at rank 2
+Processed Items: 56
+
+Item Q430380:
+Found suggestion at rank 1
+Processed Items: 57
+
+Item Q434687:
+Found suggestion at rank 3
+Processed Items: 58
+
+Item Q437129:
+Found suggestion at rank 3
+Processed Items: 59
+
+Item Q441874:
+Found suggestion at rank 1
+Processed Items: 60
+
+Item Q457863:
+Found suggestion at rank 2
+Processed Items: 61
+
+Item Q471311:
+Found suggestion at rank 10
+Processed Items: 62
+
+Item Q477880:
+Found suggestion at rank 7
+Processed Items: 63
+
+Item Q486764:
+Found suggestion at rank 20
+Processed Items: 64
+
+Item Q494673:
+Found suggestion at rank 2
+Processed Items: 65
+
+Item Q500830:
+Found suggestion at rank 1
+Processed Items: 66
+
+Item Q505957:
+Found suggestion at rank 1
+Processed Items: 67
+
+Item Q507177:
+Found suggestion at rank 6
+Processed Items: 68
+
+Item Q507193:
+Found suggestion at rank 1
+Processed Items: 69
+
+Item Q513554:
+Found suggestion at rank 1
+Processed Items: 70
+
+Item Q514626:
+Found suggestion at rank 1
+Processed Items: 71
+
+Item Q518700:
+Found suggestion at rank 8
+Processed Items: 72
+
+Item Q531455:
+Found suggestion at rank 1
+Processed Items: 73
+
+Item Q540791:
+Found suggestion at rank 1
+Processed Items: 74
+
+Item Q543793:
+Found suggestion at rank 1
+Processed Items: 75
+
+Item Q549254:
+Found suggestion at rank 1
+Processed Items: 76
+
+Item Q550369:
+Found suggestion at rank 1
+Processed Items: 77
+
+Item Q567075:
+Found suggestion at rank 1
+Processed Items: 78
+
+Item Q585161:
+Found suggestion at rank 3
+Processed Items: 79
+
+Item Q610298:
+Found suggestion at rank 1
+Processed Items: 80
+
+Item Q615493:
+Found suggestion at rank 1
+Processed Items: 81
+
+Item Q632285:
+Found suggestion at rank 15
+Processed Items: 82
+
+Item Q636717:
+Found suggestion at rank 7
+Processed Items: 83
+
+Item Q655736:
+Found suggestion at rank 4
+Processed Items: 84
+
+Item Q662951:
+Found suggestion at rank 1
+Processed Items: 85
+
+Item Q666017:
+Found suggestion at rank 9
+Processed Items: 86
+
+Item Q677371:
+Found suggestion at rank 1
+Processed Items: 87
+
+Item Q686169:
+Found suggestion at rank 1
+Processed Items: 88
+
+Item Q687287:
+Found suggestion at rank 2
+Processed Items: 89
+
+Item Q704508:
+Found suggestion at rank 1
+Processed Items: 90
+
+Item Q705118:
+Found suggestion at rank 1
+Processed Items: 91
+
+Item Q709269:
+Found suggestion at rank 2
+Processed Items: 92
+
+Item Q713769:
+Found suggestion at rank 4
+Processed Items: 93
+
+Item Q714886:
+Found suggestion at rank 1
+Processed Items: 94
+
+Item Q727519:
+Found suggestion at rank 1
+Processed Items: 95
+
+Item Q732639:
+Found suggestion at rank 1
+Processed Items: 96
+
+Item Q740596:
+Found suggestion at rank 1
+Processed Items: 97
+
+Item Q741679:
+Found suggestion at rank 4
+Processed Items: 98
+
+Item Q748528:
+Found suggestion at rank 1
+Processed Items: 99
+
+Item Q756476:
+Found suggestion at rank 2
+Processed Items: 100
+
+Item Q768115:
+Found suggestion at rank 16
+Processed Items: 101
+
+Item Q776444:
+Found suggestion at rank 2
+Processed Items: 102
+
+Item Q790824:
+Found suggestion at rank 4
+Processed Items: 103
+
+Item Q798976:
+Found suggestion at rank 2
+Processed Items: 104
+
+Item Q808188:
+Found suggestion at rank 3
+Processed Items: 105
+
+Item Q808648:
+Found suggestion at rank 1
+Processed Items: 106
+
+Item Q815887:
+Found suggestion at rank 1
+Processed Items: 107
+
+Item Q828656:
+Found suggestion at rank 1
+Processed Items: 108
+
+Item Q880855:
+Found suggestion at rank 1
+Processed Items: 109
+
+Item Q887693:
+Found suggestion at rank 2
+Processed Items: 110
+
+Item Q916969:
+Found suggestion at rank 1
+Processed Items: 111
+
+Item Q923985:
+Found suggestion at rank 2
+Processed Items: 112
+
+Item Q924718:
+Found suggestion at rank 2
+Processed Items: 113
+
+Item Q933463:
+Found suggestion at rank 2
+Processed Items: 114
+
+Item Q934165:
+Found suggestion at rank 2
+Processed Items: 115
+
+Item Q939985:
+Found suggestion at rank 3
+Processed Items: 116
+
+Item Q944590:
+Found suggestion at rank 1
+Processed Items: 117
+
+Item Q955251:
+Found suggestion at rank 2
+Processed Items: 118
+
+Item Q956399:
+Found suggestion at rank 1
+Processed Items: 119
+
+Item Q956507:
+Found suggestion at rank 1
+Processed Items: 120
+
+Item Q956953:
+Found suggestion at rank 1
+Processed Items: 121
+
+Item Q961578:
+Found suggestion at rank 1
+Processed Items: 122
+
+Item Q965179:
+Found suggestion at rank 1
+Processed Items: 123
+
+Item Q968135:
+Rank could not be determined within first 50
+Processed Items: 124
+
+Item Q968189:
+Found suggestion at rank 2
+Processed Items: 125
+
+Item Q993719:
+Found suggestion at rank 1
+Processed Items: 126
+
+Item Q994278:
+Found suggestion at rank 1
+Processed Items: 127
+
+Item Q1014317:
+Found suggestion at rank 2
+Processed Items: 128
+
+Item Q1029958:
+Found suggestion at rank 1
+Processed Items: 129
+
+Item Q1052227:
+Found suggestion at rank 9
+Processed Items: 130
+
+Item Q1057368:
+Found suggestion at rank 1
+Processed Items: 131
+
+Item Q1057479:
+Found suggestion at rank 1
+Processed Items: 132
+
+Item Q1076056:
+Found suggestion at rank 1
+Processed Items: 133
+
+Item Q1093760:
+Found suggestion at rank 3
+Processed Items: 134
+
+Item Q1120974:
+Found suggestion at rank 1
+Processed Items: 135
+
+Item Q1131476:
+Found suggestion at rank 11
+Processed Items: 136
+
+Item Q1132966:
+Found suggestion at rank 7
+Processed Items: 137
+
+Item Q1143545:
+Found suggestion at rank 4
+Processed Items: 138
+
+Item Q1146463:
+Found suggestion at rank 1
+Processed Items: 139
+
+Item Q1151323:
+Found suggestion at rank 1
+Processed Items: 140
+
+Item Q1187366:
+Found suggestion at rank 2
+Processed Items: 141
+
+Item Q1190027:
+Found suggestion at rank 2
+Processed Items: 142
+
+Item Q1192305:
+Found suggestion at rank 5
+Processed Items: 143
+
+Item Q1196877:
+Found suggestion at rank 1
+Processed Items: 144
+
+Item Q1232264:
+Found suggestion at rank 1
+Processed Items: 145
+
+Item Q1253293:
+Found suggestion at rank 1
+Processed Items: 146
+
+Item Q1280526:
+Found suggestion at rank 1
+Processed Items: 147
+
+Item Q1283706:
+Found suggestion at rank 2
+Processed Items: 148
+
+Item Q1288756:
+Found suggestion at rank 2
+Processed Items: 149
+
+Item Q1311541:
+Found suggestion at rank 1
+Processed Items: 150
+
+Item Q1318822:
+Found suggestion at rank 2
+Processed Items: 151
+
+Item Q1322978:
+Found suggestion at rank 1
+Processed Items: 152
+
+Item Q1356346:
+Found suggestion at rank 1
+Processed Items: 153
+
+Item Q1360495:
+Found suggestion at rank 2
+Processed Items: 154
+
+Item Q1364853:
+Found suggestion at rank 1
+Processed Items: 155
+
+Item Q1366442:
+Found suggestion at rank 1
+Processed Items: 156
+
+Item Q1372613:
+Found suggestion at rank 1
+Processed Items: 157
+
+Item Q1379826:
+Found suggestion at rank 1
+Processed Items: 158
+
+Item Q1416566:
+Found suggestion at rank 1
+Processed Items: 159
+
+Item Q1417464:
+Found suggestion at rank 1
+Processed Items: 160
+
+Item Q1434145:
+Found suggestion at rank 1
+Processed Items: 161
+
+Item Q1443106:
+Found suggestion at rank 1
+Processed Items: 162
+
+Item Q1445832:
+Found suggestion at rank 1
+Processed Items: 163
+
+Item Q1480244:
+Found suggestion at rank 1
+Processed Items: 164
+
+Item Q1512382:
+Found suggestion at rank 1
+Processed Items: 165
+
+Item Q1517316:
+Found suggestion at rank 1
+Processed Items: 166
+
+Item Q1542162:
+Found suggestion at rank 3
+Processed Items: 167
+
+Item Q1547448:
+Found suggestion at rank 2
+Processed Items: 168
+
+Item Q1555523:
+Found suggestion at rank 2
+Processed Items: 169
+
+Item Q1568249:
+Found suggestion at rank 4
+Processed Items: 170
+
+Item Q1574169:
+Found suggestion at rank 1
+Processed Items: 171
+
+Item Q1577210:
+Found suggestion at rank 3
+Processed Items: 172
+
+Item Q1577262:
+Found suggestion at rank 1
+Processed Items: 173
+
+Item Q1577479:
+Found suggestion at rank 1
+Processed Items: 174
+
+Item Q1589732:
+Found suggestion at rank 1
+Processed Items: 175
+
+Item Q1590156:
+Found suggestion at rank 1
+Processed Items: 176
+
+Item Q1591502:
+Found suggestion at rank 1
+Processed Items: 177
+
+Item Q1600663:
+Found suggestion at rank 1
+Processed Items: 178
+
+Item Q1602727:
+Found suggestion at rank 1
+Processed Items: 179
+
+Item Q1607325:
+Found suggestion at rank 1
+Processed Items: 180
+
+Item Q1613182:
+Found suggestion at rank 2
+Processed Items: 181
+
+Item Q1613200:
+Found suggestion at rank 2
+Processed Items: 182
+
+Item Q1622730:
+Found suggestion at rank 1
+Processed Items: 183
+
+Item Q1634095:
+Found suggestion at rank 1
+Processed Items: 184
+
+Item Q1646278:
+Found suggestion at rank 2
+Processed Items: 185
+
+Item Q1672424:
+Found suggestion at rank 8
+Processed Items: 186
+
+Item Q1700525:
+Found suggestion at rank 2
+Processed Items: 187
+
+Item Q1707638:
+Found suggestion at rank 1
+Processed Items: 188
+
+Item Q1711200:
+Found suggestion at rank 1
+Processed Items: 189
+
+Item Q1713359:
+Found suggestion at rank 1
+Processed Items: 190
+
+Item Q1725036:
+Found suggestion at rank 1
+Processed Items: 191
+
+Item Q1729005:
+Found suggestion at rank 1
+Processed Items: 192
+
+Item Q1730621:
+Found suggestion at rank 1
+Processed Items: 193
+
+Item Q1735328:
+Found suggestion at rank 2
+Processed Items: 194
+
+Item Q1735715:
+Found suggestion at rank 3
+Processed Items: 195
+
+Item Q1736237:
+Found suggestion at rank 1
+Processed Items: 196
+
+Item Q1778962:
+Found suggestion at rank 1
+Processed Items: 197
+
+Item Q1789356:
+Found suggestion at rank 2
+Processed Items: 198
+
+Item Q1795014:
+Found suggestion at rank 9
+Processed Items: 199
+
+Item Q1798243:
+Found suggestion at rank 1
+Processed Items: 200
+
+Item Q1809601:
+Found suggestion at rank 2
+Processed Items: 201
+
+Item Q1811043:
+Found suggestion at rank 2
+Processed Items: 202
+
+Item Q1811828:
+Found suggestion at rank 2
+Processed Items: 203
+
+Item Q1826429:
+Found suggestion at rank 1
+Processed Items: 204
+
+Item Q1847119:
+Found suggestion at rank 1
+Processed Items: 205
+
+Item Q1851533:
+Found suggestion at rank 1
+Processed Items: 206
+
+Item Q1857691:
+Found suggestion at rank 3
+Processed Items: 207
+
+Item Q1863369:
+Found suggestion at rank 4
+Processed Items: 208
+
+Item Q1870763:
+Found suggestion at rank 1
+Processed Items: 209
+
+Item Q1880277:
+Found suggestion at rank 1
+Processed Items: 210
+
+Item Q1891273:
+Found suggestion at rank 2
+Processed Items: 211
+
+Item Q1894295:
+Found suggestion at rank 1
+Processed Items: 212
+
+Item Q1903941:
+Found suggestion at rank 2
+Processed Items: 213
+
+Item Q1950624:
+Found suggestion at rank 2
+Processed Items: 214
+
+Item Q1952812:
+Found suggestion at rank 1
+Processed Items: 215
+
+Item Q1969930:
+Found suggestion at rank 1
+Processed Items: 216
+
+Item Q1977031:
+Found suggestion at rank 1
+Processed Items: 217
+
+Item Q1979019:
+Found suggestion at rank 1
+Processed Items: 218
+
+Item Q1984410:
+Found suggestion at rank 1
+Processed Items: 219
+
+Item Q1985733:
+Found suggestion at rank 1
+Processed Items: 220
+
+Item Q1987933:
+Found suggestion at rank 3
+Processed Items: 221
+
+Item Q1992638:
+Found suggestion at rank 1
+Processed Items: 222
+
+Item Q1998947:
+Found suggestion at rank 1
+Processed Items: 223
+
+Item Q2001226:
+Found suggestion at rank 1
+Processed Items: 224
+
+Item Q2013868:
+Found suggestion at rank 2
+Processed Items: 225
+
+Item Q2019997:
+Found suggestion at rank 3
+Processed Items: 226
+
+Item Q2026565:
+Found suggestion at rank 2
+Processed Items: 227
+
+Item Q2027736:
+Found suggestion at rank 2
+Processed Items: 228
+
+Item Q2055757:
+Found suggestion at rank 2
+Processed Items: 229
+
+Item Q2061016:
+Found suggestion at rank 1
+Processed Items: 230
+
+Item Q2072790:
+Found suggestion at rank 1
+Processed Items: 231
+
+Item Q2076006:
+Found suggestion at rank 1
+Processed Items: 232
+
+Item Q2092202:
+Found suggestion at rank 3
+Processed Items: 233
+
+Item Q2115406:
+Found suggestion at rank 2
+Processed Items: 234
+
+Item Q2137137:
+Found suggestion at rank 2
+Processed Items: 235
+
+Item Q2153229:
+Found suggestion at rank 2
+Processed Items: 236
+
+Item Q2174314:
+Found suggestion at rank 2
+Processed Items: 237
+
+Item Q2182557:
+Found suggestion at rank 1
+Processed Items: 238
+
+Item Q2197950:
+Found suggestion at rank 2
+Processed Items: 239
+
+Item Q2198517:
+Found suggestion at rank 1
+Processed Items: 240
+
+Item Q2206918:
+Found suggestion at rank 2
+Processed Items: 241
+
+Item Q2210213:
+Found suggestion at rank 2
+Processed Items: 242
+
+Item Q2239066:
+Found suggestion at rank 1
+Processed Items: 243
+
+Item Q2241851:
+Found suggestion at rank 2
+Processed Items: 244
+
+Item Q2248834:
+Found suggestion at rank 1
+Processed Items: 245
+
+Item Q2264924:
+Found suggestion at rank 2
+Processed Items: 246
+
+Item Q2266047:
+Found suggestion at rank 5
+Processed Items: 247
+
+Item Q2273287:
+Found suggestion at rank 1
+Processed Items: 248
+
+Item Q2273809:
+Found suggestion at rank 1
+Processed Items: 249
+
+Item Q2274363:
+Found suggestion at rank 2
+Processed Items: 250
+
+Item Q2289663:
+Found suggestion at rank 2
+Processed Items: 251
+
+Item Q2290025:
+Found suggestion at rank 2
+Processed Items: 252
+
+Item Q2297315:
+Found suggestion at rank 2
+Processed Items: 253
+
+Item Q2299058:
+Found suggestion at rank 1
+Processed Items: 254
+
+Item Q2301338:
+Found suggestion at rank 2
+Processed Items: 255
+
+Item Q2313897:
+Found suggestion at rank 3
+Processed Items: 256
+
+Item Q2315630:
+Found suggestion at rank 1
+Processed Items: 257
+
+Item Q2316345:
+Found suggestion at rank 1
+Processed Items: 258
+
+Item Q2333212:
+Found suggestion at rank 1
+Processed Items: 259
+
+Item Q2338791:
+Found suggestion at rank 2
+Processed Items: 260
+
+Item Q2354037:
+Found suggestion at rank 2
+Processed Items: 261
+
+Item Q2357573:
+Found suggestion at rank 7
+Processed Items: 262
+
+Item Q2361105:
+Found suggestion at rank 2
+Processed Items: 263
+
+Item Q2367368:
+Found suggestion at rank 1
+Processed Items: 264
+
+Item Q2411033:
+Found suggestion at rank 2
+Processed Items: 265
+
+Item Q2424326:
+Found suggestion at rank 1
+Processed Items: 266
+
+Item Q2428164:
+Found suggestion at rank 2
+Processed Items: 267
+
+Item Q2434729:
+Found suggestion at rank 1
+Processed Items: 268
+
+Item Q2447783:
+Found suggestion at rank 2
+Processed Items: 269
+
+Item Q2448069:
+Found suggestion at rank 1
+Processed Items: 270
+
+Item Q2470274:
+Found suggestion at rank 2
+Processed Items: 271
+
+Item Q2476169:
+Found suggestion at rank 1
+Processed Items: 272
+
+Item Q2487870:
+Found suggestion at rank 1
+Processed Items: 273
+
+Item Q2500310:
+Found suggestion at rank 1
+Processed Items: 274
+
+Item Q2500702:
+Found suggestion at rank 1
+Processed Items: 275
+
+Item Q2518884:
+Found suggestion at rank 1
+Processed Items: 276
+
+Item Q2544193:
+Found suggestion at rank 4
+Processed Items: 277
+
+Item Q2544980:
+Found suggestion at rank 2
+Processed Items: 278
+
+Item Q2546247:
+Found suggestion at rank 1
+Processed Items: 279
+
+Item Q2568985:
+Found suggestion at rank 2
+Processed Items: 280
+
+Item Q2597098:
+Found suggestion at rank 1
+Processed Items: 281
+
+Item Q2599296:
+Found suggestion at rank 2
+Processed Items: 282
+
+Item Q2602012:
+Found suggestion at rank 10
+Processed Items: 283
+
+Item Q2617150:
+Found suggestion at rank 1
+Processed Items: 284
+
+Item Q2618059:
+Found suggestion at rank 1
+Processed Items: 285
+
+Item Q2625104:
+Found suggestion at rank 2
+Processed Items: 286
+
+Item Q2631335:
+Found suggestion at rank 7
+Processed Items: 287
+
+Item Q2631554:
+Found suggestion at rank 2
+Processed Items: 288
+
+Item Q2634324:
+Found suggestion at rank 2
+Processed Items: 289
+
+Item Q2641838:
+Found suggestion at rank 1
+Processed Items: 290
+
+Item Q2646579:
+Found suggestion at rank 1
+Processed Items: 291
+
+Item Q2660826:
+Found suggestion at rank 1
+Processed Items: 292
+
+Item Q2669193:
+Found suggestion at rank 1
+Processed Items: 293
+
+Item Q2674650:
+Found suggestion at rank 1
+Processed Items: 294
+
+Item Q2675215:
+Found suggestion at rank 1
+Processed Items: 295
+
+Item Q2681818:
+Found suggestion at rank 4
+Processed Items: 296
+
+Item Q2685818:
+Found suggestion at rank 2
+Processed Items: 297
+
+Item Q2694837:
+Found suggestion at rank 4
+Processed Items: 298
+
+Item Q2696962:
+Found suggestion at rank 1
+Processed Items: 299
+
+Item Q2704812:
+Found suggestion at rank 1
+Processed Items: 300
+
+Item Q2707524:
+Found suggestion at rank 2
+Processed Items: 301
+
+Item Q2719876:
+Found suggestion at rank 2
+Processed Items: 302
+
+Item Q2742073:
+Found suggestion at rank 2
+Processed Items: 303
+
+Item Q2761101:
+Found suggestion at rank 1
+Processed Items: 304
+
+Item Q2768751:
+Found suggestion at rank 1
+Processed Items: 305
+
+Item Q2780936:
+Found suggestion at rank 7
+Processed Items: 306
+
+Item Q2800357:
+Found suggestion at rank 1
+Processed Items: 307
+
+Item Q2803552:
+Found suggestion at rank 2
+Processed Items: 308
+
+Item Q2813722:
+Found suggestion at rank 7
+Processed Items: 309
+
+Item Q2821042:
+Found suggestion at rank 2
+Processed Items: 310
+
+Item Q2825566:
+Found suggestion at rank 45
+Processed Items: 311
+
+Item Q2826970:
+Found suggestion at rank 1
+Processed Items: 312
+
+Item Q2830302:
+Found suggestion at rank 1
+Processed Items: 313
+
+Item Q2835022:
+Found suggestion at rank 1
+Processed Items: 314
+
+Item Q2846563:
+Found suggestion at rank 4
+Processed Items: 315
+
+Item Q2846822:
+Found suggestion at rank 2
+Processed Items: 316
+
+Item Q2852518:
+Found suggestion at rank 2
+Processed Items: 317
+
+Item Q2854955:
+Found suggestion at rank 3
+Processed Items: 318
+
+Item Q2875618:
+Found suggestion at rank 6
+Processed Items: 319
+
+Item Q2893699:
+Found suggestion at rank 1
+Processed Items: 320
+
+Item Q2915421:
+Found suggestion at rank 1
+Processed Items: 321
+
+Item Q2916270:
+Found suggestion at rank 2
+Processed Items: 322
+
+Item Q2919837:
+Found suggestion at rank 1
+Processed Items: 323
+
+Item Q2926731:
+Found suggestion at rank 1
+Processed Items: 324
+
+Item Q2929478:
+Found suggestion at rank 2
+Processed Items: 325
+
+Item Q2957400:
+Found suggestion at rank 1
+Processed Items: 326
+
+Item Q2958068:
+Found suggestion at rank 2
+Processed Items: 327
+
+Item Q2969891:
+Found suggestion at rank 5
+Processed Items: 328
+
+Item Q2972724:
+Found suggestion at rank 1
+Processed Items: 329
+
+Item Q2985937:
+Rank could not be determined within first 50
+Processed Items: 330
+
+Item Q2997050:
+Found suggestion at rank 2
+Processed Items: 331
+
+Item Q3013761:
+Found suggestion at rank 1
+Processed Items: 332
+
+Item Q3014599:
+Found suggestion at rank 8
+Processed Items: 333
+
+Item Q3025675:
+Found suggestion at rank 21
+Processed Items: 334
+
+Item Q3045555:
+Found suggestion at rank 1
+Processed Items: 335
+
+Item Q3055424:
+Found suggestion at rank 1
+Processed Items: 336
+
+Item Q3091527:
+Found suggestion at rank 2
+Processed Items: 337
+
+Item Q3100285:
+Found suggestion at rank 1
+Processed Items: 338
+
+Item Q3100886:
+Found suggestion at rank 9
+Processed Items: 339
+
+Item Q3119321:
+Found suggestion at rank 1
+Processed Items: 340
+
+Item Q3147522:
+Found suggestion at rank 1
+Processed Items: 341
+
+Item Q3157515:
+Found suggestion at rank 2
+Processed Items: 342
+
+Item Q3160011:
+Found suggestion at rank 3
+Processed Items: 343
+
+Item Q3166273:
+Found suggestion at rank 38
+Processed Items: 344
+
+Item Q3170829:
+Found suggestion at rank 1
+Processed Items: 345
+
+Item Q3187791:
+Found suggestion at rank 3
+Processed Items: 346
+
+Item Q3208622:
+Found suggestion at rank 3
+Processed Items: 347
+
+Item Q3209095:
+Found suggestion at rank 2
+Processed Items: 348
+
+Item Q3216311:
+Found suggestion at rank 1
+Processed Items: 349
+
+Item Q3225414:
+Found suggestion at rank 13
+Processed Items: 350
+
+Item Q3233182:
+Found suggestion at rank 7
+Processed Items: 351
+
+Item Q3241312:
+Found suggestion at rank 1
+Processed Items: 352
+
+Item Q3269810:
+Found suggestion at rank 26
+Processed Items: 353
+
+Item Q3313687:
+Found suggestion at rank 1
+Processed Items: 354
+
+Item Q3317572:
+Found suggestion at rank 3
+Processed Items: 355
+
+Item Q3327503:
+Found suggestion at rank 1
+Processed Items: 356
+
+Item Q3335438:
+Found suggestion at rank 1
+Processed Items: 357
+
+Item Q3338352:
+Found suggestion at rank 3
+Processed Items: 358
+
+Item Q3350523:
+Found suggestion at rank 4
+Processed Items: 359
+
+Item Q3367352:
+Found suggestion at rank 1
+Processed Items: 360
+
+Item Q3376970:
+Found suggestion at rank 1
+Processed Items: 361
+
+Item Q3386365:
+Found suggestion at rank 10
+Processed Items: 362
+
+Item Q3388399:
+Found suggestion at rank 15
+Processed Items: 363
+
+Item Q3398952:
+Found suggestion at rank 7
+Processed Items: 364
+
+Item Q3403930:
+Found suggestion at rank 1
+Processed Items: 365
+
+Item Q3429151:
+Found suggestion at rank 1
+Processed Items: 366
+
+Item Q3430387:
+Found suggestion at rank 6
+Processed Items: 367
+
+Item Q3433598:
+Found suggestion at rank 2
+Processed Items: 368
+
+Item Q3440573:
+Found suggestion at rank 1
+Processed Items: 369
+
+Item Q3448333:
+Found suggestion at rank 6
+Processed Items: 370
+
+Item Q3457115:
+Found suggestion at rank 1
+Processed Items: 371
+
+Item Q3468663:
+Found suggestion at rank 1
+Processed Items: 372
+
+Item Q3473756:
+Found suggestion at rank 1
+Processed Items: 373
+
+Item Q3479500:
+Found suggestion at rank 3
+Processed Items: 374
+
+Item Q3487328:
+Found suggestion at rank 1
+Processed Items: 375
+
+Item Q3503112:
+Found suggestion at rank 1
+Processed Items: 376
+
+Item Q3523631:
+Found suggestion at rank 13
+Processed Items: 377
+
+Item Q3528139:
+Found suggestion at rank 1
+Processed Items: 378
+
+Item Q3542369:
+Found suggestion at rank 1
+Processed Items: 379
+
+Item Q3545364:
+Found suggestion at rank 2
+Processed Items: 380
+
+Item Q3552323:
+Found suggestion at rank 2
+Processed Items: 381
+
+Item Q3556437:
+Found suggestion at rank 1
+Processed Items: 382
+
+Item Q3557095:
+Found suggestion at rank 1
+Processed Items: 383
+
+Item Q3559771:
+Found suggestion at rank 1
+Processed Items: 384
+
+Item Q3561923:
+Found suggestion at rank 1
+Processed Items: 385
+
+Item Q3571704:
+Found suggestion at rank 1
+Processed Items: 386
+
+Item Q3598276:
+Found suggestion at rank 2
+Processed Items: 387
+
+Item Q3601910:
+Found suggestion at rank 2
+Processed Items: 388
+
+Item Q3606407:
+Found suggestion at rank 1
+Processed Items: 389
+
+Item Q3627656:
+Found suggestion at rank 1
+Processed Items: 390
+
+Item Q3660660:
+Found suggestion at rank 3
+Processed Items: 391
+
+Item Q3690144:
+Found suggestion at rank 2
+Processed Items: 392
+
+Item Q3691239:
+Found suggestion at rank 1
+Processed Items: 393
+
+Item Q3692315:
+Found suggestion at rank 2
+Processed Items: 394
+
+Item Q3738659:
+Found suggestion at rank 1
+Processed Items: 395
+
+Item Q3744156:
+Found suggestion at rank 4
+Processed Items: 396
+
+Item Q3746342:
+Found suggestion at rank 7
+Processed Items: 397
+
+Item Q3759453:
+Found suggestion at rank 2
+Processed Items: 398
+
+Item Q3804575:
+Found suggestion at rank 2
+Processed Items: 399
+
+Item Q3807016:
+Found suggestion at rank 3
+Processed Items: 400
+
+Item Q3810220:
+Found suggestion at rank 1
+Processed Items: 401
+
+Item Q3824169:
+Found suggestion at rank 1
+Processed Items: 402
+
+Item Q3826030:
+Found suggestion at rank 1
+Processed Items: 403
+
+Item Q3838314:
+Found suggestion at rank 5
+Processed Items: 404
+
+Item Q3844477:
+Found suggestion at rank 7
+Processed Items: 405
+
+Item Q3868186:
+Found suggestion at rank 2
+Processed Items: 406
+
+Item Q3881363:
+Found suggestion at rank 1
+Processed Items: 407
+
+Item Q3881446:
+Found suggestion at rank 5
+Processed Items: 408
+
+Item Q3906681:
+Found suggestion at rank 7
+Processed Items: 409
+
+Item Q3907147:
+Found suggestion at rank 2
+Processed Items: 410
+
+Item Q3907925:
+Found suggestion at rank 1
+Processed Items: 411
+
+Item Q3929566:
+Found suggestion at rank 5
+Processed Items: 412
+
+Item Q3948012:
+Found suggestion at rank 6
+Processed Items: 413
+
+Item Q3964670:
+Found suggestion at rank 3
+Processed Items: 414
+
+Item Q3966071:
+Found suggestion at rank 11
+Processed Items: 415
+
+Item Q3988964:
+Found suggestion at rank 1
+Processed Items: 416
+
+Item Q4005933:
+Found suggestion at rank 1
+Processed Items: 417
+
+Item Q4051806:
+Found suggestion at rank 1
+Processed Items: 418
+
+Item Q4053000:
+Found suggestion at rank 1
+Processed Items: 419
+
+Item Q4060340:
+Found suggestion at rank 6
+Processed Items: 420
+
+Item Q4062370:
+Found suggestion at rank 5
+Processed Items: 421
+
+Item Q4066713:
+Found suggestion at rank 1
+Processed Items: 422
+
+Item Q4076708:
+Found suggestion at rank 1
+Processed Items: 423
+
+Item Q4081971:
+Found suggestion at rank 2
+Processed Items: 424
+
+Item Q4104364:
+Found suggestion at rank 1
+Processed Items: 425
+
+Item Q4128068:
+Found suggestion at rank 1
+Processed Items: 426
+
+Item Q4129619:
+Found suggestion at rank 2
+Processed Items: 427
+
+Item Q4151844:
+Found suggestion at rank 2
+Processed Items: 428
+
+Item Q4162915:
+Found suggestion at rank 2
+Processed Items: 429
+
+Item Q4173194:
+Found suggestion at rank 1
+Processed Items: 430
+
+Item Q4175166:
+Found suggestion at rank 3
+Processed Items: 431
+
+Item Q4181076:
+Found suggestion at rank 3
+Processed Items: 432
+
+Item Q4182731:
+Found suggestion at rank 2
+Processed Items: 433
+
+Item Q4194980:
+Found suggestion at rank 1
+Processed Items: 434
+
+Item Q4214933:
+Found suggestion at rank 1
+Processed Items: 435
+
+Item Q4216101:
+Found suggestion at rank 2
+Processed Items: 436
+
+Item Q4218658:
+Found suggestion at rank 1
+Processed Items: 437
+
+Item Q4233216:
+Found suggestion at rank 2
+Processed Items: 438
+
+Item Q4240092:
+Found suggestion at rank 1
+Processed Items: 439
+
+Item Q4252506:
+Found suggestion at rank 2
+Processed Items: 440
+
+Item Q4253907:
+Rank could not be determined within first 50
+Processed Items: 441
+
+Item Q4266337:
+Found suggestion at rank 1
+Processed Items: 442
+
+Item Q4282293:
+Found suggestion at rank 2
+Processed Items: 443
+
+Item Q4286211:
+Found suggestion at rank 2
+Processed Items: 444
+
+Item Q4289473:
+Found suggestion at rank 2
+Processed Items: 445
+
+Item Q4290842:
+Found suggestion at rank 2
+Processed Items: 446
+
+Item Q4294387:
+Found suggestion at rank 2
+Processed Items: 447
+
+Item Q4298342:
+Found suggestion at rank 1
+Processed Items: 448
+
+Item Q4311425:
+Found suggestion at rank 2
+Processed Items: 449
+
+Item Q4313249:
+Found suggestion at rank 1
+Processed Items: 450
+
+Item Q4336859:
+Found suggestion at rank 1
+Processed Items: 451
+
+Item Q4358815:
+Found suggestion at rank 1
+Processed Items: 452
+
+Item Q4363053:
+Found suggestion at rank 3
+Processed Items: 453
+
+Item Q4374641:
+Found suggestion at rank 1
+Processed Items: 454
+
+Item Q4427847:
+Found suggestion at rank 1
+Processed Items: 455
+
+Item Q4449506:
+Found suggestion at rank 1
+Processed Items: 456
+
+Item Q4466218:
+Found suggestion at rank 2
+Processed Items: 457
+
+Item Q4474587:
+Found suggestion at rank 1
+Processed Items: 458
+
+Item Q4477143:
+Found suggestion at rank 2
+Processed Items: 459
+
+Item Q4487546:
+Found suggestion at rank 1
+Processed Items: 460
+
+Item Q4491238:
+Found suggestion at rank 4
+Processed Items: 461
+
+Item Q4492275:
+Found suggestion at rank 1
+Processed Items: 462
+
+Item Q4497669:
+Found suggestion at rank 2
+Processed Items: 463
+
+Item Q4505260:
+Found suggestion at rank 1
+Processed Items: 464
+
+Item Q4506212:
+Found suggestion at rank 1
+Processed Items: 465
+
+Item Q4514109:
+Found suggestion at rank 2
+Processed Items: 466
+
+Item Q4519619:
+Found suggestion at rank 2
+Processed Items: 467
+
+Item Q4543617:
+Found suggestion at rank 2
+Processed Items: 468
+
+Item Q4552833:
+Found suggestion at rank 2
+Processed Items: 469
+
+Item Q4554934:
+Found suggestion at rank 1
+Processed Items: 470
+
+Item Q4565102:
+Found suggestion at rank 6
+Processed Items: 471
+
+Item Q4582950:
+Found suggestion at rank 5
+Processed Items: 472
+
+Item Q4591455:
+Found suggestion at rank 2
+Processed Items: 473
+
+Item Q4649997:
+Found suggestion at rank 1
+Processed Items: 474
+
+Item Q4660428:
+Rank could not be determined within first 50
+Processed Items: 475
+
+Item Q4685430:
+Found suggestion at rank 1
+Processed Items: 476
+
+Item Q4687344:
+Found suggestion at rank 5
+Processed Items: 477
+
+Item Q4689708:
+Found suggestion at rank 2
+Processed Items: 478
+
+Item Q4696839:
+Found suggestion at rank 13
+Processed Items: 479
+
+Item Q4697146:
+Found suggestion at rank 2
+Processed Items: 480
+
+Item Q4707075:
+Found suggestion at rank 1
+Processed Items: 481
+
+Item Q4711019:
+Found suggestion at rank 1
+Processed Items: 482
+
+Item Q4713570:
+Found suggestion at rank 1
+Processed Items: 483
+
+Item Q4714968:
+Found suggestion at rank 1
+Processed Items: 484
+
+Item Q4718330:
+Found suggestion at rank 1
+Processed Items: 485
+
+Item Q4728698:
+Found suggestion at rank 1
+Processed Items: 486
+
+Item Q4737001:
+Found suggestion at rank 2
+Processed Items: 487
+
+Item Q4749373:
+Found suggestion at rank 1
+Processed Items: 488
+
+Item Q4752665:
+Found suggestion at rank 2
+Processed Items: 489
+
+Item Q4772794:
+Found suggestion at rank 1
+Processed Items: 490
+
+Item Q4782012:
+Found suggestion at rank 1
+Processed Items: 491
+
+Item Q4784855:
+Found suggestion at rank 2
+Processed Items: 492
+
+Item Q4795538:
+Found suggestion at rank 1
+Processed Items: 493
+
+Item Q4839830:
+Found suggestion at rank 1
+Processed Items: 494
+
+Item Q4840738:
+Found suggestion at rank 1
+Processed Items: 495
+
+Item Q4842659:
+Found suggestion at rank 1
+Processed Items: 496
+
+Item Q4846061:
+Found suggestion at rank 2
+Processed Items: 497
+
+Item Q4872358:
+Found suggestion at rank 1
+Processed Items: 498
+
+Item Q4875341:
+Found suggestion at rank 2
+Processed Items: 499
+
+Item Q4878806:
+Found suggestion at rank 1
+Processed Items: 500
+
+Item Q4880359:
+Found suggestion at rank 1
+Processed Items: 501
+
+Item Q4883337:
+Found suggestion at rank 1
+Processed Items: 502
+
+Item Q4911373:
+Found suggestion at rank 1
+Processed Items: 503
+
+Item Q4914028:
+Rank could not be determined within first 50
+Processed Items: 504
+
+Item Q4915992:
+Found suggestion at rank 10
+Processed Items: 505
+
+Item Q4917487:
+Found suggestion at rank 2
+Processed Items: 506
+
+Item Q4918517:
+Found suggestion at rank 12
+Processed Items: 507
+
+Item Q4918668:
+Found suggestion at rank 35
+Processed Items: 508
+
+Item Q4937463:
+Found suggestion at rank 1
+Processed Items: 509
+
+Item Q4956688:
+Found suggestion at rank 1
+Processed Items: 510
+
+Item Q4956898:
+Found suggestion at rank 1
+Processed Items: 511
+
+Item Q4980526:
+Rank could not be determined within first 50
+Processed Items: 512
+
+Item Q4990303:
+Found suggestion at rank 2
+Processed Items: 513
+
+Item Q4999288:
+Found suggestion at rank 2
+Processed Items: 514
+
+Item Q5001556:
+Found suggestion at rank 1
+Processed Items: 515
+
+Item Q5026075:
+Found suggestion at rank 2
+Processed Items: 516
+
+Item Q5047530:
+Rank could not be determined within first 50
+Processed Items: 517
+
+Item Q5058413:
+Found suggestion at rank 2
+Processed Items: 518
+
+Item Q5077989:
+Found suggestion at rank 1
+Processed Items: 519
+
+Item Q5087121:
+Found suggestion at rank 1
+Processed Items: 520
+
+Item Q5088560:
+Found suggestion at rank 2
+Processed Items: 521
+
+Item Q5090147:
+Found suggestion at rank 1
+Processed Items: 522
+
+Item Q5106941:
+Found suggestion at rank 1
+Processed Items: 523
+
+Item Q5111795:
+Found suggestion at rank 1
+Processed Items: 524
+
+Item Q5112023:
+Found suggestion at rank 1
+Processed Items: 525
+
+Item Q5112424:
+Found suggestion at rank 1
+Processed Items: 526
+
+Item Q5143990:
+Found suggestion at rank 1
+Processed Items: 527
+
+Item Q5163519:
+Found suggestion at rank 1
+Processed Items: 528
+
+Item Q5176446:
+Found suggestion at rank 1
+Processed Items: 529
+
+Item Q5179749:
+Found suggestion at rank 2
+Processed Items: 530
+
+Item Q5186776:
+Found suggestion at rank 1
+Processed Items: 531
+
+Item Q5190747:
+Found suggestion at rank 1
+Processed Items: 532
+
+Item Q5203819:
+Found suggestion at rank 1
+Processed Items: 533
+
+Item Q5208436:
+Found suggestion at rank 1
+Processed Items: 534
+
+Item Q5228763:
+Found suggestion at rank 1
+Processed Items: 535
+
+Item Q5230747:
+Found suggestion at rank 1
+Processed Items: 536
+
+Item Q5234422:
+Found suggestion at rank 1
+Processed Items: 537
+
+Item Q5261217:
+Found suggestion at rank 2
+Processed Items: 538
+
+Item Q5263651:
+Found suggestion at rank 1
+Processed Items: 539
+
+Item Q5271228:
+Found suggestion at rank 1
+Processed Items: 540
+
+Item Q5274739:
+Found suggestion at rank 1
+Processed Items: 541
+
+Item Q5286031:
+Found suggestion at rank 1
+Processed Items: 542
+
+Item Q5304553:
+Found suggestion at rank 1
+Processed Items: 543
+
+Item Q5311976:
+Found suggestion at rank 1
+Processed Items: 544
+
+Item Q5315564:
+Found suggestion at rank 1
+Processed Items: 545
+
+Item Q5322552:
+Found suggestion at rank 35
+Processed Items: 546
+
+Item Q5329363:
+Found suggestion at rank 1
+Processed Items: 547
+
+Item Q5334436:
+Found suggestion at rank 1
+Processed Items: 548
+
+Item Q5334832:
+Found suggestion at rank 1
+Processed Items: 549
+
+Item Q5336543:
+Found suggestion at rank 1
+Processed Items: 550
+
+Item Q5341635:
+Found suggestion at rank 1
+Processed Items: 551
+
+Item Q5342150:
+Found suggestion at rank 1
+Processed Items: 552
+
+Item Q5344709:
+Found suggestion at rank 1
+Processed Items: 553
+
+Item Q5354148:
+Found suggestion at rank 1
+Processed Items: 554
+
+Item Q5384024:
+Found suggestion at rank 1
+Processed Items: 555
+
+Item Q5388649:
+Found suggestion at rank 1
+Processed Items: 556
+
+Item Q5388763:
+Found suggestion at rank 1
+Processed Items: 557
+
+Item Q5393955:
+Found suggestion at rank 1
+Processed Items: 558
+
+Item Q5400510:
+Found suggestion at rank 4
+Processed Items: 559
+
+Item Q5415358:
+Found suggestion at rank 1
+Processed Items: 560
+
+Item Q5448242:
+Found suggestion at rank 1
+Processed Items: 561
+
+Item Q5466735:
+Found suggestion at rank 1
+Processed Items: 562
+
+Item Q5497167:
+Found suggestion at rank 1
+Processed Items: 563
+
+Item Q5528203:
+Found suggestion at rank 1
+Processed Items: 564
+
+Item Q5535087:
+Found suggestion at rank 2
+Processed Items: 565
+
+Item Q5535148:
+Found suggestion at rank 5
+Processed Items: 566
+
+Item Q5536646:
+Found suggestion at rank 1
+Processed Items: 567
+
+Item Q5538290:
+Found suggestion at rank 1
+Processed Items: 568
+
+Item Q5538501:
+Found suggestion at rank 1
+Processed Items: 569
+
+Item Q5544832:
+Found suggestion at rank 10
+Processed Items: 570
+
+Item Q5567281:
+Found suggestion at rank 12
+Processed Items: 571
+
+Item Q5569971:
+Found suggestion at rank 1
+Processed Items: 572
+
+Item Q5573723:
+Found suggestion at rank 2
+Processed Items: 573
+
+Item Q5583214:
+Found suggestion at rank 1
+Processed Items: 574
+
+Item Q5586397:
+Found suggestion at rank 1
+Processed Items: 575
+
+Item Q5604496:
+Found suggestion at rank 2
+Processed Items: 576
+
+Item Q5615847:
+Found suggestion at rank 1
+Processed Items: 577
+
+Item Q5633842:
+Found suggestion at rank 4
+Processed Items: 578
+
+Item Q5660291:
+Found suggestion at rank 1
+Processed Items: 579
+
+Item Q5663236:
+Found suggestion at rank 1
+Processed Items: 580
+
+Item Q5693763:
+Found suggestion at rank 1
+Processed Items: 581
+
+Item Q5695818:
+Rank could not be determined within first 50
+Processed Items: 582
+
+Item Q5699210:
+Found suggestion at rank 1
+Processed Items: 583
+
+Item Q5721959:
+Found suggestion at rank 7
+Processed Items: 584
+
+Item Q5722312:
+Found suggestion at rank 7
+Processed Items: 585
+
+Item Q5730953:
+Found suggestion at rank 1
+Processed Items: 586
+
+Item Q5750018:
+Found suggestion at rank 1
+Processed Items: 587
+
+Item Q5757250:
+Found suggestion at rank 2
+Processed Items: 588
+
+Item Q5758521:
+Found suggestion at rank 2
+Processed Items: 589
+
+Item Q5774207:
+Found suggestion at rank 19
+Processed Items: 590
+
+Item Q5784298:
+Found suggestion at rank 2
+Processed Items: 591
+
+Item Q5786062:
+Found suggestion at rank 2
+Processed Items: 592
+
+Item Q5786400:
+Found suggestion at rank 2
+Processed Items: 593
+
+Item Q5789505:
+Found suggestion at rank 6
+Processed Items: 594
+
+Item Q5796459:
+Found suggestion at rank 1
+Processed Items: 595
+
+Item Q5797779:
+Found suggestion at rank 6
+Processed Items: 596
+
+Item Q5803242:
+Found suggestion at rank 11
+Processed Items: 597
+
+Item Q5837773:
+Found suggestion at rank 2
+Processed Items: 598
+
+Item Q5840974:
+Found suggestion at rank 2
+Processed Items: 599
+
+Item Q5841273:
+Found suggestion at rank 1
+Processed Items: 600
+
+Item Q5846667:
+Found suggestion at rank 2
+Processed Items: 601
+
+Item Q5856410:
+Found suggestion at rank 18
+Processed Items: 602
+
+Item Q5885542:
+Found suggestion at rank 1
+Processed Items: 603
+
+Item Q5894063:
+Found suggestion at rank 1
+Processed Items: 604
+
+Item Q5894351:
+Found suggestion at rank 1
+Processed Items: 605
+
+Item Q5906861:
+Found suggestion at rank 2
+Processed Items: 606
+
+Item Q5912406:
+Found suggestion at rank 1
+Processed Items: 607
+
+Item Q5921151:
+Found suggestion at rank 1
+Processed Items: 608
+
+Item Q5931315:
+Found suggestion at rank 1
+Processed Items: 609
+
+Item Q5963016:
+Found suggestion at rank 1
+Processed Items: 610
+
+Item Q5966693:
+Found suggestion at rank 1
+Processed Items: 611
+
+Item Q5979582:
+Found suggestion at rank 5
+Processed Items: 612
+
+Item Q5995328:
+Found suggestion at rank 2
+Processed Items: 613
+
+Item Q6001862:
+Found suggestion at rank 1
+Processed Items: 614
+
+Item Q6007310:
+Found suggestion at rank 1
+Processed Items: 615
+
+Item Q6010938:
+Found suggestion at rank 2
+Processed Items: 616
+
+Item Q6044339:
+Found suggestion at rank 1
+Processed Items: 617
+
+Item Q6068144:
+Found suggestion at rank 1
+Processed Items: 618
+
+Item Q6105913:
+Found suggestion at rank 1
+Processed Items: 619
+
+Item Q6107390:
+Found suggestion at rank 1
+Processed Items: 620
+
+Item Q6112569:
+Found suggestion at rank 1
+Processed Items: 621
+
+Item Q6115987:
+Found suggestion at rank 2
+Processed Items: 622
+
+Item Q6153527:
+Found suggestion at rank 1
+Processed Items: 623
+
+Item Q6166561:
+Found suggestion at rank 1
+Processed Items: 624
+
+Item Q6173240:
+Found suggestion at rank 6
+Processed Items: 625
+
+Item Q6200421:
+Found suggestion at rank 1
+Processed Items: 626
+
+Item Q6201500:
+Found suggestion at rank 1
+Processed Items: 627
+
+Item Q6219600:
+Found suggestion at rank 1
+Processed Items: 628
+
+Item Q6222348:
+Found suggestion at rank 1
+Processed Items: 629
+
+Item Q6236737:
+Found suggestion at rank 1
+Processed Items: 630
+
+Item Q6284837:
+Found suggestion at rank 1
+Processed Items: 631
+
+Item Q6289686:
+Found suggestion at rank 4
+Processed Items: 632
+
+Item Q6326652:
+Found suggestion at rank 2
+Processed Items: 633
+
+Item Q6326815:
+Found suggestion at rank 2
+Processed Items: 634
+
+Item Q6339535:
+Found suggestion at rank 2
+Processed Items: 635
+
+Item Q6362022:
+Found suggestion at rank 3
+Processed Items: 636
+
+Item Q6390299:
+Found suggestion at rank 1
+Processed Items: 637
+
+Item Q6398099:
+Found suggestion at rank 6
+Processed Items: 638
+
+Item Q6401751:
+Found suggestion at rank 1
+Processed Items: 639
+
+Item Q6408617:
+Found suggestion at rank 1
+Processed Items: 640
+
+Item Q6409819:
+Found suggestion at rank 1
+Processed Items: 641
+
+Item Q6425948:
+Found suggestion at rank 1
+Processed Items: 642
+
+Item Q6426088:
+Found suggestion at rank 1
+Processed Items: 643
+
+Item Q6428124:
+Found suggestion at rank 2
+Processed Items: 644
+
+Item Q6428356:
+Found suggestion at rank 2
+Processed Items: 645
+
+Item Q6433069:
+Found suggestion at rank 1
+Processed Items: 646
+
+Item Q6434049:
+Found suggestion at rank 2
+Processed Items: 647
+
+Item Q6454439:
+Found suggestion at rank 2
+Processed Items: 648
+
+Item Q6461849:
+Found suggestion at rank 1
+Processed Items: 649
+
+Item Q6465687:
+Rank could not be determined within first 50
+Processed Items: 650
+
+Item Q6485703:
+Found suggestion at rank 1
+Processed Items: 651
+
+Item Q6488085:
+Found suggestion at rank 1
+Processed Items: 652
+
+Item Q6496891:
+Found suggestion at rank 8
+Processed Items: 653
+
+Item Q6506813:
+Found suggestion at rank 1
+Processed Items: 654
+
+Item Q6507117:
+Found suggestion at rank 1
+Processed Items: 655
+
+Item Q6578899:
+Found suggestion at rank 2
+Processed Items: 656
+
+Item Q6585279:
+Found suggestion at rank 6
+Processed Items: 657
+
+Item Q6590800:
+Found suggestion at rank 1
+Processed Items: 658
+
+Item Q6595825:
+Found suggestion at rank 1
+Processed Items: 659
+
+Item Q6601408:
+Found suggestion at rank 6
+Processed Items: 660
+
+Item Q6670081:
+Found suggestion at rank 8
+Processed Items: 661
+
+Item Q6678729:
+Rank could not be determined within first 50
+Processed Items: 662
+
+Item Q6688544:
+Found suggestion at rank 1
+Processed Items: 663
+
+Item Q6700290:
+Found suggestion at rank 1
+Processed Items: 664
+
+Item Q6710731:
+Found suggestion at rank 2
+Processed Items: 665
+
+Item Q6722290:
+Found suggestion at rank 1
+Processed Items: 666
+
+Item Q6734284:
+Found suggestion at rank 1
+Processed Items: 667
+
+Item Q6741203:
+Found suggestion at rank 1
+Processed Items: 668
+
+Item Q6741519:
+Found suggestion at rank 1
+Processed Items: 669
+
+Item Q6743157:
+Found suggestion at rank 1
+Processed Items: 670
+
+Item Q6743926:
+Found suggestion at rank 1
+Processed Items: 671
+
+Item Q6746790:
+Found suggestion at rank 1
+Processed Items: 672
+
+Item Q6759974:
+Found suggestion at rank 3
+Processed Items: 673
+
+Item Q6760562:
+Found suggestion at rank 1
+Processed Items: 674
+
+Item Q6763372:
+Found suggestion at rank 1
+Processed Items: 675
+
+Item Q6784598:
+Found suggestion at rank 1
+Processed Items: 676
+
+Item Q6789789:
+Found suggestion at rank 21
+Processed Items: 677
+
+Item Q6803223:
+Found suggestion at rank 1
+Processed Items: 678
+
+Item Q6834973:
+Found suggestion at rank 4
+Processed Items: 679
+
+Item Q6847775:
+Found suggestion at rank 1
+Processed Items: 680
+
+Item Q6848827:
+Found suggestion at rank 1
+Processed Items: 681
+
+Item Q6872982:
+Found suggestion at rank 1
+Processed Items: 682
+
+Item Q6875900:
+Rank could not be determined within first 50
+Processed Items: 683
+
+Item Q6937078:
+Found suggestion at rank 1
+Processed Items: 684
+
+Item Q6962575:
+Found suggestion at rank 1
+Processed Items: 685
+
+Item Q6968119:
+Found suggestion at rank 1
+Processed Items: 686
+
+Item Q6977190:
+Found suggestion at rank 2
+Processed Items: 687
+
+Item Q7020242:
+Found suggestion at rank 1
+Processed Items: 688
+
+Item Q7021673:
+Found suggestion at rank 1
+Processed Items: 689
+
+Item Q7025939:
+Found suggestion at rank 1
+Processed Items: 690
+
+Item Q7027945:
+Found suggestion at rank 1
+Processed Items: 691
+
+Item Q7031963:
+Found suggestion at rank 1
+Processed Items: 692
+
+Item Q7041127:
+Found suggestion at rank 1
+Processed Items: 693
+
+Item Q7049337:
+Found suggestion at rank 2
+Processed Items: 694
+
+Item Q7078228:
+Found suggestion at rank 1
+Processed Items: 695
+
+Item Q7080617:
+Found suggestion at rank 6
+Processed Items: 696
+
+Item Q7082937:
+Found suggestion at rank 1
+Processed Items: 697
+
+Item Q7104087:
+Found suggestion at rank 1
+Processed Items: 698
+
+Item Q7111980:
+Found suggestion at rank 2
+Processed Items: 699
+
+Item Q7127045:
+Found suggestion at rank 1
+Processed Items: 700
+
+Item Q7130306:
+Found suggestion at rank 4
+Processed Items: 701
+
+Item Q7175733:
+Found suggestion at rank 1
+Processed Items: 702
+
+Item Q7217855:
+Found suggestion at rank 1
+Processed Items: 703
+
+Item Q7232125:
+Found suggestion at rank 23
+Processed Items: 704
+
+Item Q7234841:
+Found suggestion at rank 1
+Processed Items: 705
+
+Item Q7276916:
+Found suggestion at rank 1
+Processed Items: 706
+
+Item Q7294442:
+Found suggestion at rank 1
+Processed Items: 707
+
+Item Q7326905:
+Found suggestion at rank 1
+Processed Items: 708
+
+Item Q7328627:
+Found suggestion at rank 3
+Processed Items: 709
+
+Item Q7334866:
+Found suggestion at rank 2
+Processed Items: 710
+
+Item Q7350501:
+Found suggestion at rank 1
+Processed Items: 711
+
+Item Q7351674:
+Found suggestion at rank 1
+Processed Items: 712
+
+Item Q7362956:
+Found suggestion at rank 1
+Processed Items: 713
+
+Item Q7363196:
+Found suggestion at rank 1
+Processed Items: 714
+
+Item Q7364083:
+Found suggestion at rank 3
+Processed Items: 715
+
+Item Q7372366:
+Found suggestion at rank 1
+Processed Items: 716
+
+Item Q7373062:
+Found suggestion at rank 1
+Processed Items: 717
+
+Item Q7380667:
+Found suggestion at rank 16
+Processed Items: 718
+
+Item Q7398921:
+Found suggestion at rank 38
+Processed Items: 719
+
+Item Q7436780:
+Found suggestion at rank 4
+Processed Items: 720
+
+Item Q7459860:
+Found suggestion at rank 1
+Processed Items: 721
+
+Item Q7520049:
+Found suggestion at rank 1
+Processed Items: 722
+
+Item Q7542211:
+Found suggestion at rank 1
+Processed Items: 723
+
+Item Q7554673:
+Found suggestion at rank 2
+Processed Items: 724
+
+Item Q7566273:
+Found suggestion at rank 1
+Processed Items: 725
+
+Item Q7575993:
+Found suggestion at rank 1
+Processed Items: 726
+
+Item Q7587108:
+Found suggestion at rank 8
+Processed Items: 727
+
+Item Q7595630:
+Found suggestion at rank 2
+Processed Items: 728
+
+Item Q7602763:
+Found suggestion at rank 2
+Processed Items: 729
+
+Item Q7620514:
+Found suggestion at rank 2
+Processed Items: 730
+
+Item Q7621277:
+Found suggestion at rank 1
+Processed Items: 731
+
+Item Q7668755:
+Found suggestion at rank 5
+Processed Items: 732
+
+Item Q7698026:
+Found suggestion at rank 2
+Processed Items: 733
+
+Item Q7702194:
+Found suggestion at rank 1
+Processed Items: 734
+
+Item Q7714224:
+Found suggestion at rank 1
+Processed Items: 735
+
+Item Q7718184:
+Found suggestion at rank 1
+Processed Items: 736
+
+Item Q7734536:
+Found suggestion at rank 2
+Processed Items: 737
+
+Item Q7744040:
+Found suggestion at rank 13
+Processed Items: 738
+
+Item Q7764198:
+Found suggestion at rank 7
+Processed Items: 739
+
+Item Q7793694:
+Found suggestion at rank 1
+Processed Items: 740
+
+Item Q7805483:
+Found suggestion at rank 3
+Processed Items: 741
+
+Item Q7815212:
+Found suggestion at rank 1
+Processed Items: 742
+
+Item Q7818238:
+Found suggestion at rank 1
+Processed Items: 743
+
+Item Q7822676:
+Found suggestion at rank 2
+Processed Items: 744
+
+Item Q7823847:
+Found suggestion at rank 1
+Processed Items: 745
+
+Item Q7825618:
+Found suggestion at rank 1
+Processed Items: 746
+
+Item Q7842846:
+Found suggestion at rank 1
+Processed Items: 747
+
+Item Q7856751:
+Found suggestion at rank 1
+Processed Items: 748
+
+Item Q7866610:
+Found suggestion at rank 4
+Processed Items: 749
+
+Item Q7870723:
+Found suggestion at rank 12
+Processed Items: 750
+
+Item Q7881015:
+Found suggestion at rank 1
+Processed Items: 751
+
+Item Q7911835:
+Found suggestion at rank 3
+Processed Items: 752
+
+Item Q7924215:
+Found suggestion at rank 1
+Processed Items: 753
+
+Item Q7926569:
+Found suggestion at rank 1
+Processed Items: 754
+
+Item Q7926692:
+Found suggestion at rank 1
+Processed Items: 755
+
+Item Q7947386:
+Found suggestion at rank 2
+Processed Items: 756
+
+Item Q7975601:
+Found suggestion at rank 1
+Processed Items: 757
+
+Item Q7980426:
+Rank could not be determined within first 50
+Processed Items: 758
+
+Item Q8007459:
+Found suggestion at rank 1
+Processed Items: 759
+
+Item Q8009080:
+Found suggestion at rank 1
+Processed Items: 760
+
+Item Q8018403:
+Found suggestion at rank 2
+Processed Items: 761
+
+Item Q8025120:
+Found suggestion at rank 13
+Processed Items: 762
+
+Item Q8039349:
+Found suggestion at rank 1
+Processed Items: 763
+
+Item Q8057213:
+Found suggestion at rank 1
+Processed Items: 764
+
+Item Q8083405:
+Found suggestion at rank 2
+Processed Items: 765
+
+Item Q8094975:
+Found suggestion at rank 4
+Processed Items: 766
+
+Item Q8099023:
+Found suggestion at rank 8
+Processed Items: 767
+
+Item Q8106489:
+Found suggestion at rank 6
+Processed Items: 768
+
+Item Q8110006:
+Found suggestion at rank 4
+Processed Items: 769
+
+Item Q8151368:
+Found suggestion at rank 1
+Processed Items: 770
+
+Item Q8176982:
+Found suggestion at rank 8
+Processed Items: 771
+
+Item Q8179343:
+Found suggestion at rank 1
+Processed Items: 772
+
+Item Q8187263:
+Found suggestion at rank 1
+Processed Items: 773
+
+Item Q8190479:
+Found suggestion at rank 1
+Processed Items: 774
+
+Item Q8214189:
+Found suggestion at rank 1
+Processed Items: 775
+
+Item Q8225041:
+Found suggestion at rank 1
+Processed Items: 776
+
+Item Q8226951:
+Found suggestion at rank 4
+Processed Items: 777
+
+Item Q8236209:
+Found suggestion at rank 8
+Processed Items: 778
+
+Item Q8260260:
+Found suggestion at rank 4
+Processed Items: 779
+
+Item Q8260663:
+Found suggestion at rank 1
+Processed Items: 780
+
+Item Q8266894:
+Found suggestion at rank 3
+Processed Items: 781
+
+Item Q8280409:
+Found suggestion at rank 1
+Processed Items: 782
+
+Item Q8293797:
+Found suggestion at rank 1
+Processed Items: 783
+
+Item Q8306418:
+Found suggestion at rank 1
+Processed Items: 784
+
+Item Q8307435:
+Found suggestion at rank 7
+Processed Items: 785
+
+Item Q8337364:
+Found suggestion at rank 1
+Processed Items: 786
+
+Item Q8352279:
+Found suggestion at rank 4
+Processed Items: 787
+
+Item Q8358498:
+Found suggestion at rank 1
+Processed Items: 788
+
+Item Q8373325:
+Found suggestion at rank 8
+Processed Items: 789
+
+Item Q8376630:
+Found suggestion at rank 1
+Processed Items: 790
+
+Item Q8393807:
+Found suggestion at rank 1
+Processed Items: 791
+
+Item Q8407846:
+Found suggestion at rank 1
+Processed Items: 792
+
+Item Q8408070:
+Found suggestion at rank 1
+Processed Items: 793
+
+Item Q8437397:
+Found suggestion at rank 1
+Processed Items: 794
+
+Item Q8445846:
+Found suggestion at rank 1
+Processed Items: 795
+
+Item Q8469239:
+Found suggestion at rank 1
+Processed Items: 796
+
+Item Q8512346:
+Found suggestion at rank 1
+Processed Items: 797
+
+Item Q8531747:
+Found suggestion at rank 4
+Processed Items: 798
+
+Item Q8559358:
+Found suggestion at rank 1
+Processed Items: 799
+
+Item Q8561727:
+Found suggestion at rank 1
+Processed Items: 800
+
+Item Q8569239:
+Found suggestion at rank 1
+Processed Items: 801
+
+Item Q8599471:
+Found suggestion at rank 1
+Processed Items: 802
+
+Item Q8606364:
+Found suggestion at rank 1
+Processed Items: 803
+
+Item Q8616998:
+Found suggestion at rank 8
+Processed Items: 804
+
+Item Q8623225:
+Found suggestion at rank 4
+Processed Items: 805
+
+Item Q8630122:
+Found suggestion at rank 1
+Processed Items: 806
+
+Item Q8633673:
+Found suggestion at rank 1
+Processed Items: 807
+
+Item Q8659103:
+Found suggestion at rank 4
+Processed Items: 808
+
+Item Q8665068:
+Found suggestion at rank 4
+Processed Items: 809
+
+Item Q8782287:
+Found suggestion at rank 1
+Processed Items: 810
+
+Item Q8788598:
+Found suggestion at rank 1
+Processed Items: 811
+
+Item Q8817657:
+Found suggestion at rank 4
+Processed Items: 812
+
+Item Q8817934:
+Found suggestion at rank 1
+Processed Items: 813
+
+Item Q8858894:
+Found suggestion at rank 6
+Processed Items: 814
+
+Item Q8865191:
+Found suggestion at rank 1
+Processed Items: 815
+
+Item Q8888429:
+Found suggestion at rank 1
+Processed Items: 816
+
+Item Q8896931:
+Found suggestion at rank 1
+Processed Items: 817
+
+Item Q8958796:
+Found suggestion at rank 1
+Processed Items: 818
+
+Item Q8999834:
+Found suggestion at rank 1
+Processed Items: 819
+
+Item Q9013906:
+Found suggestion at rank 1
+Processed Items: 820
+
+Item Q9015308:
+Found suggestion at rank 35
+Processed Items: 821
+
+Item Q9018831:
+Found suggestion at rank 1
+Processed Items: 822
+
+Item Q9020382:
+Found suggestion at rank 1
+Processed Items: 823
+
+Item Q9023007:
+Found suggestion at rank 1
+Processed Items: 824
+
+Item Q9024790:
+Found suggestion at rank 1
+Processed Items: 825
+
+Item Q9045586:
+Found suggestion at rank 1
+Processed Items: 826
+
+Item Q9046230:
+Found suggestion at rank 1
+Processed Items: 827
+
+Item Q9162909:
+Found suggestion at rank 2
+Processed Items: 828
+
+Item Q9359226:
+Rank could not be determined within first 50
+Processed Items: 829
+
+Item Q9456142:
+Found suggestion at rank 4
+Processed Items: 830
+
+Item Q9595922:
+Found suggestion at rank 2
+Processed Items: 831
+
+Item Q9630609:
+Found suggestion at rank 1
+Processed Items: 832
+
+Item Q9644839:
+Found suggestion at rank 8
+Processed Items: 833
+
+Item Q9989094:
+Found suggestion at rank 8
+Processed Items: 834
+
+Item Q10264456:
+Found suggestion at rank 5
+Processed Items: 835
+
+Item Q10417848:
+Found suggestion at rank 2
+Processed Items: 836
+
+Item Q10444227:
+Found suggestion at rank 1
+Processed Items: 837
+
+Item Q10448056:
+Found suggestion at rank 1
+Processed Items: 838
+
+Item Q10450212:
+Found suggestion at rank 1
+Processed Items: 839
+
+Item Q10460411:
+Found suggestion at rank 1
+Processed Items: 840
+
+Item Q10461994:
+Found suggestion at rank 2
+Processed Items: 841
+
+Item Q10464001:
+Found suggestion at rank 1
+Processed Items: 842
+
+Item Q10476180:
+Found suggestion at rank 1
+Processed Items: 843
+
+Item Q10476220:
+Found suggestion at rank 1
+Processed Items: 844
+
+Item Q10482866:
+Found suggestion at rank 1
+Processed Items: 845
+
+Item Q10505660:
+Found suggestion at rank 1
+Processed Items: 846
+
+Item Q10505733:
+Found suggestion at rank 1
+Processed Items: 847
+
+Item Q10507862:
+Found suggestion at rank 1
+Processed Items: 848
+
+Item Q10514591:
+Found suggestion at rank 1
+Processed Items: 849
+
+Item Q10524469:
+Found suggestion at rank 1
+Processed Items: 850
+
+Item Q10526331:
+Found suggestion at rank 1
+Processed Items: 851
+
+Item Q10529190:
+Found suggestion at rank 1
+Processed Items: 852
+
+Item Q10535147:
+Found suggestion at rank 1
+Processed Items: 853
+
+Item Q10537723:
+Found suggestion at rank 1
+Processed Items: 854
+
+Item Q10574495:
+Found suggestion at rank 1
+Processed Items: 855
+
+Item Q10581954:
+Found suggestion at rank 1
+Processed Items: 856
+
+Item Q10596195:
+Found suggestion at rank 2
+Processed Items: 857
+
+Item Q10597830:
+Found suggestion at rank 1
+Processed Items: 858
+
+Item Q10598355:
+Found suggestion at rank 1
+Processed Items: 859
+
+Item Q10601610:
+Found suggestion at rank 1
+Processed Items: 860
+
+Item Q10605943:
+Found suggestion at rank 1
+Processed Items: 861
+
+Item Q10625521:
+Found suggestion at rank 1
+Processed Items: 862
+
+Item Q10638341:
+Found suggestion at rank 1
+Processed Items: 863
+
+Item Q10640744:
+Found suggestion at rank 1
+Processed Items: 864
+
+Item Q10652781:
+Found suggestion at rank 1
+Processed Items: 865
+
+Item Q10656752:
+Found suggestion at rank 1
+Processed Items: 866
+
+Item Q10699888:
+Found suggestion at rank 1
+Processed Items: 867
+
+Item Q10749951:
+Found suggestion at rank 1
+Processed Items: 868
+
+Item Q10857962:
+Found suggestion at rank 1
+Processed Items: 869
+
+Item Q10897805:
+Found suggestion at rank 1
+Processed Items: 870
+
+Item Q10906386:
+Found suggestion at rank 1
+Processed Items: 871
+
+Item Q10907755:
+Found suggestion at rank 2
+Processed Items: 872
+
+Item Q10946520:
+Found suggestion at rank 2
+Processed Items: 873
+
+Item Q10953396:
+Found suggestion at rank 3
+Processed Items: 874
+
+Item Q11028446:
+Found suggestion at rank 1
+Processed Items: 875
+
+Item Q11045160:
+Found suggestion at rank 2
+Processed Items: 876
+
+Item Q11064724:
+Found suggestion at rank 3
+Processed Items: 877
+
+Item Q11129682:
+Found suggestion at rank 2
+Processed Items: 878
+
+Item Q11321124:
+Found suggestion at rank 1
+Processed Items: 879
+
+Item Q11360851:
+Found suggestion at rank 1
+Processed Items: 880
+
+Item Q11415936:
+Found suggestion at rank 4
+Processed Items: 881
+
+Item Q11495339:
+Found suggestion at rank 1
+Processed Items: 882
+
+Item Q11831896:
+Found suggestion at rank 1
+Processed Items: 883
+
+Item Q12005280:
+Found suggestion at rank 1
+Processed Items: 884
+
+Item Q12015610:
+Found suggestion at rank 1
+Processed Items: 885
+
+Item Q12025082:
+Found suggestion at rank 1
+Processed Items: 886
+
+Item Q12025262:
+Found suggestion at rank 1
+Processed Items: 887
+
+Item Q12026582:
+Found suggestion at rank 1
+Processed Items: 888
+
+Item Q12042971:
+Found suggestion at rank 1
+Processed Items: 889
+
+Item Q12050291:
+Found suggestion at rank 1
+Processed Items: 890
+
+Item Q12054587:
+Found suggestion at rank 4
+Processed Items: 891
+
+Item Q12062678:
+Found suggestion at rank 1
+Processed Items: 892
+
+Item Q12063945:
+Found suggestion at rank 1
+Processed Items: 893
+
+Item Q12084127:
+Found suggestion at rank 1
+Processed Items: 894
+
+Item Q12096790:
+Found suggestion at rank 1
+Processed Items: 895
+
+Item Q12119713:
+Found suggestion at rank 1
+Processed Items: 896
+
+Item Q12129911:
+Found suggestion at rank 20
+Processed Items: 897
+
+Item Q12153715:
+Found suggestion at rank 1
+Processed Items: 898
+
+Item Q12161543:
+Found suggestion at rank 1
+Processed Items: 899
+
+Item Q12288239:
+Found suggestion at rank 1
+Processed Items: 900
+
+Item Q12475220:
+Found suggestion at rank 1
+Processed Items: 901
+
+Item Q12475249:
+Rank could not be determined within first 50
+Processed Items: 902
+
+Item Q12490144:
+Rank could not be determined within first 50
+Processed Items: 903
+
+Item Q12874456:
+Found suggestion at rank 11
+Processed Items: 904
+
+Item Q12884672:
+Found suggestion at rank 3
+Processed Items: 905
+
+Item Q13095382:
+Rank could not be determined within first 50
+Processed Items: 906
+
+Item Q13231032:
+Found suggestion at rank 1
+Processed Items: 907
+
+Item Q13251236:
+Found suggestion at rank 8
+Processed Items: 908
+
+Item Q13370358:
+Found suggestion at rank 1
+Processed Items: 909
+
+Item Q13378989:
+Found suggestion at rank 1
+Processed Items: 910
+
+Item Q13379995:
+Found suggestion at rank 1
+Processed Items: 911
+
+Item Q13386017:
+Found suggestion at rank 1
+Processed Items: 912
+
+Item Q13393672:
+Found suggestion at rank 1
+Processed Items: 913
+
+Item Q13393802:
+Found suggestion at rank 1
+Processed Items: 914
+
+Item Q13395356:
+Found suggestion at rank 1
+Processed Items: 915
+
+Item Q13425008:
+Found suggestion at rank 1
+Processed Items: 916
+
+Item Q13437619:
+Found suggestion at rank 1
+Processed Items: 917
+
+Item Q13440954:
+Found suggestion at rank 1
+Processed Items: 918
+
+Item Q13455234:
+Found suggestion at rank 1
+Processed Items: 919
+
+Item Q13469889:
+Found suggestion at rank 1
+Processed Items: 920
+
+Item Q13471514:
+Found suggestion at rank 1
+Processed Items: 921
+
+Item Q13478405:
+Found suggestion at rank 1
+Processed Items: 922
+
+Item Q13481370:
+Found suggestion at rank 1
+Processed Items: 923
+
+Item Q13485903:
+Found suggestion at rank 1
+Processed Items: 924
+
+Item Q13492271:
+Found suggestion at rank 1
+Processed Items: 925
+
+Item Q13492645:
+Found suggestion at rank 1
+Processed Items: 926
+
+Item Q13496022:
+Found suggestion at rank 1
+Processed Items: 927
+
+Item Q13502725:
+Found suggestion at rank 1
+Processed Items: 928
+
+Item Q13507035:
+Found suggestion at rank 1
+Processed Items: 929
+
+Item Q13513956:
+Found suggestion at rank 1
+Processed Items: 930
+
+Item Q13524732:
+Found suggestion at rank 1
+Processed Items: 931
+
+Item Q13529341:
+Found suggestion at rank 1
+Processed Items: 932
+
+Item Q13536159:
+Found suggestion at rank 1
+Processed Items: 933
+
+Item Q13536970:
+Found suggestion at rank 1
+Processed Items: 934
+
+Item Q13539909:
+Found suggestion at rank 2
+Processed Items: 935
+
+Item Q13544555:
+Rank could not be determined within first 50
+Processed Items: 936
+
+Item Q13559890:
+Found suggestion at rank 2
+Processed Items: 937
+
+Item Q13575372:
+Found suggestion at rank 1
+Processed Items: 938
+
+Item Q13597139:
+Found suggestion at rank 1
+Processed Items: 939
+
+Item Q13602399:
+Found suggestion at rank 1
+Processed Items: 940
+
+Item Q13623752:
+Found suggestion at rank 1
+Processed Items: 941
+
+Item Q13641160:
+Found suggestion at rank 1
+Processed Items: 942
+
+Item Q13643292:
+Found suggestion at rank 1
+Processed Items: 943
+
+Item Q13654539:
+Found suggestion at rank 2
+Processed Items: 944
+
+Item Q13656543:
+Found suggestion at rank 1
+Processed Items: 945
+
+Item Q13659772:
+Found suggestion at rank 2
+Processed Items: 946
+
+Item Q13661128:
+Found suggestion at rank 2
+Processed Items: 947
+
+Item Q13662366:
+Found suggestion at rank 2
+Processed Items: 948
+
+Item Q13671374:
+Found suggestion at rank 2
+Processed Items: 949
+
+Item Q13674944:
+Found suggestion at rank 2
+Processed Items: 950
+
+Item Q13679768:
+Found suggestion at rank 2
+Processed Items: 951
+
+Item Q13684485:
+Found suggestion at rank 2
+Processed Items: 952
+
+Item Q13687866:
+Found suggestion at rank 2
+Processed Items: 953
+
+Item Q13688295:
+Found suggestion at rank 2
+Processed Items: 954
+
+Item Q13689325:
+Found suggestion at rank 2
+Processed Items: 955
+
+Item Q13692377:
+Found suggestion at rank 2
+Processed Items: 956
+
+Item Q13693036:
+Found suggestion at rank 2
+Processed Items: 957
+
+Item Q13696217:
+Found suggestion at rank 2
+Processed Items: 958
+
+Item Q13699273:
+Found suggestion at rank 2
+Processed Items: 959
+
+Item Q13709731:
+Found suggestion at rank 2
+Processed Items: 960
+
+Item Q13720899:
+Found suggestion at rank 2
+Processed Items: 961
+
+Item Q13732124:
+Found suggestion at rank 2
+Processed Items: 962
+
+Item Q13736059:
+Found suggestion at rank 2
+Processed Items: 963
+
+Item Q13740611:
+Found suggestion at rank 2
+Processed Items: 964
+
+Item Q13747912:
+Found suggestion at rank 2
+Processed Items: 965
+
+Item Q13757431:
+Found suggestion at rank 2
+Processed Items: 966
+
+Item Q13760659:
+Found suggestion at rank 2
+Processed Items: 967
+
+Item Q13760735:
+Found suggestion at rank 2
+Processed Items: 968
+
+Item Q13764701:
+Found suggestion at rank 1
+Processed Items: 969
+
+Item Q13781251:
+Found suggestion at rank 2
+Processed Items: 970
+
+Item Q13794623:
+Found suggestion at rank 2
+Processed Items: 971
+
+Item Q13801569:
+Found suggestion at rank 2
+Processed Items: 972
+
+Item Q13805911:
+Found suggestion at rank 2
+Processed Items: 973
+
+Item Q13809326:
+Found suggestion at rank 2
+Processed Items: 974
+
+Item Q13809731:
+Found suggestion at rank 2
+Processed Items: 975
+
+Item Q13813940:
+Found suggestion at rank 2
+Processed Items: 976
+
+Item Q13819456:
+Found suggestion at rank 2
+Processed Items: 977
+
+Item Q13831247:
+Found suggestion at rank 1
+Processed Items: 978
+
+Item Q13832848:
+Found suggestion at rank 1
+Processed Items: 979
+
+Item Q13846382:
+Found suggestion at rank 1
+Processed Items: 980
+
+Item Q13850913:
+Found suggestion at rank 2
+Processed Items: 981
+
+Item Q13854446:
+Found suggestion at rank 1
+Processed Items: 982
+
+Item Q13863593:
+Found suggestion at rank 2
+Processed Items: 983
+
+Item Q13874516:
+Found suggestion at rank 1
+Processed Items: 984
+
+Item Q13884434:
+Found suggestion at rank 2
+Processed Items: 985
+
+Item Q13884690:
+Found suggestion at rank 2
+Processed Items: 986
+
+Item Q13884856:
+Found suggestion at rank 2
+Processed Items: 987
+
+Item Q13885464:
+Found suggestion at rank 2
+Processed Items: 988
+
+Item Q13889021:
+Found suggestion at rank 2
+Processed Items: 989
+
+Item Q13892407:
+Found suggestion at rank 2
+Processed Items: 990
+
+Item Q13898070:
+Found suggestion at rank 2
+Processed Items: 991
+
+Item Q13906819:
+Found suggestion at rank 2
+Processed Items: 992
+
+Item Q13908179:
+Found suggestion at rank 2
+Processed Items: 993
+
+Item Q13908697:
+Found suggestion at rank 2
+Processed Items: 994
+
+Item Q13925201:
+Found suggestion at rank 1
+Processed Items: 995
+
+Item Q13933167:
+Found suggestion at rank 2
+Processed Items: 996
+
+Item Q13934639:
+Found suggestion at rank 2
+Processed Items: 997
+
+Item Q13937898:
+Found suggestion at rank 2
+Processed Items: 998
+
+Item Q13939818:
+Found suggestion at rank 2
+Processed Items: 999
+
+Item Q13942757:
+Found suggestion at rank 2
+Size of Entities in Output: 1000
+ samplesize the user requested: 1000
+Total amount of items in dump: 10957764
+We extract the last added property and check at which position it would have been suggested (based on remaining properties).
+Average rank of extracted properties positioned within the first 50 suggestions: 2.51120162933
+Count of extracted properties not positioned within the first 50 suggestions: 18
+
+Process finished with exit code 0

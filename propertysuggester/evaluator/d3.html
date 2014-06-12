@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="style_wikidata.css">
-<script src="d3.v3.min.js"></script>
-<script src="d3.tip.v0.6.3.js"></script>
+<link rel="stylesheet" type="text/css" href="frameworks/style_wikidata.css">
+<script src="frameworks/d3.v3.min.js"></script>
+<script src="frameworks/d3.tip.v0.6.3.js"></script>
 <title> Evaluation </title>
 <body>
   <div id="option">
     <input name="letterButton" 
                  type="button" 
                 value="random"
-                onclick="execute_it('20130526_dump_1000_random.csv')" />
+                onclick="execute_it('csv/20130526_dump_1000_random.csv')" />
       <input name="bubu"
-             type = "button" value="random new algo" onclick="execute_it('20130526_dump_1000_random_new_algorithm.csv')" />
+             type = "button" value="random new algo" onclick="execute_it('csv/20130526_dump_1000_random_new_algorithm.csv')" />
     <input name="evalButton" 
      type="button" 
     value="letztes element"
-    onclick="execute_it('20130526_dump_new_algorithm_1000.csv')" />
+    onclick="execute_it('csv/20130526_dump_new_algorithm_1000.csv')" />
 </div>
 <h1> Evaluation of the EntitySuggester</h1>
 <h3>Sample size: 1000 </h3></br>
-<script src="svg_script.js"></script>
+<script src="frameworks/svg_script.js"></script>
 </body>
 </html>
