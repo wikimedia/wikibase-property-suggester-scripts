@@ -9,14 +9,14 @@ für jede eigenschaft x die durchschnittliche bewertung ermitteln
 """
 
 __author__ = 'Virginia'
-
-import json
 import csv
 from Entity import Entity
+
 
 class UserFeedbackEvaluation():
     def __init__(self):
         pass
+
     def preprocess_file(self):
         filename = 'C:\Users\Virginia\Documents\GitHub\PropertySuggester-Python\propertysuggester\evaluator\manuell\python_excel.csv'
         skipped = 0
@@ -26,20 +26,22 @@ class UserFeedbackEvaluation():
             eval_reader = csv.reader(csvfile, delimiter='\t', quotechar='"')
             evaluation_list = []
             for i, row in enumerate(eval_reader):
-                id = i
+                entity_id = i
                 # for checking
                 properties = row[4]
                 suggestions = row[5]
                 missing = row[6]
-                if properties[-1]  != "]" or suggestions[-1]  != "]" or missing[-1] != "]":
-                    skipped+=1
+                if properties[-1] != "]" or suggestions[-1] != "]" or missing[-1] != "]":
+                    skipped += 1
                     skipped_ids.append(row[3])
                     continue
-                entity = Entity(row, id)
+                entity = Entity(row, entity_id)
                 evaluation_list.append(entity)
-            print "Skipped Items due to invalid data: " + str(skipped) +". Items: " + str(skipped_ids)
+            print "Skipped Items due to invalid data: " + str(skipped) + " Items: " + str(skipped_ids)
             return evaluation_list
+
     def analyse_count(self, eval_list):
+        ratings_dict = {}
         positive = 0
         negative = 0
         neutral = 0
@@ -48,18 +50,28 @@ class UserFeedbackEvaluation():
         totalEntities = 0
         for entity in eval_list:
             for suggestion in entity.suggestions:
-
+                prob = (int(float(suggestion.probability) * 50))
+                if prob not in ratings_dict:
+                    ratings_dict[prob] = {"pos": 0, "neutral": 0, "neg": 0}
                 if suggestion.rating == -1:
-                    negative +=1
+                    negative += 1
+                    ratings_dict[prob]["neg"] += 1
                 if suggestion.rating == 0:
                     neutral += 1
+                    ratings_dict[prob]["neutral"] += 1
                 if suggestion.rating == 1:
                     positive += 1
+                    ratings_dict[prob]["pos"] += 1
                 if suggestion.rating == -2:
                     question += 1
                 totalAmountRatings += 1
-            totalEntities+=1
-
+            totalEntities += 1
+        with open("average_csv.csv", "wb") as csv_file:
+            rating_writer = csv.writer(csv_file, delimiter=';',
+                                       quotechar='|')
+            rating_writer.writerow(["probability", "positive", "neutral", "negative"])
+            for proba, amount in ratings_dict.items():
+                rating_writer.writerow([proba, amount["pos"], amount["neutral"], amount["neg"]])
         print str(totalAmountRatings) + " total ratings in " + str(totalEntities) + " Entities"
         print "Positive: " + str(positive)
         print "Negative: " + str(negative)
@@ -67,32 +79,123 @@ class UserFeedbackEvaluation():
         print "Do not know: " + str(question)
 
     def analyse_average_per_entity(self, eval_list):
-        entity_dict = {}
+
+        entity_ratings = {}
+        entity_probabilities = {}
+
         for entity in eval_list:
-            if not entity.entity in entity_dict:
-                entity_dict[entity.entity] = []
+            if not entity.entity in entity_ratings:
+                entity_ratings[entity.entity] = []
+            if not entity.entity in entity_probabilities:
+                entity_probabilities[entity.entity] = []
+
             for suggestion in entity.suggestions:
                 if not suggestion.rating == -2:
-                    entity_dict[entity.entity].append(suggestion.rating)
-        total_average = 0
-        total_counter = 0
-        for entity_id, entity_data in entity_dict.items():
+                    entity_ratings[entity.entity].append(suggestion.rating)
+                entity_probabilities[entity.entity].append(suggestion.probability)
+        total_rating_average = 0
+        total_rating_counter = 0
+        for entity_id, entity_data in entity_ratings.items():
             print "Entity: " + str(entity_id)
             summe = 0
             counter = 0
-            if entity_data ==[]:
+            if entity_data == []:
                 print "Can't determine average (only '?' provided), skip to  next item"
                 continue
             for rating in entity_data:
                 summe += rating
                 counter += 1
 
-            print "Average: " + str(float(summe)/counter) +" out of " + str(counter) +" ratings"
-            total_average += float(summe)/counter
-            total_counter += 1
-        print "Total average over all items " + str(total_average/total_counter)
+            print "Average: " + str(float(summe) / counter) + " out of " + str(counter) + " ratings"
+            total_rating_average += float(summe) / counter
+            total_rating_counter += 1
+
+        print "Total average over all items " + str(total_rating_average / total_rating_counter)
+        for entity_id, entity_probability in entity_probabilities.items():
+            summe = 0
+            counter = 0
+            for probability in entity_probability:
+                summe += float(probability)
+                counter += 1
+            print "Average probability Item (" + str(entity_id) + ") " + str(float(summe) / counter)
+
+    def determine_amount_entities(self, eval_list):
+        entity_dict = {}
+        for entity in eval_list:
+            if not entity.entity in entity_dict:
+                entity_dict[entity.entity] = 1
+                continue
+            entity_dict[entity.entity] += 1
+
+        for entity_entry, entity_amount in entity_dict.items():
+            print str(entity_entry) + " amount: " + str(entity_amount)
+
+    def determine_precision(self, eval_list):
+        precision_sum = 0
+        precision_counter = 0
+        for entity in eval_list:
+            relevant_set = set()
+            retrieved_set = set()
+            for suggestion in entity.suggestions:
+                retrieved_set.add(suggestion.suggestion_id)
+
+                if suggestion.rating == 1 or suggestion.rating == 0:
+                    relevant_set.add(suggestion.suggestion_id)
+            # second round
+            relevance_counter = 0
+            for suggestion in entity.suggestions:
+
+
+                if suggestion.suggestion_id in relevant_set:
+                    relevance_counter += 1
+                    rel_length= len(relevant_set)
+                    precision = (float(relevance_counter))/(int(suggestion.position)+1)
+                print "calculation: precision position #"+ str(suggestion.position) + "  "+ str(precision)
+
+
+            result_set = retrieved_set.intersection(relevant_set)
+            if len(relevant_set) == 0:
+                print "null relevance, skip " + str(entity.entity)
+                continue
+            precision = float(len(result_set)) / len(retrieved_set)
+            precision_sum += precision
+            precision_counter += 1
+            print "precision for: " + str(entity.entity) + str(" ") + str(precision)
+        print "Average precision over all items: " + str(float(precision_sum / precision_counter))
+
+    def determine_recall_per_position(self, eval_list):
+        for entity in eval_list:
+            relevant_set = set()
+            retrieved_set = set()
+            for suggestion in entity.suggestions:
+                retrieved_set.add(suggestion.suggestion_id)
+
+                if suggestion.rating == 1 or suggestion.rating == 0:
+                    relevant_set.add(suggestion.suggestion_id)
+            # second round
+            relevance_counter = 0
+            print entity.entity
+            for suggestion in entity.suggestions:
+
+
+                if suggestion.suggestion_id in relevant_set:
+                    relevance_counter += 1
+                    rel_length= len(relevant_set)
+                    recall = (float(relevance_counter))/rel_length
+                print "Recall at  position #"+ str(suggestion.position) + "  "+ str(recall)
+
+
+
 
 luser = UserFeedbackEvaluation()
 eval_list = luser.preprocess_file()
-luser.analyse_count(eval_list)
+#print (" ##### Amount of ratings")
+#luser.analyse_count(eval_list)
+print (" ##### Average rating per entity")
 #luser.analyse_average_per_entity(eval_list)
+print (" ###### Amount of entities")
+#luser.determine_amount_entities(eval_list)
+
+#luser.determine_precision(eval_list)
+#luser.determine_precision(eval_list)
+luser.determine_recall_per_position(eval_list)
