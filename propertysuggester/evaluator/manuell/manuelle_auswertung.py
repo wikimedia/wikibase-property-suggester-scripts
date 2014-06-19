@@ -126,40 +126,53 @@ class UserFeedbackEvaluation():
                 entity_dict[entity.entity] = 1
                 continue
             entity_dict[entity.entity] += 1
+        sorted = [(entity_amount,entity_entry) for entity_entry, entity_amount in entity_dict.items()]
+        sorted.sort(reverse=True)
 
-        for entity_entry, entity_amount in entity_dict.items():
-            print str(entity_entry) + " amount: " + str(entity_amount)
+        with open("amount_per_entity.csv", "wb") as csv_file:
+            amount_writer = csv.writer(csv_file, delimiter=';',
+                                       quotechar='|')
+            for entity_amount, entity_entry in sorted:
+                print str(entity_entry) + " amount: " + str(entity_amount)
+                amount_writer.writerow([entity_entry, entity_amount])
 
     def determine_precision(self, eval_list):
         precision_sum = 0
         precision_counter = 0
+
         for entity in eval_list:
             relevant_set = set()
             retrieved_set = set()
-            for suggestion in entity.suggestions:
-                retrieved_set.add(suggestion.suggestion_id)
+            with open("precision_per_entity_per_position.csv", "wb") as position_csv:
+                precision_position_writer = csv.writer(position_csv, delimiter=';',
+                                   quotechar='|')
+                for suggestion in entity.suggestions:
+                    retrieved_set.add(suggestion.suggestion_id)
 
-                if suggestion.rating == 1 or suggestion.rating == 0:
-                    relevant_set.add(suggestion.suggestion_id)
-            # second round
-            relevance_counter = 0
-            for suggestion in entity.suggestions:
+                    if suggestion.rating == 1 or suggestion.rating == 0:
+                        relevant_set.add(suggestion.suggestion_id)
+                # second round
+                relevance_counter = 0
+
+                for suggestion in entity.suggestions:
+                    if suggestion.suggestion_id in relevant_set:
+                        relevance_counter += 1
+                        precision = (float(relevance_counter))/(int(suggestion.position)+1)
+                    print "calculation: precision position #"+ str(suggestion.position) + "  "+ str(precision)
+                    precision_position_writer.writerow([entity.entity, suggestion.position, precision])
 
 
-                if suggestion.suggestion_id in relevant_set:
-                    relevance_counter += 1
-                    rel_length= len(relevant_set)
-                    precision = (float(relevance_counter))/(int(suggestion.position)+1)
-                print "calculation: precision position #"+ str(suggestion.position) + "  "+ str(precision)
-
-
-            result_set = retrieved_set.intersection(relevant_set)
-            if len(relevant_set) == 0:
-                print "null relevance, skip " + str(entity.entity)
-                continue
-            precision = float(len(result_set)) / len(retrieved_set)
-            precision_sum += precision
-            precision_counter += 1
+                result_set = retrieved_set.intersection(relevant_set)
+                if len(relevant_set) == 0:
+                    print "null relevance, skip " + str(entity.entity)
+                    continue
+        precision = float(len(result_set)) / len(retrieved_set)
+        precision_sum += precision
+        precision_counter += 1
+        with open("precision_per_entity.csv", "wb") as csv_file:
+            precision_writer = csv.writer(csv_file, delimiter=';',
+                               quotechar='|')
+            precision_writer.writerow([entity.entity, precision])
             print "precision for: " + str(entity.entity) + str(" ") + str(precision)
         print "Average precision over all items: " + str(float(precision_sum / precision_counter))
 
@@ -185,8 +198,24 @@ class UserFeedbackEvaluation():
                 print "Recall at  position #"+ str(suggestion.position) + "  "+ str(recall)
 
 
+    def analyse_suggestion_properties(self, eval_list):
+        property_dict ={}
 
-
+        for entity in eval_list:
+            for suggestion in entity.suggestions:
+                property_id = suggestion.suggestion_id
+                if property_id not in property_dict:
+                    property_dict[property_id] = {"pos": 0, "neutral": 0, "neg": 0,"question" : 0}
+                if suggestion.rating == -1:
+                    property_dict[property_id]["neg"] += 1
+                if suggestion.rating == 0:
+                    property_dict[property_id]["neutral"] += 1
+                if suggestion.rating == 1:
+                    property_dict[property_id]["pos"] += 1
+                if suggestion.rating == -2:
+                    property_dict[property_id]["question"] += 1
+        for prop_id, prop in property_dict.items():
+            print "prop id " + str(prop_id) + " " + str(prop)
 luser = UserFeedbackEvaluation()
 eval_list = luser.preprocess_file()
 #print (" ##### Amount of ratings")
@@ -194,8 +223,9 @@ eval_list = luser.preprocess_file()
 print (" ##### Average rating per entity")
 #luser.analyse_average_per_entity(eval_list)
 print (" ###### Amount of entities")
-#luser.determine_amount_entities(eval_list)
+luser.determine_amount_entities(eval_list)
 
 #luser.determine_precision(eval_list)
-#luser.determine_precision(eval_list)
-luser.determine_recall_per_position(eval_list)
+luser.determine_precision(eval_list)
+#luser.determine_recall_per_position(eval_list)
+#luser.analyse_suggestion_properties(eval_list)
