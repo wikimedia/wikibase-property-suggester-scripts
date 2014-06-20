@@ -1,27 +1,18 @@
 
-"""
-read_csv returns a generator that yields the tuple (title, [(p1, dt1, v1), (p2, dt1, v2),..])
-where
-p_n is a property
-d_n is a datatype
-v_n is a value
-
-usage:
-with open("file.csv", "r") as f:
-	 for title, claim in read_csv(f):
-		  do_things()
-
-"""
-
 import random
 from propertysuggester.evaluator.ResultEvaluation import ResultEvaluation
 
 class SearchResultEvaluation(ResultEvaluation):
-	def __init__(self):
-		ResultEvaluation.__init__(self, "Y:\Documents\GitHub\PropertySuggester-Python\wikidatawiki-20140526-pages-articles.csv",
-								  1000 ,"20130526_dump_1000_random_new_algorithm_5_threshold.csv")
 
-	def process_entities(self, entity):
+    def __init__(self):
+        self.filename = "C:\Users\Virginia\Documents\GitHub\PropertySuggester-Python\propertysuggester\evaluator\wikidatawiki-20140526-pages-articles.csv"
+        self.samplesize = 1000
+        self.outputfile = "20130526_dump" + str(self.samplesize) + "2-5.csv"
+
+        ResultEvaluation.__init__(self, self.filename,
+								  self.samplesize , self.outputfile)
+
+	def process_entities_random(self, entity):
 		propertyIds = [claim.property_id for claim in entity.claims]  # get ids from claims
 		random_item = random.choice(propertyIds)
 		removed_list = propertyIds[:]
@@ -30,6 +21,12 @@ class SearchResultEvaluation(ResultEvaluation):
 		suggestions = self.api.wbs_getsuggestions(properties=removed_list, limit=50, cont=0)
 		self.rank_suggestions(propertyIds, suggestions)
 
+    def process_entities(self, entity):
+        propertyIds = [claim.property_id for claim in entity.claims]  # get ids from claims
+        removed_list = propertyIds[:-1]
+        print "\nItem {0} - {1} properties".format(entity.title, len(propertyIds))
+        suggestions = self.api.wbs_getsuggestions(properties=removed_list, limit=50, cont=0)
+        self.rank_suggestions(propertyIds, suggestions)
 x = SearchResultEvaluation()
 x.evaluate()
 
