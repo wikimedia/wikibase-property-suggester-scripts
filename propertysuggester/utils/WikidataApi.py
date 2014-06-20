@@ -39,6 +39,6 @@ class WikidataApi:
         return result.json()
 
     def wb_searchentities(self,letter = "",type = 'property',language ='en', continues=0 ):
-        params ={'action': 'wbsearchentities', 'format': 'json', 'language': language, 'type': type, 'search' : letter, 'continue': continues}
+        params ={'action': 'wbsearchentities', 'format': 'json', 'language': language, 'type': type, 'search' : letter, 'continue': continues, 'limit': 50}
         result = requests.get(self.url + "/api.php", params=params)
         return result.json()

@@ -1,20 +1,6 @@
-"""
-read_csv returns a generator that yields the tuple (title, [(p1, dt1, v1), (p2, dt1, v2),..])
-where
-p_n is a property
-d_n is a datatype
-v_n is a value
-
-usage:
-with open("file.csv", "r") as f:
-     for title, claim in read_csv(f):
-          do_things()
-
-"""
-
 from propertysuggester.evaluator.ResultEvaluation import ResultEvaluation
 from propertysuggester.parser import CsvReader
-
+import csv
 class FirstLetterResultEvaluation(ResultEvaluation):
 
     def __init__(self):
@@ -49,22 +35,29 @@ class FirstLetterResultEvaluation(ResultEvaluation):
         for letter in letters:
             result_dict[letter] = 0
 
-            total = self.api.wb_searchentities(letter=letter)
+            total = self.api.wb_searchentities(letter=letter, language='de')
             print total
-            while "search-continue" in total:
-                print total["search-continue"]
-                continues = total["search-continue"]
+            continues = 0
+            while len(total["search"]) > 0:
                 result = total["search"]
-
                 length = len(result)
+                print "current amount of results: " +str(length)
                 result_dict[letter] += length
-                total = self.api.wb_searchentities(letter=letter, continues=continues)
+                continues += 50
+                total = self.api.wb_searchentities(letter=letter, continues=continues, language='de')
+
 
         print str(result_dict)
         summe = 0
         for letter, amount in result_dict.items():
             summe += amount
         print "insgesamte anzahl properties: " + str(summe)
+        with open("verteilung_buchstaben_de.csv","wb") as eng_file:
+            en_letter_writer = csv.writer(eng_file, delimiter=';',
+                                       quotechar='|')
+            en_letter_writer.writerow(["letter","amount"])
+            for letter, amount in result_dict.items():
+                en_letter_writer.writerow([letter, amount])
 
 
 x = FirstLetterResultEvaluation()
