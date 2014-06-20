@@ -137,44 +137,56 @@ class UserFeedbackEvaluation():
                 amount_writer.writerow([entity_entry, entity_amount])
 
     def determine_precision(self, eval_list):
+
         precision_sum = 0
         precision_counter = 0
-
         for entity in eval_list:
             relevant_set = set()
             retrieved_set = set()
-            with open("precision_per_entity_per_position.csv", "wb") as position_csv:
-                precision_position_writer = csv.writer(position_csv, delimiter=';',
+
+            for suggestion in entity.suggestions:
+                retrieved_set.add(suggestion.suggestion_id)
+                # neutral included
+                if suggestion.rating == 1 or suggestion.rating == 0:
+                    relevant_set.add(suggestion.suggestion_id)
+
+            result_set = retrieved_set.intersection(relevant_set)
+            if len(relevant_set) == 0:
+                print "null relevance, skip " + str(entity.entity)
+                continue
+            precision = float(len(result_set)) / len(retrieved_set)
+            precision_sum += precision
+            precision_counter += 1
+            with open("precision_per_entity.csv", "wb") as csv_file:
+                precision_writer = csv.writer(csv_file, delimiter=';',
                                    quotechar='|')
+                precision_writer.writerow([entity.entity, precision])
+                print "precision for: " + str(entity.entity) + str(" ") + str(precision)
+        print "Average precision over all items: " + str(float(precision_sum / precision_counter))
+
+
+    def determine_precision_per_position(self,eval_list):
+        with open("precision_per_entity_per_position.csv", "wb") as position_csv:
+            precision_position_writer = csv.writer(position_csv, delimiter=';',
+                                   quotechar='|')
+            for entity in eval_list:
+                relevant_set = set()
+                retrieved_set = set()
+
                 for suggestion in entity.suggestions:
                     retrieved_set.add(suggestion.suggestion_id)
 
                     if suggestion.rating == 1 or suggestion.rating == 0:
                         relevant_set.add(suggestion.suggestion_id)
-                # second round
+                    # second round
                 relevance_counter = 0
 
                 for suggestion in entity.suggestions:
                     if suggestion.suggestion_id in relevant_set:
                         relevance_counter += 1
                         precision = (float(relevance_counter))/(int(suggestion.position)+1)
-                    print "calculation: precision position #"+ str(suggestion.position) + "  "+ str(precision)
+                    print "calculation: precision position #" + str(suggestion.position) + "  "+ str(precision)
                     precision_position_writer.writerow([entity.entity, suggestion.position, precision])
-
-
-                result_set = retrieved_set.intersection(relevant_set)
-                if len(relevant_set) == 0:
-                    print "null relevance, skip " + str(entity.entity)
-                    continue
-        precision = float(len(result_set)) / len(retrieved_set)
-        precision_sum += precision
-        precision_counter += 1
-        with open("precision_per_entity.csv", "wb") as csv_file:
-            precision_writer = csv.writer(csv_file, delimiter=';',
-                               quotechar='|')
-            precision_writer.writerow([entity.entity, precision])
-            print "precision for: " + str(entity.entity) + str(" ") + str(precision)
-        print "Average precision over all items: " + str(float(precision_sum / precision_counter))
 
     def determine_recall_per_position(self, eval_list):
         for entity in eval_list:
@@ -229,3 +241,4 @@ luser.determine_amount_entities(eval_list)
 luser.determine_precision(eval_list)
 #luser.determine_recall_per_position(eval_list)
 #luser.analyse_suggestion_properties(eval_list)
+luser.determine_precision_per_position(eval_list)
