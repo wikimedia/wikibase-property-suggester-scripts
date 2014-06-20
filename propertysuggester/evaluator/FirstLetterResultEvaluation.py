@@ -43,9 +43,31 @@ class FirstLetterResultEvaluation(ResultEvaluation):
         self.rank_suggestions( propertyIds, suggestions)
 
 
+    def get_all_letters(self):
+        letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+        result_dict ={}
+        for letter in letters:
+            result_dict[letter] = 0
+
+            total = self.api.wb_searchentities(letter=letter)
+            print total
+            while "search-continue" in total:
+                print total["search-continue"]
+                continues = total["search-continue"]
+                result = total["search"]
+
+                length = len(result)
+                result_dict[letter] += length
+                total = self.api.wb_searchentities(letter=letter, continues=continues)
+
+        print str(result_dict)
+        summe = 0
+        for letter, amount in result_dict.items():
+            summe += amount
+        print "insgesamte anzahl properties: " + str(summe)
 
 
 x = FirstLetterResultEvaluation()
-x.evaluate()
+x.get_all_letters()
 
 #importfile = "Wikidata-20131129161111.xml.gz.csv"
