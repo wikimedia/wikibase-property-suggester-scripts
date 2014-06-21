@@ -9,18 +9,18 @@ class ResultEvaluation:
         self.samplesize = samplesize
         self.outputfile = outputfile
         self.itemsBeyond50Count = 0
-        self.itemsOnFirst50PositionSum = 0
-        self.itemsOnFirst50Count = 0
+        self.foundMissingPropertiesRankSum = 0
+        self.foundMissingProperties = 0
         self.appearsWithinFirst50 = False
         self.ranking_amounts = {i: 0 for i in range(1,51)}
         self.random_ids = []
         self.foundEntities = 0
-        self.api = WikidataApi("http://wikidata.org/w/")
+        self.api = WikidataApi("http://127.0.0.1/devrepo")
 
     def generate_random_integers(self):
         random.seed(2)
         counter = 0
-        while counter < 5 * self.samplesize:
+        while counter < 100 * self.samplesize:
             self.random_ids.append(random.randint(0, 10957764))
             counter += 1
 
@@ -49,8 +49,8 @@ class ResultEvaluation:
     def handle_found_suggestion(self, rank):
         print "Found suggestion at rank " + str(rank)
         self.ranking_amounts[rank] += 1
-        self.itemsOnFirst50PositionSum += rank
-        self.itemsOnFirst50Count += 1
+        self.foundMissingPropertiesRankSum += rank
+        self.foundMissingProperties += 1
         self.foundEntities += 1
         self.appearsWithinFirst50 = True
 
@@ -64,7 +64,7 @@ class ResultEvaluation:
             processed_items = 0
             for entity in CsvReader.read_csv(f):
                 if self.foundEntities < self.samplesize:
-                    if current_item_count in self.random_ids and len(entity.claims) > 2 and len(entity.claims) < 6:
+                    if current_item_count in self.random_ids and len(entity.claims) > 6:
                         print "Processed Items: {0}".format(processed_items)
                         self.process_entities(entity)
                         processed_items += 1
@@ -77,9 +77,9 @@ class ResultEvaluation:
         print " samplesize the user requested: " + str(self.samplesize)
         print "Total amount of items in dump: " + str(current_item_number)
         print "We extract the last added property and check at which position it would have been suggested (based on remaining properties)."
-        if self.itemsOnFirst50Count > 0 and self.itemsOnFirst50PositionSum > 0:
+        if self.foundMissingProperties > 0 and self.foundMissingPropertiesRankSum > 0:
             print "Average rank of extracted properties positioned within the first 50 suggestions: " + str(
-                float(self.itemsOnFirst50PositionSum) / self.itemsOnFirst50Count)
+                float(self.foundMissingPropertiesRankSum) / self.foundMissingProperties)
         print "Count of extracted properties not positioned within the first 50 suggestions: " + str(
             self.itemsBeyond50Count)
 

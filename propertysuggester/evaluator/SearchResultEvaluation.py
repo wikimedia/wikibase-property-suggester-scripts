@@ -7,7 +7,7 @@ class SearchResultEvaluation(ResultEvaluation):
     def __init__(self):
         self.filename = "C:\Users\Virginia\Documents\GitHub\PropertySuggester-Python\propertysuggester\evaluator\wikidatawiki-20140526-pages-articles.csv"
         self.samplesize = 1000
-        self.outputfile = "20130526_dump" + str(self.samplesize) + "2-5.csv"
+        self.outputfile = "20130526_dump" + str(self.samplesize) + "6_threshold_0_.csv"
 
         ResultEvaluation.__init__(self, self.filename,
 								  self.samplesize , self.outputfile)

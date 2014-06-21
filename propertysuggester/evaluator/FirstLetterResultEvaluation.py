@@ -1,18 +1,20 @@
 from propertysuggester.evaluator.ResultEvaluation import ResultEvaluation
 from propertysuggester.parser import CsvReader
+from propertysuggester.utils.WikidataApi import WikidataApi
 import csv
 class FirstLetterResultEvaluation(ResultEvaluation):
 
     def __init__(self):
-        ResultEvaluation.__init__(self, "Y:\Documents\GitHub\PropertySuggester-Python\wikidatawiki-20140526-pages-articles.csv", 1000, "20130526_dump_1000_first_letter.csv")
+        ResultEvaluation.__init__(self, "C:\Users\Virginia\Documents\GitHub\PropertySuggester-Python\propertysuggester\evaluator\wikidatawiki-20140526-pages-articles.csv", 1000, "20130526_dump_1000_first_letter_threshold_0_6.csv")
         self.property_dic = {}
+        self.wikidata_api = WikidataApi("http://wikidata.org/w/")
 
 
     def get_first_letter(self, property_id):
         if property_id in self.property_dic:
             first_letter = self.property_dic[property_id]
         else:
-            property_json = self.api.wb_getentities(entityid=property_id, language="en")
+            property_json = self.wikidata_api.wb_getentities(entityid=property_id, language="en")
             property_description = property_json["entities"][str(property_id)]["labels"]["en"]["value"]
             first_letter = property_description[0]
             self.property_dic[property_id] = first_letter
@@ -24,7 +26,7 @@ class FirstLetterResultEvaluation(ResultEvaluation):
         removed_property_id = propertyIds[-1]
         property_id = "P" + str(removed_property_id)
         print "\nItem " + entity.title + ":"
-        first_letter = self.get_first_letter(property_id)  #api = WikidataApi("http://suggester.wmflabs.org/wiki")
+        first_letter = self.get_first_letter(property_id)  # api = WikidataApi("http://suggester.wmflabs.org/wiki")
         suggestions = self.api.wbs_getsuggestions(properties=removed_list, limit=50, cont=0, search=first_letter)
         self.rank_suggestions( propertyIds, suggestions)
 
@@ -61,6 +63,6 @@ class FirstLetterResultEvaluation(ResultEvaluation):
 
 
 x = FirstLetterResultEvaluation()
-x.get_all_letters()
-
+#x.get_all_letters()
+x.evaluate()
 #importfile = "Wikidata-20131129161111.xml.gz.csv"
