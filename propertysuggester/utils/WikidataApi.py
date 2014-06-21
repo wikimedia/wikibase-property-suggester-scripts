@@ -24,7 +24,7 @@ class WikidataApi:
         if entity:
             params['entity'] = entity
         elif properties:
-            params['properties'] = ','.join(map(str, properties))
+            params['properties'] = '|'.join(map(str, properties))
 
         result = requests.get(self.url + "/api.php", params=params)
         return result.json()
