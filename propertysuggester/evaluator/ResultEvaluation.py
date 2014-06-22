@@ -15,7 +15,7 @@ class ResultEvaluation:
         self.ranking_amounts = {i: 0 for i in range(1,51)}
         self.random_ids = []
         self.foundEntities = 0
-        self.api = WikidataApi("http://127.0.0.1/devrepo")
+        self.api = WikidataApi("http://127.0.0.1/devrepo/wiki")
 
     def generate_random_integers(self):
         random.seed(2)
