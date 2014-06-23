@@ -2,11 +2,13 @@
 import random
 from propertysuggester.evaluator.ResultEvaluation import ResultEvaluation
 
+classifyingAttributes = [31, 5]
+
 class SearchResultEvaluation(ResultEvaluation):
 
     def __init__(self):
         self.filename = "E:\Moritz\Desktop\Bachelorprojekt\wikidatawiki-20140526-pages-articles.xml\dump.csv"
-        self.samplesize = 10000
+        self.samplesize = 1000
         self.outputfile = "ClassifyingPropertiesEvaluation20130526_dump" + str(self.samplesize) + "6_threshold_0_.csv"
 
         ResultEvaluation.__init__(self, self.filename,
@@ -25,9 +27,10 @@ class SearchResultEvaluation(ResultEvaluation):
         propertyValuePairs = [] 
         propertyIds = [claim.property_id for claim in entity.claims]  # get ids from claims
         for claim in entity.claims:
-            propertyValuePairs.append("("+ str(claim.property_id) + ";" + "0" + ")")
-            if claim.datatype == "wikibase-entityid":
+            if claim.property_id in classifyingAttributes:
                 propertyValuePairs.append("("+ str(claim.property_id) + ";" + str(claim.value)[1:] + ")")
+            else:
+                propertyValuePairs.append("("+ str(claim.property_id) + ";" + "0" + ")")
         removed_list = propertyValuePairs[:-1]
         print removed_list
         print "\nItem {0} - {1} properties".format(entity.title, len(propertyIds))
