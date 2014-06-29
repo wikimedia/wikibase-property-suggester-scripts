@@ -3,7 +3,7 @@ from collections import defaultdict
 
 
 
-def compute_table(generator, classifier_ids=(31, 106)):
+def compute_table(generator, classifier_ids=(31, 106, 105, 171, 132, 136)):
     """
     @type generator: collections.Iterable[Entity]
     @return: dict[int, dict]
