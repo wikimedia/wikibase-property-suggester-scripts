@@ -2,14 +2,14 @@
 import random
 from propertysuggester.evaluator.ResultEvaluation import ResultEvaluation
 
-classifyingAttributes = [31, 5]
+classifyingAttributes = [31, 106, 105, 171, 132, 136]
 
 class SearchResultEvaluation(ResultEvaluation):
 
     def __init__(self):
         self.filename = "E:\Moritz\Desktop\Bachelorprojekt\wikidatawiki-20140526-pages-articles.xml\dump.csv"
         self.samplesize = 1000
-        self.outputfile = "ClassifyingPropertiesEvaluation20130526_dump" + str(self.samplesize) + "2To6_threshold_0_.csv"
+        self.outputfile = "E:\Moritz\Desktop\Bachelorprojekt\wikidatawiki-20140526-pages-articles.xml\ClassifyingPropertiesEvaluation20130526_dump" + str(self.samplesize) + "2To5_threshold_0_.csv"
 
         ResultEvaluation.__init__(self, self.filename,
 								  self.samplesize , self.outputfile)
