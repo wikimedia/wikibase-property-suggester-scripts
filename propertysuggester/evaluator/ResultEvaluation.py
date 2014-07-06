@@ -64,7 +64,7 @@ class ResultEvaluation:
             processed_items = 0
             for entity in CsvReader.read_csv(f):
                 if self.foundEntities < self.samplesize:
-                    if current_item_count in self.random_ids and len(entity.claims) < 6 and len(entity.claims) > 1:
+                    if current_item_count in self.random_ids and len(entity.claims) >= 6:
                         print "Processed Items: {0}".format(processed_items)
                         self.process_entities(entity)
                         processed_items += 1
