@@ -54,7 +54,10 @@ class WikidataApi:
         if "-1" in resultjson["entities"]:
             return None
         else:
-            return resultjson["entities"].values()[0]
+            entity = resultjson["entities"].values()[0]
+            if "missing" in entity:
+                return None
+            return entity
 
     def create_entity(self, data, entitytype):
         params = {
