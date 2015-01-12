@@ -29,7 +29,7 @@ class Importer:
 
 
     def get_dummy_data(self, entityid):
-        dummy = {"labels": {"en-gb": {"language": "en-gb", "value": "dummy" + entityid + " " + str(random.randint)}},
+        dummy = {"labels": {"en-gb": {"language": "en-gb", "value": "dummy" + entityid + " " + str(random.randint(0, 1e+9))}},
                  "descriptions": {"en-gb": {"language": "en-gb", "value": "Propertydescription"}},
                  "datatype": "string"}
         return dummy
