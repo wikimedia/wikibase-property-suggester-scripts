@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/Wikidata-lib/PropertySuggester-Python.png?branch=master)](https://travis-ci.org/Wikidata-lib/PropertySuggester-Python)
-[![Coverage Status](https://coveralls.io/repos/Wikidata-lib/PropertySuggester-Python/badge.png?branch=master)](https://coveralls.io/r/Wikidata-lib/PropertySuggester-Python)
+[![Build Status](https://travis-ci.org/wikimedia/wikibase-property-suggester-scripts.svg?branch=master)](https://travis-ci.org/wikimedia/wikibase-property-suggester-scripts)
+[![Coverage Status](https://coveralls.io/repos/github/wikimedia/wikibase-property-suggester-scripts/badge.svg?branch=master)](https://coveralls.io/github/wikimedia/wikibase-property-suggester-scripts?branch=master)
 
 # PropertySuggester Scripts
 Contains scripts for PropertySuggester to preprocess the wikidata dump
