@@ -20,6 +20,8 @@ setup(
                  "wikidata dumps"),
     url="https://github.com/Wikidata-lib/PropertySuggester-Python",
     packages=find_packages(),
+    package_data={'propertysuggester': ['analyzer/analyzer.ini']},
+    include_package_data=True,
     long_description=read('README.md'),
     install_requires=requirements("requirements.txt"),
     classifiers=[
