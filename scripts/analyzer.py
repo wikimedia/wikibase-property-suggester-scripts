@@ -14,11 +14,11 @@ if __name__ == "__main__":
         description="this program generates a correlation-table from "
                     "the csv-dump")
     parser.add_argument("input", help="The CSV input file (wikidata triple)",
-                        type=CompressedFileType('rb'))
+                        type=CompressedFileType('r'))
     parser.add_argument("output",
                         help="The CSV output file (default=sys.stdout)",
                         default=sys.stdout, nargs='?',
-                        type=CompressedFileType('wb'))
+                        type=CompressedFileType('w'))
     args = parser.parse_args()
 
     start = time.time()
