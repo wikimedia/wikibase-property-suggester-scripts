@@ -11,12 +11,12 @@ sudo apt-get install build-essential python-pip python-dev
 python setup.py install
 ```
 ## Usage 
-- use dumpconverter.py to convert a wikidata dump to csv
+- use dumpconverter.py to convert a wikidata JSON dump to csv (this can be obtained using extensions/Wikibase/repo/maintenance/dumpJson.php)
 - use analyzer.py to create a csv file with the suggestion data that can be loaded into a sql table
 - the PropertySuggester extension provides a maintenance script (maintenance/UpdateTable.php) that allows to load the csv into the database
 
 ```
-python scripts/dumpconverter.py wikidatawiki-20140226-pages-articles.xml.bz2 dump.csv
+python scripts/dumpconverter.py latest-all.json.bz2 dump.csv
 python scripts/analyzer.py dump.csv wbs_propertypairs.csv
 php extensions/PropertySuggester/maintenance/UpdateTable.php --file wbs_propertypairs.csv
 ```
