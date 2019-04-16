@@ -24,7 +24,9 @@ data_types = [
     "url",
     "external-id",
     "math",
-    "tabular-data"
+    "tabular-data",
+    "musical-notation",
+    "wikibase-lexeme"
 ]
 
 
