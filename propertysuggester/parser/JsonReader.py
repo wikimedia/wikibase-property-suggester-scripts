@@ -25,8 +25,7 @@ data_types = [
     "external-id",
     "math",
     "tabular-data",
-    "musical-notation",
-    "wikibase-lexeme"
+    "musical-notation"
 ]
 
 
@@ -108,14 +107,35 @@ def _parse_json_snak(claim_json):
                 value = datavalue
             elif datatype == "wikibase-item":
                 if datavalue["entity-type"] == "item":
-                    value = "Q" + str(datavalue["numeric-id"])
+                    value = datavalue["id"]
                 else:
                     logging.warning(
                         "unknown entitytype: {0}".format(
                             datavalue["entity-type"]))
             elif datatype == "wikibase-property":
                 if datavalue["entity-type"] == "property":
-                    value = "P" + str(datavalue["numeric-id"])
+                    value = datavalue["id"]
+                else:
+                    logging.warning(
+                        "unknown entitytype: {0}".format(
+                            datavalue["entity-type"]))
+            elif datatype == "wikibase-lexeme":
+                if datavalue["entity-type"] == "lexeme":
+                    value = datavalue["id"]
+                else:
+                    logging.warning(
+                        "unknown entitytype: {0}".format(
+                            datavalue["entity-type"]))
+            elif datatype == "wikibase-sense":
+                if datavalue["entity-type"] == "sense":
+                    value = datavalue["id"]
+                else:
+                    logging.warning(
+                        "unknown entitytype: {0}".format(
+                            datavalue["entity-type"]))
+            elif datatype == "wikibase-form":
+                if datavalue["entity-type"] == "form":
+                    value = datavalue["id"]
                 else:
                     logging.warning(
                         "unknown entitytype: {0}".format(

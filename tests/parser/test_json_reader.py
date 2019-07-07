@@ -16,7 +16,7 @@ class TestJsonReader():
             Snak(1082, "quantity", "+25"),
             [
                 Snak(459, "wikibase-item", "Q745221"),
-                Snak(585, "time", "+00000002001-01-01T00:00:00Z")
+                Snak(585, "time", "+2001-01-01T00:00:00Z")
             ],
             [Snak(248, "wikibase-item", "Q17597573")]
         )
